@@ -1,0 +1,467 @@
+{
+  "ok": true,
+  "pdf": "/home/hatch/workspace/goals/first-in-consciousness-mentor-series/files/first-in-consciousness-speech-2-production-package/first-in-consciousness-speech-2-production-package.pdf",
+  "pages": 0,
+  "pngs": [],
+  "fonts": {
+    "missing": [],
+    "unused": [],
+    "used": [
+      "Liberation Sans",
+      "Liberation Serif"
+    ],
+    "expected": [
+      "Liberation Sans:400",
+      "Liberation Sans:700",
+      "Liberation Serif:400",
+      "Liberation Serif:700"
+    ]
+  },
+  "overflow": [],
+  "text_floor": [
+    {
+      "index": 0,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 206,
+          "max_node_chars": 160,
+          "sample": "VisionWeaver · First in Consciousness · "
+        },
+        {
+          "pt": 9,
+          "chars": 205,
+          "max_node_chars": 205,
+          "sample": "How to use this file: produce scenes in "
+        },
+        {
+          "pt": 10.5,
+          "chars": 632,
+          "max_node_chars": 112,
+          "sample": "Series:"
+        },
+        {
+          "pt": 12,
+          "chars": 237,
+          "max_node_chars": 237,
+          "sample": "Speech 2 production package. The full sc"
+        },
+        {
+          "pt": 12.5,
+          "chars": 16,
+          "max_node_chars": 16,
+          "sample": "Episode at a glance"
+        },
+        {
+          "pt": 30,
+          "chars": 25,
+          "max_node_chars": 14,
+          "sample": "Hurry Is Fear"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 23,
+          "max_node_chars": 23,
+          "sample": "Approved Script · Verbatim"
+        },
+        {
+          "pt": 9,
+          "chars": 114,
+          "max_node_chars": 114,
+          "sample": "Speaker is Okta throughout, telling the "
+        },
+        {
+          "pt": 11.5,
+          "chars": 595,
+          "max_node_chars": 225,
+          "sample": "The morning after the crossing, the trav"
+        },
+        {
+          "pt": 12.5,
+          "chars": 36,
+          "max_node_chars": 32,
+          "sample": "Hook"
+        },
+        {
+          "pt": 16,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "“Name what you’re actually afraid will h"
+        },
+        {
+          "pt": 17,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The script is the source - these words d"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "Approved Script · Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 201,
+          "max_node_chars": 80,
+          "sample": "Okta arrives slowly. The bell rings once"
+        },
+        {
+          "pt": 11.5,
+          "chars": 508,
+          "max_node_chars": 162,
+          "sample": "That is when I arrived - at my own pace,"
+        },
+        {
+          "pt": 12.5,
+          "chars": 27,
+          "max_node_chars": 27,
+          "sample": "Delivery notes for this section"
+        },
+        {
+          "pt": 17,
+          "chars": 27,
+          "max_node_chars": 27,
+          "sample": "She had sped up - and left herself"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "Approved Script · Verbatim, Continued"
+        },
+        {
+          "pt": 11.5,
+          "chars": 999,
+          "max_node_chars": 408,
+          "sample": "Hear me. Speed is often not efficiency. "
+        },
+        {
+          "pt": 12.5,
+          "chars": 15,
+          "max_node_chars": 8,
+          "sample": "Reframe"
+        },
+        {
+          "pt": 17,
+          "chars": 17,
+          "max_node_chars": 17,
+          "sample": "Catch the first link"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "Approved Script · Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 267,
+          "max_node_chars": 149,
+          "sample": "End of approved script. The payoff sits "
+        },
+        {
+          "pt": 11.5,
+          "chars": 289,
+          "max_node_chars": 162,
+          "sample": "You will know the right call when you ar"
+        },
+        {
+          "pt": 12.5,
+          "chars": 38,
+          "max_node_chars": 25,
+          "sample": "Payoff / Bridge"
+        },
+        {
+          "pt": 17,
+          "chars": 46,
+          "max_node_chars": 46,
+          "sample": "Calm hands can hold people - without hol"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 39,
+          "max_node_chars": 39,
+          "sample": "Crossroads Standards - Mapped to This Ep"
+        },
+        {
+          "pt": 8.8,
+          "chars": 36,
+          "max_node_chars": 18,
+          "sample": "Crossroads standard"
+        },
+        {
+          "pt": 9.2,
+          "chars": 1375,
+          "max_node_chars": 247,
+          "sample": "Pipeline order"
+        },
+        {
+          "pt": 10.5,
+          "chars": 305,
+          "max_node_chars": 218,
+          "sample": "The standards already set for Crossroads"
+        },
+        {
+          "pt": 17,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The Crossroads standard governs this epi"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 29,
+          "max_node_chars": 29,
+          "sample": "Scene Map - 12 Scenes · 6-12 Minutes"
+        },
+        {
+          "pt": 8.8,
+          "chars": 41,
+          "max_node_chars": 13,
+          "sample": "#"
+        },
+        {
+          "pt": 9,
+          "chars": 121,
+          "max_node_chars": 121,
+          "sample": "Setting: a morning road, the day after t"
+        },
+        {
+          "pt": 9.2,
+          "chars": 1099,
+          "max_node_chars": 81,
+          "sample": "1"
+        },
+        {
+          "pt": 17,
+          "chars": 35,
+          "max_node_chars": 35,
+          "sample": "Scenes 1-6 - hook, promise, rush, and fa"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 18,
+          "max_node_chars": 18,
+          "sample": "Scene Map - Continued"
+        },
+        {
+          "pt": 8.8,
+          "chars": 41,
+          "max_node_chars": 13,
+          "sample": "#"
+        },
+        {
+          "pt": 9,
+          "chars": 141,
+          "max_node_chars": 141,
+          "sample": "Payoff placement: Scene 12 lands at 70-8"
+        },
+        {
+          "pt": 9.2,
+          "chars": 1192,
+          "max_node_chars": 97,
+          "sample": "7"
+        },
+        {
+          "pt": 17,
+          "chars": 43,
+          "max_node_chars": 43,
+          "sample": "Scenes 7-12 - arrival, the chain, practi"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 2 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 139,
+          "max_node_chars": 57,
+          "sample": "Posting Package · Processing Status"
+        },
+        {
+          "pt": 9,
+          "chars": 38,
+          "max_node_chars": 38,
+          "sample": "No posting day or time is set for this e"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1117,
+          "max_node_chars": 240,
+          "sample": "Long title:"
+        },
+        {
+          "pt": 12.5,
+          "chars": 53,
+          "max_node_chars": 26,
+          "sample": "Short - 45-60 second beat sheet"
+        },
+        {
+          "pt": 15,
+          "chars": 22,
+          "max_node_chars": 11,
+          "sample": "HURRY IS FEAR"
+        },
+        {
+          "pt": 17,
+          "chars": 36,
+          "max_node_chars": 36,
+          "sample": "Ready to post - when the episode is prod"
+        }
+      ]
+    }
+  ],
+  "image_resolution": [
+    {
+      "index": 0,
+      "images": [
+        {
+          "rendered_w": 656.9,
+          "natural_w": 1280,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "images": []
+    },
+    {
+      "index": 2,
+      "images": []
+    },
+    {
+      "index": 3,
+      "images": []
+    },
+    {
+      "index": 4,
+      "images": []
+    },
+    {
+      "index": 5,
+      "images": []
+    },
+    {
+      "index": 6,
+      "images": []
+    },
+    {
+      "index": 7,
+      "images": []
+    },
+    {
+      "index": 8,
+      "images": [
+        {
+          "rendered_w": 320.9,
+          "natural_w": 2048,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        },
+        {
+          "rendered_w": 320.9,
+          "natural_w": 1120,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    }
+  ],
+  "geometry": {
+    "failures": [],
+    "advisories": []
+  },
+  "gate_failures": [],
+  "advisories": [
+    "1 image(s) sit below the sharp target of 2x their rendered width (worst 1280px at 657px); fine if no larger source exists, soft in print and on retina screens otherwise"
+  ]
+}

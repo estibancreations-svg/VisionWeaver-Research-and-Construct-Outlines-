@@ -1,0 +1,430 @@
+{
+  "ok": true,
+  "pdf": "/home/hatch/workspace/goals/first-in-consciousness-mentor-series/files/first-in-consciousness-speech-1-posting-pack/first-in-consciousness-speech-1-posting-pack.pdf",
+  "pages": 0,
+  "pngs": [],
+  "fonts": {
+    "missing": [],
+    "unused": [],
+    "used": [
+      "Liberation Sans",
+      "Liberation Serif"
+    ],
+    "expected": [
+      "Liberation Sans:400",
+      "Liberation Sans:700",
+      "Liberation Serif:400",
+      "Liberation Serif:700"
+    ]
+  },
+  "overflow": [],
+  "text_floor": [
+    {
+      "index": 0,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 44,
+          "max_node_chars": 39,
+          "sample": "First in Consciousness — Speech 1 Postin"
+        },
+        {
+          "pt": 8.2,
+          "chars": 83,
+          "max_node_chars": 83,
+          "sample": "media-generation-speech1-thumbnail-main-"
+        },
+        {
+          "pt": 8.5,
+          "chars": 169,
+          "max_node_chars": 87,
+          "sample": "VisionWeaver · First in Consciousness · "
+        },
+        {
+          "pt": 8.8,
+          "chars": 11,
+          "max_node_chars": 7,
+          "sample": "Item"
+        },
+        {
+          "pt": 9.3,
+          "chars": 279,
+          "max_node_chars": 58,
+          "sample": "Series"
+        },
+        {
+          "pt": 10.5,
+          "chars": 212,
+          "max_node_chars": 195,
+          "sample": "How to use this pack:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 224,
+          "max_node_chars": 192,
+          "sample": "You Are Not Behind — You Are Mid-River."
+        },
+        {
+          "pt": 29,
+          "chars": 38,
+          "max_node_chars": 20,
+          "sample": "First in Consciousness"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 44,
+          "max_node_chars": 39,
+          "sample": "First in Consciousness — Speech 1 Postin"
+        },
+        {
+          "pt": 8.2,
+          "chars": 196,
+          "max_node_chars": 83,
+          "sample": "mid-river"
+        },
+        {
+          "pt": 8.5,
+          "chars": 90,
+          "max_node_chars": 34,
+          "sample": "Long video · YouTube · Estiban Creations"
+        },
+        {
+          "pt": 8.8,
+          "chars": 90,
+          "max_node_chars": 76,
+          "sample": "Thumbnail file:"
+        },
+        {
+          "pt": 10,
+          "chars": 1192,
+          "max_node_chars": 334,
+          "sample": "Stop measuring your life from the bank y"
+        },
+        {
+          "pt": 10.5,
+          "chars": 187,
+          "max_node_chars": 187,
+          "sample": "The thumbnail says “MID-RIVER, NOT BEHIN"
+        },
+        {
+          "pt": 11.5,
+          "chars": 52,
+          "max_node_chars": 52,
+          "sample": "You Are Not Behind — You Are Mid-River |"
+        },
+        {
+          "pt": 16.5,
+          "chars": 40,
+          "max_node_chars": 40,
+          "sample": "The title and thumbnail promise the same"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 44,
+          "max_node_chars": 39,
+          "sample": "First in Consciousness — Speech 1 Postin"
+        },
+        {
+          "pt": 8.2,
+          "chars": 80,
+          "max_node_chars": 80,
+          "sample": "media-generation-speech1-short-cover-0-5"
+        },
+        {
+          "pt": 8.5,
+          "chars": 137,
+          "max_node_chars": 48,
+          "sample": "Short · 45–60 seconds · YouTube Shorts"
+        },
+        {
+          "pt": 8.8,
+          "chars": 21,
+          "max_node_chars": 11,
+          "sample": "Beat"
+        },
+        {
+          "pt": 9.3,
+          "chars": 484,
+          "max_node_chars": 132,
+          "sample": "1. Hook"
+        },
+        {
+          "pt": 10,
+          "chars": 43,
+          "max_node_chars": 43,
+          "sample": "Peace Is a Pace, Not a Place | First in "
+        },
+        {
+          "pt": 10.5,
+          "chars": 347,
+          "max_node_chars": 162,
+          "sample": "#MidRiver #PeaceIsAPace #SlowLiving #Min"
+        },
+        {
+          "pt": 12,
+          "chars": 31,
+          "max_node_chars": 16,
+          "sample": "The bell is the open"
+        },
+        {
+          "pt": 16.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "One aphorism, one practice, one bridge"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 44,
+          "max_node_chars": 39,
+          "sample": "First in Consciousness — Speech 1 Postin"
+        },
+        {
+          "pt": 8.2,
+          "chars": 84,
+          "max_node_chars": 84,
+          "sample": "media-generation-speech1-instagram-quote"
+        },
+        {
+          "pt": 8.5,
+          "chars": 172,
+          "max_node_chars": 76,
+          "sample": "Instagram · Master_Your_Thinking · 2 pos"
+        },
+        {
+          "pt": 8.8,
+          "chars": 137,
+          "max_node_chars": 137,
+          "sample": "Order matters: quote card first, thumbna"
+        },
+        {
+          "pt": 10,
+          "chars": 841,
+          "max_node_chars": 200,
+          "sample": "Peace is a pace, not a place."
+        },
+        {
+          "pt": 10.5,
+          "chars": 148,
+          "max_node_chars": 148,
+          "sample": "Post the main thumbnail image (16:9 file"
+        },
+        {
+          "pt": 12,
+          "chars": 22,
+          "max_node_chars": 22,
+          "sample": "Post 2 — the thumbnail post"
+        },
+        {
+          "pt": 16.5,
+          "chars": 40,
+          "max_node_chars": 40,
+          "sample": "The stills can post now, before any vide"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 44,
+          "max_node_chars": 39,
+          "sample": "First in Consciousness — Speech 1 Postin"
+        },
+        {
+          "pt": 8.5,
+          "chars": 30,
+          "max_node_chars": 30,
+          "sample": "Weekly posting calendar · Weeks 1–8"
+        },
+        {
+          "pt": 8.8,
+          "chars": 200,
+          "max_node_chars": 176,
+          "sample": "Week"
+        },
+        {
+          "pt": 9.3,
+          "chars": 582,
+          "max_node_chars": 82,
+          "sample": "1"
+        },
+        {
+          "pt": 10.5,
+          "chars": 628,
+          "max_node_chars": 174,
+          "sample": "Every week follows the Speech 1 pattern:"
+        },
+        {
+          "pt": 16.5,
+          "chars": 42,
+          "max_node_chars": 42,
+          "sample": "One speech a week, the same three pieces"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 44,
+          "max_node_chars": 39,
+          "sample": "First in Consciousness — Speech 1 Postin"
+        },
+        {
+          "pt": 8.5,
+          "chars": 22,
+          "max_node_chars": 22,
+          "sample": "Before anything goes live"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1539,
+          "max_node_chars": 204,
+          "sample": "Thumbnail uploaded — the 16:9 file from "
+        },
+        {
+          "pt": 12,
+          "chars": 54,
+          "max_node_chars": 36,
+          "sample": "Posting checklist — YouTube and Instagra"
+        },
+        {
+          "pt": 16.5,
+          "chars": 29,
+          "max_node_chars": 29,
+          "sample": "Run both checklists, in this order"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 44,
+          "max_node_chars": 39,
+          "sample": "First in Consciousness — Speech 1 Postin"
+        },
+        {
+          "pt": 8.2,
+          "chars": 321,
+          "max_node_chars": 113,
+          "sample": "1. Main thumbnail (16:9) — media-generat"
+        },
+        {
+          "pt": 8.5,
+          "chars": 23,
+          "max_node_chars": 23,
+          "sample": "Honest status · Where we are"
+        },
+        {
+          "pt": 8.8,
+          "chars": 160,
+          "max_node_chars": 149,
+          "sample": "Piece"
+        },
+        {
+          "pt": 9.3,
+          "chars": 640,
+          "max_node_chars": 142,
+          "sample": "Images"
+        },
+        {
+          "pt": 10.5,
+          "chars": 306,
+          "max_node_chars": 133,
+          "sample": "Instagram Post 1 — the quote card"
+        },
+        {
+          "pt": 12,
+          "chars": 51,
+          "max_node_chars": 31,
+          "sample": "What can post now, with no video at all"
+        },
+        {
+          "pt": 15,
+          "chars": 126,
+          "max_node_chars": 126,
+          "sample": "No video has been rendered, recorded, or"
+        },
+        {
+          "pt": 16.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "Ready to use the moment the render lands"
+        }
+      ]
+    }
+  ],
+  "image_resolution": [
+    {
+      "index": 0,
+      "images": [
+        {
+          "rendered_w": 483.8,
+          "natural_w": 1600,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "images": []
+    },
+    {
+      "index": 2,
+      "images": [
+        {
+          "rendered_w": 226.8,
+          "natural_w": 900,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "images": [
+        {
+          "rendered_w": 322.8,
+          "natural_w": 1200,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "images": []
+    },
+    {
+      "index": 5,
+      "images": []
+    },
+    {
+      "index": 6,
+      "images": []
+    }
+  ],
+  "geometry": {
+    "failures": [],
+    "advisories": []
+  },
+  "gate_failures": [],
+  "advisories": []
+}
