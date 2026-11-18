@@ -1,0 +1,43 @@
+{
+  "job": "fireside-ep01-looptest",
+  "job_file": "jobs/fireside-ep01-looptest.json",
+  "started_utc": "2026-10-19T03:56:29Z",
+  "dry_run": false,
+  "stages": {
+    "cast": {
+      "status": "ok",
+      "detail": {
+        "characters": [
+          {
+            "name": "The Radio",
+            "voice_id": "avocado_v2:vdc_5723",
+            "look_ref": "~/workspace/your_files/fireside-images/ep01.png"
+          }
+        ]
+      }
+    },
+    "voice": {
+      "status": "ok",
+      "detail": {
+        "files": [
+          "/home/hatch/workspace/your_files/fireside-audio/ep01-on-the-bank-crisis-fdr-s-first-fireside--solemn-pillar.mp3"
+        ]
+      }
+    },
+    "animate": {
+      "status": "ok",
+      "detail": {
+        "shots": [
+          {
+            "id": "ep01-anim",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/ep01-anim.mp4",
+            "reused": true
+          }
+        ],
+        "credits": 0
+      }
+    }
+  },
+  "status": "failed",
+  "error": "RuntimeError: ffmpeg -y -v error failed: tion fflags to value +shortest.\n[out#0/mp4 @ 0x5cada5e54c80] Could not write header (incorrect codec parameters ?): Invalid argument\n[vf#0:0 @ 0x5cada5ef3340] Error sending frames to consumers: Invalid argument\n[vf#0:0 @ 0x5cada5ef3340] Task finished with error code: -22 (Invalid argument)\n[vf#0:0 @ 0x5cada5ef3340] Terminating thread with return code -22 (Invalid argument)\n[out#0/mp4 @ 0x5cada5e54c80] Nothing was written into output file, because at least one of its streams received no packets.\n"
+}

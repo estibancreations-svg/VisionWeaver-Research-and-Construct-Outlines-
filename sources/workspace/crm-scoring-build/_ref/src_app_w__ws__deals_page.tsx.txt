@@ -1,0 +1,124 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { getWorkspace } from "@/lib/session";
+import { fullName, money, shortDate } from "@/lib/format";
+import { Badge, PageHead } from "@/components/ui";
+import { SubmitButton } from "@/components/forms";
+import { IconPlus } from "@/components/icons";
+import { moveDeal } from "../actions";
+
+export const metadata: Metadata = { title: "Deals" };
+
+export default async function Deals({ params, searchParams }: { params: Promise<{ ws: string }>; searchParams: Promise<{ status?: string }> }) {
+  const { ws } = await params;
+  const { status } = await searchParams;
+  const ctx = await getWorkspace(ws);
+  const show = status === "won" || status === "lost" ? status : "open";
+  const [stages, deals] = await Promise.all([
+    ctx.supabase.from("pipeline_stages").select("id, name, position, probability").eq("workspace_id", ws).order("position"),
+    ctx.supabase
+      .from("deals")
+      .select("id, title, amount, stage_id, status, expected_close_date, next_action, contacts(first_name, last_name)")
+      .eq("workspace_id", ws)
+      .eq("status", show)
+      .is("archived_at", null)
+      .order("expected_close_date", { ascending: true, nullsFirst: false })
+      .limit(500),
+  ]);
+  const st = stages.data ?? [];
+  const ds = deals.data ?? [];
+
+  return (
+    <div className="stack-lg">
+      <PageHead
+        eyebrow={ctx.ws.name}
+        title="Deals"
+        actions={
+          ctx.canWrite ? (
+            <Link className="btn btn-primary" href={`/w/${ws}/deals/new`}>
+              <IconPlus /> New deal
+            </Link>
+          ) : null
+        }
+      />
+      <nav className="row" aria-label="Deal status">
+        {(["open", "won", "lost"] as const).map((s) => (
+          <Link
+            key={s}
+            aria-current={show === s ? "page" : undefined}
+            className={`btn btn-sm${show === s ? " btn-primary" : ""}`}
+            href={`/w/${ws}/deals${s === "open" ? "" : `?status=${s}`}`}
+          >
+            {s[0].toUpperCase() + s.slice(1)}
+          </Link>
+        ))}
+      </nav>
+      <p className="faint">Swipe sideways to see every stage. Use “Move” on a card to change its stage.</p>
+      <div className="board" aria-label="Pipeline board">
+        {st.map((s) => {
+          const items = ds.filter((d) => d.stage_id === s.id);
+          const total = items.reduce((t, d) => t + Number(d.amount), 0);
+          return (
+            <section key={s.id} className="column" aria-label={`${s.name} stage`}>
+              <div className="column-head">
+                <span className="column-title">{s.name}</span>
+                <span className="faint">
+                  {items.length} · {money(total)}
+                </span>
+              </div>
+              {items.length === 0 ? (
+                <p className="faint" style={{ padding: "8px 6px" }}>
+                  Nothing here yet.
+                </p>
+              ) : null}
+              {items.map((d) => {
+                const c = d.contacts as unknown as { first_name: string; last_name: string } | null;
+                return (
+                  <article key={d.id} className="deal-card">
+                    <Link href={`/w/${ws}/deals/${d.id}`}>
+                      <div style={{ fontWeight: 700 }}>{d.title}</div>
+                      <div className="faint">{c ? fullName(c) : "No contact"}</div>
+                    </Link>
+                    <div className="spread">
+                      <span className="deal-amount">{money(d.amount)}</span>
+                      {d.status !== "open" ? (
+                        <Badge value={d.status} />
+                      ) : (
+                        <span className="faint">{shortDate(d.expected_close_date, ctx.ws.timezone)}</span>
+                      )}
+                    </div>
+                    {d.next_action ? <div className="faint">Next: {d.next_action}</div> : null}
+                    {ctx.canWrite ? (
+                      <form action={moveDeal.bind(null, ws)} className="row" style={{ flexWrap: "nowrap" }}>
+                        <input type="hidden" name="id" value={d.id} />
+                        <label className="sr-only" htmlFor={`mv-${d.id}`}>
+                          Move {d.title} to stage
+                        </label>
+                        <select
+                          id={`mv-${d.id}`}
+                          name="stage_id"
+                          className="select"
+                          defaultValue={s.id}
+                          style={{ minHeight: 38, padding: "6px 34px 6px 12px", backgroundPosition: "calc(100% - 18px) 16px, calc(100% - 13px) 16px" }}
+                        >
+                          {st.map((o) => (
+                            <option key={o.id} value={o.id}>
+                              {o.name}
+                            </option>
+                          ))}
+                        </select>
+                        <SubmitButton className="btn btn-sm" pendingText="…">
+                          Move
+                        </SubmitButton>
+                      </form>
+                    ) : null}
+                  </article>
+                );
+              })}
+            </section>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,356 @@
+"use server";
+
+import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
+import { getWorkspace, type ActionState } from "@/lib/session";
+import {
+  companySchema,
+  contactSchema,
+  dealSchema,
+  firstIssue,
+  formObject,
+  loginSchema,
+  noteSchema,
+  passwordSchema,
+  taskSchema,
+  uuid,
+  workspaceSchema,
+} from "@/lib/validation";
+import { toIsoOrNull } from "@/lib/format";
+import { z } from "zod";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import { friendlyDbError, functionError } from "@/lib/functions";
+
+/* All writes run as the signed-in user through Supabase with RLS enforcing access.
+   The role checks here only give friendlier messages — the database is the guard. */
+
+async function writer(ws: string) {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canWrite) throw new Error("Your login can view this sub-account but not change it.");
+  return ctx;
+}
+function fail(e: unknown): ActionState {
+  return { error: e instanceof Error ? e.message : "Something went wrong." };
+}
+function friendly(msg: string) {
+  return friendlyDbError(msg, "Couldn't save that. Please try again.");
+}
+function isRedirect(e: unknown) {
+  return Boolean(e && typeof e === "object" && "digest" in e && String((e as { digest: unknown }).digest).startsWith("NEXT_"));
+}
+
+/* ---------- Contacts ---------- */
+export async function saveContact(ws: string, id: string | null, _: ActionState, fd: FormData): Promise<ActionState> {
+  try {
+    const ctx = await writer(ws);
+    const p = contactSchema.safeParse(formObject(fd));
+    if (!p.success) return { error: firstIssue(p.error) };
+    const q = id
+      ? ctx.supabase.from("contacts").update(p.data).eq("id", id).eq("workspace_id", ws).select("id").single()
+      : ctx.supabase.from("contacts").insert({ ...p.data, workspace_id: ws }).select("id").single();
+    const { data, error } = await q;
+    if (error) return { error: friendly(error.message) };
+    revalidatePath(`/w/${ws}`, "layout");
+    if (!id) redirect(`/w/${ws}/contacts/${data.id}`);
+    return { ok: "Contact saved." };
+  } catch (e) {
+    if (isRedirect(e)) throw e;
+    return fail(e);
+  }
+}
+
+/* ---------- Companies ---------- */
+export async function saveCompany(ws: string, id: string | null, _: ActionState, fd: FormData): Promise<ActionState> {
+  try {
+    const ctx = await writer(ws);
+    const p = companySchema.safeParse(formObject(fd));
+    if (!p.success) return { error: firstIssue(p.error) };
+    const q = id
+      ? ctx.supabase.from("companies").update(p.data).eq("id", id).eq("workspace_id", ws).select("id").single()
+      : ctx.supabase.from("companies").insert({ ...p.data, workspace_id: ws }).select("id").single();
+    const { data, error } = await q;
+    if (error) return { error: friendly(error.message) };
+    revalidatePath(`/w/${ws}`, "layout");
+    if (!id) redirect(`/w/${ws}/companies/${data.id}`);
+    return { ok: "Company saved." };
+  } catch (e) {
+    if (isRedirect(e)) throw e;
+    return fail(e);
+  }
+}
+
+/* ---------- Deals ---------- */
+export async function saveDeal(ws: string, id: string | null, _: ActionState, fd: FormData): Promise<ActionState> {
+  try {
+    const ctx = await writer(ws);
+    const p = dealSchema.safeParse(formObject(fd));
+    if (!p.success) return { error: firstIssue(p.error) };
+    const { data: stage } = await ctx.supabase
+      .from("pipeline_stages")
+      .select("pipeline_id")
+      .eq("id", p.data.stage_id)
+      .eq("workspace_id", ws)
+      .maybeSingle();
+    if (!stage) return { error: "Pick a stage from this sub-account's pipeline." };
+    const row = { ...p.data, pipeline_id: stage.pipeline_id };
+    const q = id
+      ? ctx.supabase.from("deals").update(row).eq("id", id).eq("workspace_id", ws).select("id").single()
+      : ctx.supabase.from("deals").insert({ ...row, workspace_id: ws }).select("id").single();
+    const { data, error } = await q;
+    if (error) return { error: friendly(error.message) };
+    revalidatePath(`/w/${ws}`, "layout");
+    if (!id) redirect(`/w/${ws}/deals/${data.id}`);
+    return { ok: "Deal saved." };
+  } catch (e) {
+    if (isRedirect(e)) throw e;
+    return fail(e);
+  }
+}
+
+export async function moveDeal(ws: string, fd: FormData) {
+  const ctx = await writer(ws);
+  const id = uuid.parse(fd.get("id"));
+  const stage = uuid.parse(fd.get("stage_id"));
+  await ctx.supabase.from("deals").update({ stage_id: stage }).eq("id", id).eq("workspace_id", ws);
+  revalidatePath(`/w/${ws}`, "layout");
+}
+
+/* ---------- Tasks ---------- */
+export async function saveTask(ws: string, id: string | null, _: ActionState, fd: FormData): Promise<ActionState> {
+  try {
+    const ctx = await writer(ws);
+    const p = taskSchema.safeParse(formObject(fd));
+    if (!p.success) return { error: firstIssue(p.error) };
+    const row = { ...p.data, due_at: toIsoOrNull(p.data.due_at) };
+    const { error } = id
+      ? await ctx.supabase.from("tasks").update(row).eq("id", id).eq("workspace_id", ws)
+      : await ctx.supabase.from("tasks").insert({ ...row, workspace_id: ws });
+    if (error) return { error: friendly(error.message) };
+    revalidatePath(`/w/${ws}`, "layout");
+    return { ok: id ? "Task updated." : "Task added." };
+  } catch (e) {
+    return fail(e);
+  }
+}
+
+export async function setTaskStatus(ws: string, fd: FormData) {
+  const ctx = await writer(ws);
+  const id = uuid.parse(fd.get("id"));
+  const status = z.enum(["open", "in_progress", "done", "cancelled"]).parse(fd.get("status"));
+  await ctx.supabase.from("tasks").update({ status }).eq("id", id).eq("workspace_id", ws);
+  revalidatePath(`/w/${ws}`, "layout");
+}
+
+/* ---------- Notes ---------- */
+export async function addNote(ws: string, _: ActionState, fd: FormData): Promise<ActionState> {
+  try {
+    const ctx = await writer(ws);
+    const p = noteSchema.safeParse(formObject(fd));
+    if (!p.success) return { error: firstIssue(p.error) };
+    const { error } = await ctx.supabase.from("notes").insert({ ...p.data, workspace_id: ws });
+    if (error) return { error: friendly(error.message) };
+    revalidatePath(`/w/${ws}`, "layout");
+    return { ok: "Note added." };
+  } catch (e) {
+    return fail(e);
+  }
+}
+
+/* ---------- Archive / restore any record ---------- */
+const ARCHIVABLE = z.enum(["contacts", "companies", "deals", "tasks"]);
+export async function setArchived(ws: string, fd: FormData) {
+  const ctx = await writer(ws);
+  const table = ARCHIVABLE.parse(fd.get("table"));
+  const id = uuid.parse(fd.get("id"));
+  const archive = fd.get("archive") === "1";
+  await (ctx.supabase as unknown as SupabaseClient)
+    .from(table)
+    .update({ archived_at: archive ? new Date().toISOString() : null })
+    .eq("id", id)
+    .eq("workspace_id", ws);
+  revalidatePath(`/w/${ws}`, "layout");
+  if (archive) redirect(`/w/${ws}/${table}`);
+}
+
+/* ---------- Sub-account settings ---------- */
+export async function updateWorkspace(ws: string, _: ActionState, fd: FormData): Promise<ActionState> {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) return { error: "Only admins can change sub-account settings." };
+  const p = workspaceSchema.extend({ accent: z.enum(["mustard", "walnut", "slate", "sage", "clay"]) }).safeParse(formObject(fd));
+  if (!p.success) return { error: firstIssue(p.error) };
+  const { error } = await ctx.supabase.from("workspaces").update(p.data).eq("id", ws);
+  if (error) return { error: friendly(error.message) };
+  revalidatePath(`/w/${ws}`, "layout");
+  revalidatePath("/home");
+  return { ok: "Settings saved." };
+}
+
+export async function archiveWorkspace(ws: string, fd: FormData) {
+  const ctx = await getWorkspace(ws);
+  if (ctx.role !== "agency") throw new Error("Only the agency can archive a sub-account.");
+  const archive = fd.get("archive") === "1";
+  await ctx.supabase.from("workspaces").update({ archived_at: archive ? new Date().toISOString() : null }).eq("id", ws);
+  revalidatePath("/home");
+  revalidatePath(`/w/${ws}`, "layout");
+  if (archive) redirect("/home");
+}
+
+export async function deleteWorkspace(ws: string, _: ActionState, fd: FormData): Promise<ActionState> {
+  const ctx = await getWorkspace(ws);
+  if (ctx.role !== "agency") return { error: "Only the agency can delete a sub-account." };
+  const confirm = String(fd.get("confirm") ?? "");
+  if (confirm !== ctx.ws.name) return { error: `Type "${ctx.ws.name}" exactly to confirm.` };
+  const { error } = await ctx.supabase.rpc("delete_workspace", { p_workspace: ws, p_confirm_name: confirm });
+  if (error) {
+    if (/does not exist|Could not find the function/i.test(error.message)) {
+      return { error: "Permanent delete isn't enabled on this database yet. Use Archive instead (see the guide)." };
+    }
+    return { error: friendly(error.message) };
+  }
+  revalidatePath("/home");
+  redirect("/home");
+}
+
+/* ---------- Logins (via the manage-logins Edge Function) ---------- */
+export async function createLogin(ws: string, _: ActionState, fd: FormData): Promise<ActionState> {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) return { error: "Only admins can add logins." };
+  const p = loginSchema.safeParse(formObject(fd));
+  if (!p.success) return { error: firstIssue(p.error) };
+  const { data, error } = await ctx.supabase.functions.invoke("manage-logins", {
+    body: { action: "create", workspace_id: ws, ...p.data },
+  });
+  if (error) return { error: await functionError(error, "Couldn't create the login.") };
+  revalidatePath(`/w/${ws}/settings`);
+  return {
+    ok: data?.existing
+      ? `${p.data.email} already had a login — it now has access here (their password was not changed).`
+      : `Login created for ${p.data.email}. Share the temporary password privately. They'll choose their own at first sign-in.`,
+  };
+}
+
+export async function resetLoginPassword(ws: string, _: ActionState, fd: FormData): Promise<ActionState> {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) return { error: "Only admins can reset passwords." };
+  const userId = uuid.safeParse(fd.get("user_id"));
+  const pw = passwordSchema.safeParse(fd.get("password"));
+  if (!userId.success) return { error: "Pick a login." };
+  if (!pw.success) return { error: firstIssue(pw.error) };
+  const { error } = await ctx.supabase.functions.invoke("manage-logins", {
+    body: { action: "reset_password", workspace_id: ws, user_id: userId.data, password: pw.data },
+  });
+  if (error) return { error: await functionError(error, "Couldn't reset the password.") };
+  return { ok: "Password reset. Share it privately. They'll be asked to choose a new one when they sign in." };
+}
+
+export async function changeMemberRole(ws: string, fd: FormData) {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) throw new Error("Only admins can change roles.");
+  const userId = uuid.parse(fd.get("user_id"));
+  const role = z.enum(["admin", "member", "viewer"]).parse(fd.get("role"));
+  await ctx.supabase.from("workspace_members").update({ role }).eq("workspace_id", ws).eq("user_id", userId);
+  revalidatePath(`/w/${ws}/settings`);
+}
+
+export async function removeMember(ws: string, fd: FormData) {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) throw new Error("Only admins can remove logins.");
+  const userId = uuid.parse(fd.get("user_id"));
+  await ctx.supabase.from("workspace_members").delete().eq("workspace_id", ws).eq("user_id", userId);
+  revalidatePath(`/w/${ws}/settings`);
+}
+
+/* ---------- CSV import ---------- */
+export type ImportState = (ActionState & { problems?: string[] }) | undefined;
+
+export async function importContacts(ws: string, _: ImportState, fd: FormData): Promise<ImportState> {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canWrite) return { error: "Your login can view this sub-account but not change it." };
+  const file = fd.get("file");
+  if (!(file instanceof File) || file.size === 0) return { error: "Choose a CSV file to import." };
+  if (file.size > 1_048_576) return { error: "That file is over 1 MB. Split it into smaller files." };
+  if (!/\.csv$/i.test(file.name) && !/csv|text\/plain|excel/i.test(file.type)) {
+    return { error: "Save the spreadsheet as CSV first, then upload it." };
+  }
+  const { parseCsv, mapContacts } = await import("@/lib/csv");
+  const { rows, problems } = mapContacts(parseCsv(await file.text()));
+  if (rows.length === 0) return { error: problems[0] ?? "No contacts found in that file.", problems: problems.slice(1) };
+  if (rows.length > 2000) return { error: `That file has ${rows.length} contacts. Import 2,000 or fewer at a time.` };
+  const { data, error } = await ctx.supabase.rpc("import_contacts", { p_workspace: ws, p_rows: rows });
+  if (error) return { error: friendlyDbError(error.message, "Couldn't import that file."), problems };
+  const r = (Array.isArray(data) ? data[0] : data) as { inserted: number; skipped: number } | null;
+  const inserted = r?.inserted ?? 0;
+  const skipped = (r?.skipped ?? 0) + problems.length;
+  revalidatePath(`/w/${ws}`, "layout");
+  return {
+    ok: `Imported ${inserted} contact${inserted === 1 ? "" : "s"}.${skipped ? ` Skipped ${skipped} (duplicates or rows with problems).` : ""}`,
+    problems,
+  };
+}
+
+/* ---------- Client branding: logo, brand color, suggested tags ---------- */
+const LOGO_TYPES: Record<string, string> = { "image/png": "png", "image/jpeg": "jpg", "image/webp": "webp" };
+
+export async function uploadLogo(ws: string, _: ActionState, fd: FormData): Promise<ActionState> {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) return { error: "Only admins can change the logo." };
+  const file = fd.get("logo");
+  if (!(file instanceof File) || file.size === 0) return { error: "Choose an image first." };
+  const ext = LOGO_TYPES[file.type];
+  if (!ext) return { error: "Use a PNG, JPG or WebP image." };
+  if (file.size > 1_048_576) return { error: "That image is over 1 MB. Try a smaller one." };
+  const path = `${ws}/logo-${Date.now()}.${ext}`;
+  const { error: upErr } = await ctx.supabase.storage
+    .from("workspace-logos")
+    .upload(path, file, { contentType: file.type, upsert: false, cacheControl: "3600" });
+  if (upErr) return { error: friendlyDbError(upErr.message, "Couldn't upload the logo.") };
+  const old = ctx.ws.logo_path;
+  const { error } = await ctx.supabase.from("workspaces").update({ logo_path: path }).eq("id", ws);
+  if (error) {
+    await ctx.supabase.storage.from("workspace-logos").remove([path]);
+    return { error: friendly(error.message) };
+  }
+  if (old && old !== path) await ctx.supabase.storage.from("workspace-logos").remove([old]);
+  revalidatePath(`/w/${ws}`, "layout");
+  revalidatePath("/home");
+  return { ok: "Logo updated." };
+}
+
+export async function removeLogo(ws: string) {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) return;
+  const old = ctx.ws.logo_path;
+  await ctx.supabase.from("workspaces").update({ logo_path: null }).eq("id", ws);
+  if (old) await ctx.supabase.storage.from("workspace-logos").remove([old]);
+  revalidatePath(`/w/${ws}`, "layout");
+  revalidatePath("/home");
+}
+
+export async function updateBranding(ws: string, _: ActionState, fd: FormData): Promise<ActionState> {
+  const ctx = await getWorkspace(ws);
+  if (!ctx.canAdmin) return { error: "Only admins can change branding." };
+  const p = z
+    .object({
+      use_brand: z.enum(["on", "off"]).default("off"),
+      brand_color: z.string().regex(/^#[0-9a-fA-F]{6}$/, "Pick a color").default("#c39437"),
+      suggested_tags: z.string().max(600).default(""),
+    })
+    .safeParse(formObject(fd));
+  if (!p.success) return { error: firstIssue(p.error) };
+  const tags = Array.from(
+    new Set(
+      p.data.suggested_tags
+        .split(",")
+        .map((t) => t.trim().toLowerCase().slice(0, 30))
+        .filter(Boolean),
+    ),
+  ).slice(0, 30);
+  const { error } = await ctx.supabase
+    .from("workspaces")
+    .update({ brand_color: p.data.use_brand === "on" ? p.data.brand_color.toLowerCase() : null, suggested_tags: tags })
+    .eq("id", ws);
+  if (error) return { error: friendly(error.message) };
+  revalidatePath(`/w/${ws}`, "layout");
+  revalidatePath("/home");
+  return { ok: "Branding saved." };
+}

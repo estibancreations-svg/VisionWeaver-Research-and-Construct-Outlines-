@@ -1,0 +1,93 @@
+import type { ReactNode } from "react";
+import { Shell } from "@/components/shell";
+import {
+  IconBook,
+  IconBuilding,
+  IconCalendar,
+  IconCard,
+  IconCheck,
+  IconGlobe,
+  IconInbox,
+  IconMail,
+  IconMegaphone,
+  IconPlug,
+  IconTemplate,
+  IconGrid,
+  IconHistory,
+  IconHome,
+  IconPipeline,
+  IconSettings,
+  IconUsers,
+  IconTag,
+} from "@/components/icons";
+import { AGENCY_ROLE_LABEL, getWorkspace, logoUrl } from "@/lib/session";
+
+export default async function WorkspaceLayout({ children, params }: { children: ReactNode; params: Promise<{ ws: string }> }) {
+  const { ws: id } = await params;
+  const ctx = await getWorkspace(id);
+  const base = `/w/${id}`;
+  const items = [
+    { href: base, label: "Overview", icon: <IconHome />, exact: true },
+    { href: `${base}/contacts`, label: "Contacts", icon: <IconUsers /> },
+    { href: `${base}/lists`, label: "Lists", icon: <IconTag /> },
+    { href: `${base}/deals`, label: "Deals", icon: <IconPipeline /> },
+    { href: `${base}/tasks`, label: "Tasks", icon: <IconCheck /> },
+  ];
+  const more = [
+    { href: `${base}/inbox`, label: "Inbox", icon: <IconInbox /> },
+    { href: `${base}/calendar`, label: "Calendar", icon: <IconCalendar /> },
+    { href: `${base}/marketing`, label: "Marketing", icon: <IconMegaphone /> },
+    { href: `${base}/templates`, label: "Templates", icon: <IconTemplate /> },
+    { href: `${base}/mail`, label: "Mail", icon: <IconMail /> },
+    { href: `${base}/apps`, label: "Apps", icon: <IconPlug /> },
+    { href: `${base}/website`, label: "Website", icon: <IconGlobe /> },
+    { href: `${base}/learn`, label: "Learn", icon: <IconBook /> },
+    { href: `${base}/payments`, label: "Payments", icon: <IconCard /> },
+    { href: `${base}/companies`, label: "Companies", icon: <IconBuilding /> },
+    { href: `${base}/history`, label: "History", icon: <IconHistory /> },
+    { href: `${base}/settings`, label: "Settings", icon: <IconSettings /> },
+  ];
+  const agencyLinks = ctx.agency ? [{ href: "/home", label: "All sub-accounts", icon: <IconGrid />, exact: true }] : [];
+  const roleLabel =
+    ctx.role === "agency"
+      ? ctx.agencyRole
+        ? AGENCY_ROLE_LABEL[ctx.agencyRole]
+        : "Agency owner"
+      : ctx.agencyRole === "assistant" && ctx.role === "member"
+        ? AGENCY_ROLE_LABEL.assistant
+        : ctx.role === "admin"
+          ? "Sub-account admin"
+          : ctx.role === "member"
+            ? "Member"
+            : "Viewer";
+
+  const [logo, jumpRows] = await Promise.all([
+    logoUrl(ctx.supabase, ctx.ws.logo_path),
+    ctx.agency
+      ? ctx.supabase.from("workspaces").select("id, name").eq("agency_id", ctx.agency.id).is("archived_at", null).order("name")
+      : Promise.resolve({ data: null }),
+  ]);
+  const jump = (jumpRows.data ?? []).map((w) => ({ id: w.id as string, name: w.name as string }));
+
+  return (
+    <Shell
+      sections={[
+        ...(agencyLinks.length ? [{ label: ctx.agency?.name, items: agencyLinks }] : []),
+        { label: ctx.ws.name, items: [...items, ...more] },
+      ]}
+      tabs={[...items, { href: `${base}/settings`, label: "More", icon: <IconSettings /> }]}
+      title={ctx.ws.name}
+      back={ctx.agency ? { href: "/home", label: "All sub-accounts" } : undefined}
+      who={{ name: ctx.fullName, email: ctx.email, role: roleLabel }}
+      jump={jump.length ? jump : undefined}
+      brand={{ logo, color: ctx.ws.brand_color }}
+    >
+      {ctx.ws.archived_at ? (
+        <p className="alert alert-info" role="status" style={{ marginBottom: 16 }}>
+          This sub-account is archived. Restore it from Settings to make it active again.
+        </p>
+      ) : null}
+      {children}
+    </Shell>
+  );
+}

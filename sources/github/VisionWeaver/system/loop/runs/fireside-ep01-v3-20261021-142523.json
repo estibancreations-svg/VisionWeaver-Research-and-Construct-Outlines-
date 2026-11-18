@@ -1,0 +1,70 @@
+{
+  "job": "fireside-ep01-v3",
+  "job_file": "jobs/fireside-ep01-v3.json",
+  "started_utc": "2026-10-21T19:25:23Z",
+  "dry_run": false,
+  "stages": {
+    "cast": {
+      "status": "ok",
+      "detail": {
+        "characters": [
+          {
+            "name": "Grand",
+            "voice_id": "avocado_v2:myrtle",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/grandparent-render-4.webp"
+          },
+          {
+            "name": "Nadia",
+            "voice_id": "nadia-hunt-pending",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3/nadia-sheet.png"
+          },
+          {
+            "name": "Theo",
+            "voice_id": "near-silent",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3/theo-sheet.png"
+          },
+          {
+            "name": "June",
+            "voice_id": "near-silent",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3/june-sheet.png"
+          },
+          {
+            "name": "The Radio",
+            "voice_id": "avocado_v2:vdc_5723",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/ep01.png"
+          },
+          {
+            "name": "The Room",
+            "voice_id": "near-silent",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3/room-set.png"
+          }
+        ]
+      }
+    },
+    "voice": {
+      "status": "ok",
+      "detail": {
+        "files": [
+          "/home/hatch/workspace/your_files/fireside-audio/ep01-on-the-bank-crisis-fdr-s-first-fireside--solemn-pillar.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-gather.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-1.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-2.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-3.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-4.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-answer-nadia.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-answer-june.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-afterglow-1.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-afterglow-2.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-goodnight.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-1.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-2.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-3.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-4.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-5.mp3"
+        ]
+      }
+    }
+  },
+  "status": "failed",
+  "error": "RuntimeError: shot v3-ep01-gather: no task id in {'error': 'Validation of body failed', 'issues': [{'code': 'invalid_union', 'path': ['promptImage'], 'message': 'Data URI is too large: 5.5MB exceeds the 5MB limit. Upload the file and pass the return"
+}

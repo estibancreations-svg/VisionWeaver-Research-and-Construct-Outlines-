@@ -1,0 +1,849 @@
+{
+ "title": "Fireside Ep 1 v3r \u2014 On the Bank Crisis (photorealistic, conversation-mapped)",
+ "output": {
+  "width": 1280,
+  "height": 720,
+  "fps": 24
+ },
+ "shots": [
+  {
+   "id": "p001",
+   "file": "v3r-seg-p001.mp4",
+   "duration": 6.5
+  },
+  {
+   "id": "p002",
+   "file": "v3r-seg-p002.mp4",
+   "duration": 7.333
+  },
+  {
+   "id": "p003",
+   "file": "v3r-seg-p003.mp4",
+   "duration": 9.708
+  },
+  {
+   "id": "p004",
+   "file": "v3r-seg-p004.mp4",
+   "duration": 7.958
+  },
+  {
+   "id": "p005",
+   "file": "v3r-seg-p005.mp4",
+   "duration": 6.208
+  },
+  {
+   "id": "p006",
+   "file": "v3r-seg-p006.mp4",
+   "duration": 10.0
+  },
+  {
+   "id": "p007",
+   "file": "v3r-seg-p007.mp4",
+   "duration": 7.5
+  },
+  {
+   "id": "p008",
+   "file": "v3r-seg-p008.mp4",
+   "duration": 8.917
+  },
+  {
+   "id": "p009",
+   "file": "v3r-seg-p009.mp4",
+   "duration": 2.25
+  },
+  {
+   "id": "p010",
+   "file": "v3r-seg-p010.mp4",
+   "duration": 6.625
+  },
+  {
+   "id": "p011",
+   "file": "v3r-seg-p011.mp4",
+   "duration": 10.0
+  },
+  {
+   "id": "p012",
+   "file": "v3r-seg-p012.mp4",
+   "duration": 8.708
+  },
+  {
+   "id": "p013",
+   "file": "v3r-seg-p013.mp4",
+   "duration": 4.042
+  },
+  {
+   "id": "p014",
+   "file": "v3r-seg-p014.mp4",
+   "duration": 9.0
+  },
+  {
+   "id": "p015",
+   "file": "v3r-seg-p015.mp4",
+   "duration": 5.333
+  },
+  {
+   "id": "p016",
+   "file": "v3r-seg-p016.mp4",
+   "duration": 8.833
+  },
+  {
+   "id": "p017",
+   "file": "v3r-seg-p017.mp4",
+   "duration": 9.125
+  },
+  {
+   "id": "p018",
+   "file": "v3r-seg-p018.mp4",
+   "duration": 4.333
+  },
+  {
+   "id": "p019",
+   "file": "v3r-seg-p019.mp4",
+   "duration": 9.542
+  },
+  {
+   "id": "p020",
+   "file": "v3r-seg-p020.mp4",
+   "duration": 9.125
+  },
+  {
+   "id": "p021",
+   "file": "v3r-seg-p021.mp4",
+   "duration": 8.0
+  },
+  {
+   "id": "p022",
+   "file": "v3r-seg-p022.mp4",
+   "duration": 4.167
+  },
+  {
+   "id": "p023",
+   "file": "v3r-seg-p023.mp4",
+   "duration": 4.167
+  },
+  {
+   "id": "p024",
+   "file": "v3r-seg-p024.mp4",
+   "duration": 7.375
+  },
+  {
+   "id": "p025",
+   "file": "v3r-seg-p025.mp4",
+   "duration": 9.917
+  },
+  {
+   "id": "p026",
+   "file": "v3r-seg-p026.mp4",
+   "duration": 8.0
+  },
+  {
+   "id": "p027",
+   "file": "v3r-seg-p027.mp4",
+   "duration": 8.708
+  },
+  {
+   "id": "p028",
+   "file": "v3r-seg-p028.mp4",
+   "duration": 2.958
+  },
+  {
+   "id": "p029",
+   "file": "v3r-seg-p029.mp4",
+   "duration": 2.125
+  },
+  {
+   "id": "p030",
+   "file": "v3r-seg-p030.mp4",
+   "duration": 8.917
+  },
+  {
+   "id": "p031",
+   "file": "v3r-seg-p031.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p032",
+   "file": "v3r-seg-p032.mp4",
+   "duration": 5.125
+  },
+  {
+   "id": "p033",
+   "file": "v3r-seg-p033.mp4",
+   "duration": 4.417
+  },
+  {
+   "id": "p034",
+   "file": "v3r-seg-p034.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p035",
+   "file": "v3r-seg-p035.mp4",
+   "duration": 7.0
+  },
+  {
+   "id": "p036",
+   "file": "v3r-seg-p036.mp4",
+   "duration": 7.0
+  },
+  {
+   "id": "p037",
+   "file": "v3r-seg-p037.mp4",
+   "duration": 9.417
+  },
+  {
+   "id": "p038",
+   "file": "v3r-seg-p038.mp4",
+   "duration": 9.625
+  },
+  {
+   "id": "p039",
+   "file": "v3r-seg-p039.mp4",
+   "duration": 9.625
+  },
+  {
+   "id": "p040",
+   "file": "v3r-seg-p040.mp4",
+   "duration": 6.333
+  },
+  {
+   "id": "p041",
+   "file": "v3r-seg-p041.mp4",
+   "duration": 4.333
+  },
+  {
+   "id": "p042",
+   "file": "v3r-seg-p042.mp4",
+   "duration": 8.5
+  },
+  {
+   "id": "p043",
+   "file": "v3r-seg-p043.mp4",
+   "duration": 9.708
+  },
+  {
+   "id": "p044",
+   "file": "v3r-seg-p044.mp4",
+   "duration": 8.708
+  },
+  {
+   "id": "p045",
+   "file": "v3r-seg-p045.mp4",
+   "duration": 5.917
+  },
+  {
+   "id": "p046",
+   "file": "v3r-seg-p046.mp4",
+   "duration": 7.417
+  },
+  {
+   "id": "p047",
+   "file": "v3r-seg-p047.mp4",
+   "duration": 6.208
+  },
+  {
+   "id": "p048",
+   "file": "v3r-seg-p048.mp4",
+   "duration": 7.542
+  },
+  {
+   "id": "p049",
+   "file": "v3r-seg-p049.mp4",
+   "duration": 5.708
+  },
+  {
+   "id": "p050",
+   "file": "v3r-seg-p050.mp4",
+   "duration": 8.333
+  },
+  {
+   "id": "p051",
+   "file": "v3r-seg-p051.mp4",
+   "duration": 8.917
+  },
+  {
+   "id": "p052",
+   "file": "v3r-seg-p052.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p053",
+   "file": "v3r-seg-p053.mp4",
+   "duration": 9.708
+  },
+  {
+   "id": "p054",
+   "file": "v3r-seg-p054.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p055",
+   "file": "v3r-seg-p055.mp4",
+   "duration": 6.5
+  },
+  {
+   "id": "p056",
+   "file": "v3r-seg-p056.mp4",
+   "duration": 8.708
+  },
+  {
+   "id": "p057",
+   "file": "v3r-seg-p057.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p058",
+   "file": "v3r-seg-p058.mp4",
+   "duration": 9.5
+  },
+  {
+   "id": "p059",
+   "file": "v3r-seg-p059.mp4",
+   "duration": 9.0
+  },
+  {
+   "id": "p060",
+   "file": "v3r-seg-p060.mp4",
+   "duration": 8.208
+  },
+  {
+   "id": "p061",
+   "file": "v3r-seg-p061.mp4",
+   "duration": 7.583
+  },
+  {
+   "id": "p062",
+   "file": "v3r-seg-p062.mp4",
+   "duration": 8.375
+  },
+  {
+   "id": "p063",
+   "file": "v3r-seg-p063.mp4",
+   "duration": 7.5
+  },
+  {
+   "id": "p064",
+   "file": "v3r-seg-p064.mp4",
+   "duration": 5.208
+  },
+  {
+   "id": "p065",
+   "file": "v3r-seg-p065.mp4",
+   "duration": 7.417
+  },
+  {
+   "id": "p066",
+   "file": "v3r-seg-p066.mp4",
+   "duration": 9.708
+  },
+  {
+   "id": "p067",
+   "file": "v3r-seg-p067.mp4",
+   "duration": 7.833
+  },
+  {
+   "id": "p068",
+   "file": "v3r-seg-p068.mp4",
+   "duration": 8.833
+  },
+  {
+   "id": "p069",
+   "file": "v3r-seg-p069.mp4",
+   "duration": 10.0
+  },
+  {
+   "id": "p070",
+   "file": "v3r-seg-p070.mp4",
+   "duration": 9.0
+  },
+  {
+   "id": "p071",
+   "file": "v3r-seg-p071.mp4",
+   "duration": 6.708
+  },
+  {
+   "id": "p072",
+   "file": "v3r-seg-p072.mp4",
+   "duration": 9.0
+  },
+  {
+   "id": "p073",
+   "file": "v3r-seg-p073.mp4",
+   "duration": 9.417
+  },
+  {
+   "id": "p074",
+   "file": "v3r-seg-p074.mp4",
+   "duration": 7.0
+  },
+  {
+   "id": "p075",
+   "file": "v3r-seg-p075.mp4",
+   "duration": 8.5
+  },
+  {
+   "id": "p076",
+   "file": "v3r-seg-p076.mp4",
+   "duration": 8.625
+  },
+  {
+   "id": "p077",
+   "file": "v3r-seg-p077.mp4",
+   "duration": 6.917
+  },
+  {
+   "id": "p078",
+   "file": "v3r-seg-p078.mp4",
+   "duration": 9.208
+  },
+  {
+   "id": "p079",
+   "file": "v3r-seg-p079.mp4",
+   "duration": 4.417
+  },
+  {
+   "id": "p080",
+   "file": "v3r-seg-p080.mp4",
+   "duration": 9.792
+  },
+  {
+   "id": "p081",
+   "file": "v3r-seg-p081.mp4",
+   "duration": 9.417
+  },
+  {
+   "id": "p082",
+   "file": "v3r-seg-p082.mp4",
+   "duration": 9.417
+  },
+  {
+   "id": "p083",
+   "file": "v3r-seg-p083.mp4",
+   "duration": 9.917
+  },
+  {
+   "id": "p084",
+   "file": "v3r-seg-p084.mp4",
+   "duration": 7.208
+  },
+  {
+   "id": "p085",
+   "file": "v3r-seg-p085.mp4",
+   "duration": 8.708
+  },
+  {
+   "id": "p086",
+   "file": "v3r-seg-p086.mp4",
+   "duration": 8.708
+  },
+  {
+   "id": "p087",
+   "file": "v3r-seg-p087.mp4",
+   "duration": 7.333
+  },
+  {
+   "id": "p088",
+   "file": "v3r-seg-p088.mp4",
+   "duration": 9.708
+  },
+  {
+   "id": "p089",
+   "file": "v3r-seg-p089.mp4",
+   "duration": 8.125
+  },
+  {
+   "id": "p090",
+   "file": "v3r-seg-p090.mp4",
+   "duration": 8.417
+  },
+  {
+   "id": "p091",
+   "file": "v3r-seg-p091.mp4",
+   "duration": 7.833
+  },
+  {
+   "id": "p092",
+   "file": "v3r-seg-p092.mp4",
+   "duration": 7.833
+  },
+  {
+   "id": "p093",
+   "file": "v3r-seg-p093.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p094",
+   "file": "v3r-seg-p094.mp4",
+   "duration": 8.625
+  },
+  {
+   "id": "p095",
+   "file": "v3r-seg-p095.mp4",
+   "duration": 9.417
+  },
+  {
+   "id": "p096",
+   "file": "v3r-seg-p096.mp4",
+   "duration": 8.417
+  },
+  {
+   "id": "p097",
+   "file": "v3r-seg-p097.mp4",
+   "duration": 5.208
+  },
+  {
+   "id": "p098",
+   "file": "v3r-seg-p098.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p099",
+   "file": "v3r-seg-p099.mp4",
+   "duration": 8.417
+  },
+  {
+   "id": "p100",
+   "file": "v3r-seg-p100.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p101",
+   "file": "v3r-seg-p101.mp4",
+   "duration": 9.5
+  },
+  {
+   "id": "p102",
+   "file": "v3r-seg-p102.mp4",
+   "duration": 9.417
+  },
+  {
+   "id": "p103",
+   "file": "v3r-seg-p103.mp4",
+   "duration": 9.417
+  },
+  {
+   "id": "p104",
+   "file": "v3r-seg-p104.mp4",
+   "duration": 8.917
+  },
+  {
+   "id": "p105",
+   "file": "v3r-seg-p105.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p106",
+   "file": "v3r-seg-p106.mp4",
+   "duration": 6.917
+  },
+  {
+   "id": "p107",
+   "file": "v3r-seg-p107.mp4",
+   "duration": 8.833
+  },
+  {
+   "id": "p108",
+   "file": "v3r-seg-p108.mp4",
+   "duration": 6.417
+  },
+  {
+   "id": "p109",
+   "file": "v3r-seg-p109.mp4",
+   "duration": 7.208
+  },
+  {
+   "id": "p110",
+   "file": "v3r-seg-p110.mp4",
+   "duration": 9.625
+  },
+  {
+   "id": "p111",
+   "file": "v3r-seg-p111.mp4",
+   "duration": 7.417
+  },
+  {
+   "id": "p112",
+   "file": "v3r-seg-p112.mp4",
+   "duration": 8.917
+  },
+  {
+   "id": "p113",
+   "file": "v3r-seg-p113.mp4",
+   "duration": 7.417
+  },
+  {
+   "id": "p114",
+   "file": "v3r-seg-p114.mp4",
+   "duration": 7.333
+  },
+  {
+   "id": "p115",
+   "file": "v3r-seg-p115.mp4",
+   "duration": 2.833
+  },
+  {
+   "id": "p116",
+   "file": "v3r-seg-p116.mp4",
+   "duration": 6.417
+  },
+  {
+   "id": "p117",
+   "file": "v3r-seg-p117.mp4",
+   "duration": 8.0
+  },
+  {
+   "id": "p118",
+   "file": "v3r-seg-p118.mp4",
+   "duration": 3.417
+  },
+  {
+   "id": "p119",
+   "file": "v3r-seg-p119.mp4",
+   "duration": 1.708
+  },
+  {
+   "id": "p120",
+   "file": "v3r-seg-p120.mp4",
+   "duration": 10.0
+  },
+  {
+   "id": "p121",
+   "file": "v3r-seg-p121.mp4",
+   "duration": 9.125
+  },
+  {
+   "id": "p122",
+   "file": "v3r-seg-p122.mp4",
+   "duration": 9.833
+  },
+  {
+   "id": "p123",
+   "file": "v3r-seg-p123.mp4",
+   "duration": 3.667
+  },
+  {
+   "id": "p124",
+   "file": "v3r-seg-p124.mp4",
+   "duration": 7.958
+  },
+  {
+   "id": "p125",
+   "file": "v3r-seg-p125.mp4",
+   "duration": 7.833
+  },
+  {
+   "id": "p126",
+   "file": "v3r-seg-p126.mp4",
+   "duration": 8.708
+  },
+  {
+   "id": "p127",
+   "file": "v3r-seg-p127.mp4",
+   "duration": 5.458
+  },
+  {
+   "id": "p128",
+   "file": "v3r-seg-p128.mp4",
+   "duration": 4.667
+  },
+  {
+   "id": "p129",
+   "file": "v3r-seg-p129.mp4",
+   "duration": 2.25
+  },
+  {
+   "id": "p130",
+   "file": "v3r-seg-p130.mp4",
+   "duration": 8.5
+  },
+  {
+   "id": "p131",
+   "file": "v3r-seg-p131.mp4",
+   "duration": 7.208
+  },
+  {
+   "id": "p132",
+   "file": "v3r-seg-p132.mp4",
+   "duration": 9.708
+  },
+  {
+   "id": "p133",
+   "file": "v3r-seg-p133.mp4",
+   "duration": 1.708
+  }
+ ],
+ "audio": [
+  {
+   "file": "ep01v3-grand-gather.mp3",
+   "anchor": {
+    "shot": "p001",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-gather.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-1.mp3",
+   "anchor": {
+    "shot": "p004",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-1.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-2.mp3",
+   "anchor": {
+    "shot": "p010",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-2.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-3.mp3",
+   "anchor": {
+    "shot": "p014",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-3.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-4.mp3",
+   "anchor": {
+    "shot": "p019",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-4.mp3"
+  },
+  {
+   "file": "ep01v3-nadia-question.mp3",
+   "anchor": {
+    "shot": "p023",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Nadia: ep01v3-nadia-question.mp3"
+  },
+  {
+   "file": "ep01v3-grand-answer-nadia.mp3",
+   "anchor": {
+    "shot": "p024",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-answer-nadia.mp3"
+  },
+  {
+   "file": "ep01v3-june-question.mp3",
+   "anchor": {
+    "shot": "p029",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "June: ep01v3-june-question.mp3"
+  },
+  {
+   "file": "ep01v3-grand-answer-june.mp3",
+   "anchor": {
+    "shot": "p030",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-answer-june.mp3"
+  },
+  {
+   "file": "ep01v3-radio-1.mp3",
+   "anchor": {
+    "shot": "p034",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "The Radio: ep01v3-radio-1.mp3"
+  },
+  {
+   "file": "ep01v3-radio-2.mp3",
+   "anchor": {
+    "shot": "p048",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "The Radio: ep01v3-radio-2.mp3"
+  },
+  {
+   "file": "ep01v3-radio-3.mp3",
+   "anchor": {
+    "shot": "p062",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "The Radio: ep01v3-radio-3.mp3"
+  },
+  {
+   "file": "ep01v3-radio-4.mp3",
+   "anchor": {
+    "shot": "p080",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "The Radio: ep01v3-radio-4.mp3"
+  },
+  {
+   "file": "ep01v3-radio-5.mp3",
+   "anchor": {
+    "shot": "p098",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "The Radio: ep01v3-radio-5.mp3"
+  },
+  {
+   "file": "ep01v3-grand-afterglow-1.mp3",
+   "anchor": {
+    "shot": "p120",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-afterglow-1.mp3"
+  },
+  {
+   "file": "ep01v3-grand-afterglow-2.mp3",
+   "anchor": {
+    "shot": "p124",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-afterglow-2.mp3"
+  },
+  {
+   "file": "ep01v3-nadia-afterglow.mp3",
+   "anchor": {
+    "shot": "p128",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Nadia: ep01v3-nadia-afterglow.mp3"
+  },
+  {
+   "file": "ep01v3-june-afterglow.mp3",
+   "anchor": {
+    "shot": "p129",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "June: ep01v3-june-afterglow.mp3"
+  },
+  {
+   "file": "ep01v3-grand-goodnight.mp3",
+   "anchor": {
+    "shot": "p130",
+    "offset": 0.02
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-goodnight.mp3"
+  }
+ ],
+ "captions": "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3r-captions.ass"
+}

@@ -1,0 +1,142 @@
+{
+  "job": "fireside-ig-season",
+  "job_file": "jobs/fireside-ig-season.json",
+  "started_utc": "2026-10-21T04:37:39Z",
+  "dry_run": true,
+  "stages": {
+    "cast": {
+      "status": "ok",
+      "detail": {
+        "characters": []
+      }
+    },
+    "voice": {
+      "status": "ok",
+      "detail": {
+        "files": []
+      }
+    },
+    "animate": {
+      "status": "ok",
+      "detail": {
+        "shots": [],
+        "credits": 0
+      }
+    },
+    "assemble": {
+      "status": "ok",
+      "detail": {
+        "masters": [
+          "/home/hatch/workspace/your_files/fireside-video/ep11.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep12.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep13.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep14.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep15.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep16.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep17.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep18.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep19.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep20.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep21.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep22.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep23.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep24.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep25.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep26.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep27.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep28.mp4",
+          "/home/hatch/workspace/your_files/fireside-video/ep30.mp4"
+        ],
+        "reused": true
+      }
+    },
+    "publish": {
+      "status": "ok",
+      "detail": {
+        "posted": [
+          {
+            "id": "ep11",
+            "dry_run": true
+          },
+          {
+            "id": "ep12",
+            "dry_run": true
+          },
+          {
+            "id": "ep13",
+            "dry_run": true
+          },
+          {
+            "id": "ep14",
+            "dry_run": true
+          },
+          {
+            "id": "ep15",
+            "dry_run": true
+          },
+          {
+            "id": "ep16",
+            "dry_run": true
+          },
+          {
+            "id": "ep17",
+            "dry_run": true
+          },
+          {
+            "id": "ep18",
+            "dry_run": true
+          },
+          {
+            "id": "ep19",
+            "dry_run": true
+          },
+          {
+            "id": "ep20",
+            "dry_run": true
+          },
+          {
+            "id": "ep21",
+            "dry_run": true
+          },
+          {
+            "id": "ep22",
+            "dry_run": true
+          },
+          {
+            "id": "ep23",
+            "dry_run": true
+          },
+          {
+            "id": "ep24",
+            "dry_run": true
+          },
+          {
+            "id": "ep25",
+            "dry_run": true
+          },
+          {
+            "id": "ep26",
+            "dry_run": true
+          },
+          {
+            "id": "ep27",
+            "dry_run": true
+          },
+          {
+            "id": "ep28",
+            "dry_run": true
+          },
+          {
+            "id": "ep30",
+            "dry_run": true
+          }
+        ],
+        "skipped_already_live": [],
+        "failed": [],
+        "rate_limited_at": null,
+        "stopped": null
+      }
+    }
+  },
+  "status": "complete"
+}

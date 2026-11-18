@@ -1,0 +1,3307 @@
+{
+ "episode": "Fireside Ep1 v3 — On the Bank Crisis",
+ "total_duration": 1027.5,
+ "beats": [
+  {
+   "beat": "1-gather",
+   "ep_start": 0.0,
+   "ep_end": 23.8
+  },
+  {
+   "beat": "2-explanation",
+   "ep_start": 23.8,
+   "ep_end": 238.6
+  },
+  {
+   "beat": "3-radio-speech",
+   "ep_start": 238.6,
+   "ep_end": 930.9
+  },
+  {
+   "beat": "4-afterglow",
+   "ep_start": 931.0,
+   "ep_end": 1027.4
+  }
+ ],
+ "cues": [
+  {
+   "seq": 1,
+   "cue_index": 0,
+   "character": "Grand",
+   "file": "ep01v3-grand-gather.mp3",
+   "ep_start": 0.0,
+   "duration": 23.8,
+   "speech_start": 0.62,
+   "speech_time": 14.2,
+   "pace_wpm": 182,
+   "segments": 12,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.62
+    },
+    {
+     "at": 2.2,
+     "dur": 1.05
+    },
+    {
+     "at": 4.2,
+     "dur": 0.43
+    },
+    {
+     "at": 5.5,
+     "dur": 0.6
+    },
+    {
+     "at": 7.3,
+     "dur": 1.36
+    },
+    {
+     "at": 9.3,
+     "dur": 0.33
+    },
+    {
+     "at": 11.8,
+     "dur": 0.64
+    },
+    {
+     "at": 13.2,
+     "dur": 1.14
+    },
+    {
+     "at": 15.6,
+     "dur": 0.71
+    },
+    {
+     "at": 17.7,
+     "dur": 0.83
+    },
+    {
+     "at": 20.1,
+     "dur": 0.38
+    },
+    {
+     "at": 21.5,
+     "dur": 0.73
+    },
+    {
+     "at": 23.0,
+     "dur": 0.83
+    }
+   ],
+   "phrases": [
+    {
+     "text": "Come in close, my loves. Coats off, shoes off,",
+     "start": 0.6,
+     "end": 4.9
+    },
+    {
+     "text": "right here on the rug.",
+     "start": 4.9,
+     "end": 7.0
+    },
+    {
+     "text": "Tonight the radio has a story for us —",
+     "start": 7.0,
+     "end": 11.5
+    },
+    {
+     "text": "a true one.",
+     "start": 11.5,
+     "end": 13.2
+    },
+    {
+     "text": "It's about a night when a whole country sat by their radios,",
+     "start": 14.3,
+     "end": 19.8
+    },
+    {
+     "text": "just like this, and listened.",
+     "start": 19.8,
+     "end": 23.0
+    }
+   ]
+  },
+  {
+   "seq": 2,
+   "cue_index": 1,
+   "character": "Grand",
+   "file": "ep01v3-grand-explain-1.mp3",
+   "ep_start": 23.8,
+   "duration": 43.5,
+   "speech_start": 0.67,
+   "speech_time": 31.8,
+   "pace_wpm": 200,
+   "segments": 15,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.67
+    },
+    {
+     "at": 3.1,
+     "dur": 0.46
+    },
+    {
+     "at": 5.7,
+     "dur": 0.69
+    },
+    {
+     "at": 8.8,
+     "dur": 1.02
+    },
+    {
+     "at": 11.1,
+     "dur": 0.66
+    },
+    {
+     "at": 13.3,
+     "dur": 0.44
+    },
+    {
+     "at": 15.7,
+     "dur": 1.22
+    },
+    {
+     "at": 17.2,
+     "dur": 0.6
+    },
+    {
+     "at": 21.1,
+     "dur": 1.01
+    },
+    {
+     "at": 25.3,
+     "dur": 0.64
+    },
+    {
+     "at": 27.1,
+     "dur": 0.5
+    },
+    {
+     "at": 29.2,
+     "dur": 0.53
+    },
+    {
+     "at": 31.4,
+     "dur": 0.76
+    },
+    {
+     "at": 34.6,
+     "dur": 1.0
+    },
+    {
+     "at": 39.7,
+     "dur": 0.76
+    },
+    {
+     "at": 42.7,
+     "dur": 0.81
+    }
+   ],
+   "phrases": [
+    {
+     "text": "This happened a long, long time ago,",
+     "start": 0.7,
+     "end": 2.8
+    },
+    {
+     "text": "in the spring of 1933,",
+     "start": 2.8,
+     "end": 4.8
+    },
+    {
+     "text": "before your Grand was even a story. Times were hard.",
+     "start": 4.8,
+     "end": 8.5
+    },
+    {
+     "text": "Many people had no work,",
+     "start": 8.5,
+     "end": 11.1
+    },
+    {
+     "text": "and many had no money to spare. Now,",
+     "start": 11.7,
+     "end": 14.7
+    },
+    {
+     "text": "most folks kept what little money they had in a bank.",
+     "start": 14.7,
+     "end": 19.9
+    },
+    {
+     "text": "And a bank doesn't keep your money in a box in the back.",
+     "start": 19.9,
+     "end": 24.7
+    },
+    {
+     "text": "It lends it out — to a farmer for seed,",
+     "start": 24.7,
+     "end": 28.8
+    },
+    {
+     "text": "to a family for a house —",
+     "start": 28.8,
+     "end": 31.4
+    },
+    {
+     "text": "and that's how the money helps the whole town.",
+     "start": 32.2,
+     "end": 35.9
+    },
+    {
+     "text": "But that means the bank only keeps a little",
+     "start": 35.9,
+     "end": 38.6
+    },
+    {
+     "text": "bit of cash in the building,",
+     "start": 38.6,
+     "end": 41.1
+    },
+    {
+     "text": "just enough for an ordinary day.",
+     "start": 41.1,
+     "end": 42.7
+    }
+   ]
+  },
+  {
+   "seq": 3,
+   "cue_index": 2,
+   "character": "Grand",
+   "file": "ep01v3-grand-explain-2.mp3",
+   "ep_start": 67.3,
+   "duration": 29.5,
+   "speech_start": 0.0,
+   "speech_time": 20.0,
+   "pace_wpm": 183,
+   "segments": 12,
+   "pauses": [
+    {
+     "at": 1.7,
+     "dur": 0.74
+    },
+    {
+     "at": 3.6,
+     "dur": 0.45
+    },
+    {
+     "at": 5.9,
+     "dur": 0.69
+    },
+    {
+     "at": 10.1,
+     "dur": 1.23
+    },
+    {
+     "at": 12.9,
+     "dur": 0.6
+    },
+    {
+     "at": 15.6,
+     "dur": 0.96
+    },
+    {
+     "at": 16.9,
+     "dur": 0.33
+    },
+    {
+     "at": 18.3,
+     "dur": 1.26
+    },
+    {
+     "at": 21.3,
+     "dur": 0.51
+    },
+    {
+     "at": 23.6,
+     "dur": 1.38
+    },
+    {
+     "at": 26.6,
+     "dur": 0.5
+    },
+    {
+     "at": 28.7,
+     "dur": 0.81
+    }
+   ],
+   "phrases": [
+    {
+     "text": "Then people got frightened.",
+     "start": 0.0,
+     "end": 1.4
+    },
+    {
+     "text": "Word went around that the banks might not be safe,",
+     "start": 1.4,
+     "end": 5.9
+    },
+    {
+     "text": "and everybody ran to take their money out at the same time.",
+     "start": 6.6,
+     "end": 11.7
+    },
+    {
+     "text": "Imagine the whole town lining up at one little door,",
+     "start": 11.7,
+     "end": 15.6
+    },
+    {
+     "text": "all on the same morning. Even a good,",
+     "start": 16.6,
+     "end": 20.9
+    },
+    {
+     "text": "honest bank doesn't keep enough cash for that.",
+     "start": 20.9,
+     "end": 25.3
+    },
+    {
+     "text": "So bank after bank had to close its doors.",
+     "start": 25.3,
+     "end": 28.7
+    }
+   ]
+  },
+  {
+   "seq": 4,
+   "cue_index": 3,
+   "character": "Grand",
+   "file": "ep01v3-grand-explain-3.mp3",
+   "ep_start": 96.8,
+   "duration": 37.1,
+   "speech_start": 0.42,
+   "speech_time": 22.8,
+   "pace_wpm": 174,
+   "segments": 14,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.42
+    },
+    {
+     "at": 1.8,
+     "dur": 1.36
+    },
+    {
+     "at": 5.2,
+     "dur": 0.95
+    },
+    {
+     "at": 7.5,
+     "dur": 1.41
+    },
+    {
+     "at": 10.4,
+     "dur": 0.33
+    },
+    {
+     "at": 11.9,
+     "dur": 1.21
+    },
+    {
+     "at": 13.7,
+     "dur": 0.98
+    },
+    {
+     "at": 18.5,
+     "dur": 1.05
+    },
+    {
+     "at": 21.5,
+     "dur": 1.2
+    },
+    {
+     "at": 24.5,
+     "dur": 1.42
+    },
+    {
+     "at": 26.4,
+     "dur": 0.57
+    },
+    {
+     "at": 29.4,
+     "dur": 0.74
+    },
+    {
+     "at": 31.2,
+     "dur": 0.98
+    },
+    {
+     "at": 33.9,
+     "dur": 0.78
+    },
+    {
+     "at": 36.2,
+     "dur": 0.97
+    }
+   ],
+   "phrases": [
+    {
+     "text": "Right in the middle of it,",
+     "start": 0.4,
+     "end": 3.9
+    },
+    {
+     "text": "the country got a new President — Franklin Roosevelt.",
+     "start": 3.9,
+     "end": 9.3
+    },
+    {
+     "text": "He'd only had the job eight days. First,",
+     "start": 9.3,
+     "end": 13.7
+    },
+    {
+     "text": "he closed every bank in the country for a few days —",
+     "start": 14.6,
+     "end": 19.9
+    },
+    {
+     "text": "a bank holiday, he called it —",
+     "start": 19.9,
+     "end": 23.4
+    },
+    {
+     "text": "so everyone could take a breath.",
+     "start": 23.4,
+     "end": 27.6
+    },
+    {
+     "text": "Then his helpers checked every bank, one by one,",
+     "start": 27.6,
+     "end": 32.5
+    },
+    {
+     "text": "to see which were strong and which needed help.",
+     "start": 32.5,
+     "end": 36.2
+    }
+   ]
+  },
+  {
+   "seq": 5,
+   "cue_index": 4,
+   "character": "Grand",
+   "file": "ep01v3-grand-explain-4.mp3",
+   "ep_start": 133.9,
+   "duration": 31.6,
+   "speech_start": 0.68,
+   "speech_time": 21.7,
+   "pace_wpm": 182,
+   "segments": 10,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.68
+    },
+    {
+     "at": 2.4,
+     "dur": 0.76
+    },
+    {
+     "at": 6.1,
+     "dur": 1.13
+    },
+    {
+     "at": 10.1,
+     "dur": 0.95
+    },
+    {
+     "at": 13.7,
+     "dur": 1.07
+    },
+    {
+     "at": 17.3,
+     "dur": 0.93
+    },
+    {
+     "at": 21.3,
+     "dur": 1.19
+    },
+    {
+     "at": 24.5,
+     "dur": 0.96
+    },
+    {
+     "at": 26.4,
+     "dur": 0.84
+    },
+    {
+     "at": 28.4,
+     "dur": 0.68
+    },
+    {
+     "at": 30.9,
+     "dur": 0.63
+    }
+   ],
+   "phrases": [
+    {
+     "text": "And then, on a Sunday night,",
+     "start": 0.7,
+     "end": 3.5
+    },
+    {
+     "text": "he did something no President had ever done.",
+     "start": 3.5,
+     "end": 6.1
+    },
+    {
+     "text": "He sat down in front of a radio microphone,",
+     "start": 7.2,
+     "end": 10.1
+    },
+    {
+     "text": "and he talked to the whole country at once —",
+     "start": 11.1,
+     "end": 15.4
+    },
+    {
+     "text": "not in fancy Washington words, but in plain words,",
+     "start": 15.4,
+     "end": 19.2
+    },
+    {
+     "text": "the way I'm talking to you —",
+     "start": 19.2,
+     "end": 22.8
+    },
+    {
+     "text": "and he explained the whole thing: what happened,",
+     "start": 22.8,
+     "end": 26.4
+    },
+    {
+     "text": "what he had done, and what would happen next.",
+     "start": 27.2,
+     "end": 30.9
+    }
+   ]
+  },
+  {
+   "seq": 6,
+   "cue_index": 15,
+   "character": "Nadia",
+   "file": "ep01v3-nadia-question.mp3",
+   "ep_start": 165.5,
+   "duration": 3.8,
+   "speech_start": 0.0,
+   "speech_time": 3.8,
+   "pace_wpm": 203,
+   "segments": 1,
+   "pauses": [],
+   "phrases": [
+    {
+     "text": "But Grand — if the banks were closed,",
+     "start": 0.0,
+     "end": 2.4
+    },
+    {
+     "text": "how did people buy food?",
+     "start": 2.4,
+     "end": 3.8
+    }
+   ]
+  },
+  {
+   "seq": 7,
+   "cue_index": 5,
+   "character": "Grand",
+   "file": "ep01v3-grand-answer-nadia.mp3",
+   "ep_start": 169.3,
+   "duration": 38.0,
+   "speech_start": 0.78,
+   "speech_time": 26.3,
+   "pace_wpm": 155,
+   "segments": 13,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.78
+    },
+    {
+     "at": 2.8,
+     "dur": 1.06
+    },
+    {
+     "at": 5.6,
+     "dur": 0.82
+    },
+    {
+     "at": 8.4,
+     "dur": 0.64
+    },
+    {
+     "at": 11.1,
+     "dur": 0.57
+    },
+    {
+     "at": 14.3,
+     "dur": 1.01
+    },
+    {
+     "at": 17.2,
+     "dur": 0.74
+    },
+    {
+     "at": 19.9,
+     "dur": 0.83
+    },
+    {
+     "at": 22.8,
+     "dur": 0.84
+    },
+    {
+     "at": 26.3,
+     "dur": 0.61
+    },
+    {
+     "at": 28.1,
+     "dur": 1.01
+    },
+    {
+     "at": 31.0,
+     "dur": 0.88
+    },
+    {
+     "at": 33.8,
+     "dur": 0.83
+    },
+    {
+     "at": 36.9,
+     "dur": 1.1
+    }
+   ],
+   "phrases": [
+    {
+     "text": "That's the right question, Nadia.",
+     "start": 0.8,
+     "end": 2.8
+    },
+    {
+     "text": "For those few days, shops gave people credit —",
+     "start": 3.9,
+     "end": 8.0
+    },
+    {
+     "text": "you took your bread and your milk,",
+     "start": 8.0,
+     "end": 12.1
+    },
+    {
+     "text": "and you paid when the banks opened again. Neighbors helped neighbors.",
+     "start": 12.1,
+     "end": 17.1
+    },
+    {
+     "text": "And it was only a few days,",
+     "start": 17.9,
+     "end": 21.6
+    },
+    {
+     "text": "because the President's plan had the strong banks opening",
+     "start": 21.6,
+     "end": 25.9
+    },
+    {
+     "text": "again that very week —",
+     "start": 25.9,
+     "end": 29.5
+    },
+    {
+     "text": "the biggest cities on Monday, more towns on Tuesday,",
+     "start": 29.5,
+     "end": 33.8
+    },
+    {
+     "text": "and the little places after that.",
+     "start": 34.6,
+     "end": 36.9
+    }
+   ]
+  },
+  {
+   "seq": 8,
+   "cue_index": 17,
+   "character": "June",
+   "file": "ep01v3-june-question.mp3",
+   "ep_start": 207.3,
+   "duration": 2.7,
+   "speech_start": 0.64,
+   "speech_time": 1.5,
+   "pace_wpm": 205,
+   "segments": 1,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.64
+    },
+    {
+     "at": 2.1,
+     "dur": 0.59
+    }
+   ],
+   "phrases": [
+    {
+     "text": "Were the people scared, Grand?",
+     "start": 0.6,
+     "end": 2.1
+    }
+   ]
+  },
+  {
+   "seq": 9,
+   "cue_index": 6,
+   "character": "Grand",
+   "file": "ep01v3-grand-answer-june.mp3",
+   "ep_start": 210.0,
+   "duration": 28.6,
+   "speech_start": 0.82,
+   "speech_time": 16.9,
+   "pace_wpm": 178,
+   "segments": 11,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.82
+    },
+    {
+     "at": 1.8,
+     "dur": 0.37
+    },
+    {
+     "at": 3.2,
+     "dur": 0.8
+    },
+    {
+     "at": 7.3,
+     "dur": 1.31
+    },
+    {
+     "at": 10.5,
+     "dur": 0.98
+    },
+    {
+     "at": 13.0,
+     "dur": 1.0
+    },
+    {
+     "at": 15.2,
+     "dur": 1.0
+    },
+    {
+     "at": 17.7,
+     "dur": 1.19
+    },
+    {
+     "at": 19.7,
+     "dur": 1.0
+    },
+    {
+     "at": 22.9,
+     "dur": 1.56
+    },
+    {
+     "at": 24.9,
+     "dur": 0.84
+    },
+    {
+     "at": 27.7,
+     "dur": 0.9
+    }
+   ],
+   "phrases": [
+    {
+     "text": "They were, June. Grown people,",
+     "start": 0.8,
+     "end": 2.9
+    },
+    {
+     "text": "scared about the money they'd saved their whole lives.",
+     "start": 2.9,
+     "end": 6.6
+    },
+    {
+     "text": "That's why his voice mattered.",
+     "start": 6.6,
+     "end": 9.6
+    },
+    {
+     "text": "He wasn't scolding them.",
+     "start": 9.6,
+     "end": 11.9
+    },
+    {
+     "text": "He was sitting with them, the way we're sitting now. So hush —",
+     "start": 11.9,
+     "end": 19.4
+    },
+    {
+     "text": "let's listen to him tell it himself. Theo,",
+     "start": 19.4,
+     "end": 22.9
+    },
+    {
+     "text": "turn the dial for Grand, love.",
+     "start": 24.5,
+     "end": 27.7
+    }
+   ]
+  },
+  {
+   "seq": 10,
+   "cue_index": 10,
+   "character": "The Radio",
+   "file": "ep01v3-radio-1.mp3",
+   "ep_start": 238.6,
+   "duration": 109.6,
+   "speech_start": 0.5,
+   "speech_time": 91.5,
+   "pace_wpm": 214,
+   "segments": 23,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.5
+    },
+    {
+     "at": 4.9,
+     "dur": 0.79
+    },
+    {
+     "at": 14.2,
+     "dur": 0.63
+    },
+    {
+     "at": 17.5,
+     "dur": 1.02
+    },
+    {
+     "at": 22.4,
+     "dur": 0.6
+    },
+    {
+     "at": 24.8,
+     "dur": 1.11
+    },
+    {
+     "at": 33.8,
+     "dur": 0.73
+    },
+    {
+     "at": 37.2,
+     "dur": 0.62
+    },
+    {
+     "at": 40.7,
+     "dur": 1.14
+    },
+    {
+     "at": 50.2,
+     "dur": 1.13
+    },
+    {
+     "at": 54.8,
+     "dur": 0.64
+    },
+    {
+     "at": 59.9,
+     "dur": 0.46
+    },
+    {
+     "at": 62.1,
+     "dur": 1.1
+    },
+    {
+     "at": 67.0,
+     "dur": 0.48
+    },
+    {
+     "at": 70.5,
+     "dur": 0.77
+    },
+    {
+     "at": 73.9,
+     "dur": 0.59
+    },
+    {
+     "at": 76.5,
+     "dur": 0.43
+    },
+    {
+     "at": 79.8,
+     "dur": 0.67
+    },
+    {
+     "at": 86.3,
+     "dur": 0.87
+    },
+    {
+     "at": 87.1,
+     "dur": 0.35
+    },
+    {
+     "at": 92.0,
+     "dur": 0.81
+    },
+    {
+     "at": 98.2,
+     "dur": 1.26
+    },
+    {
+     "at": 100.2,
+     "dur": 0.38
+    },
+    {
+     "at": 105.8,
+     "dur": 0.45
+    },
+    {
+     "at": 109.0,
+     "dur": 0.54
+    }
+   ],
+   "phrases": [
+    {
+     "text": "My friends:",
+     "start": 0.5,
+     "end": 1.1
+    },
+    {
+     "text": "I want to talk for a few minutes with",
+     "start": 1.1,
+     "end": 3.6
+    },
+    {
+     "text": "the people of the United States about banking —",
+     "start": 3.6,
+     "end": 6.9
+    },
+    {
+     "text": "to talk with the comparatively few who understand the mechanics of banking,",
+     "start": 6.9,
+     "end": 10.2
+    },
+    {
+     "text": "but more particularly with the overwhelming majority of you",
+     "start": 10.2,
+     "end": 12.8
+    },
+    {
+     "text": "who use banks for the making of deposits and the drawing of checks.",
+     "start": 12.8,
+     "end": 17.2
+    },
+    {
+     "text": "I want to tell you what has been done",
+     "start": 17.2,
+     "end": 20.7
+    },
+    {
+     "text": "in the last few days,",
+     "start": 20.7,
+     "end": 22.1
+    },
+    {
+     "text": "and why it was done,",
+     "start": 22.1,
+     "end": 24.2
+    },
+    {
+     "text": "and what the next steps are going to be.",
+     "start": 24.2,
+     "end": 27.9
+    },
+    {
+     "text": "I recognize that the many proclamations from State capitols and from Washington,",
+     "start": 27.9,
+     "end": 31.3
+    },
+    {
+     "text": "the legislation, the Treasury regulations, and so forth,",
+     "start": 31.3,
+     "end": 33.6
+    },
+    {
+     "text": "couched for the most part in banking and legal terms,",
+     "start": 33.6,
+     "end": 37.0
+    },
+    {
+     "text": "ought to be explained for the benefit of the",
+     "start": 37.0,
+     "end": 40.1
+    },
+    {
+     "text": "average citizen. I owe this, in particular,",
+     "start": 40.1,
+     "end": 43.2
+    },
+    {
+     "text": "because of the fortitude and the good temper with",
+     "start": 43.2,
+     "end": 45.7
+    },
+    {
+     "text": "which everybody has accepted the inconvenience and hardships of the banking holiday.",
+     "start": 45.7,
+     "end": 49.1
+    },
+    {
+     "text": "And I know that when you understand what we",
+     "start": 49.1,
+     "end": 52.8
+    },
+    {
+     "text": "in Washington have been about,",
+     "start": 52.8,
+     "end": 54.2
+    },
+    {
+     "text": "I shall continue to have your cooperation as fully",
+     "start": 54.2,
+     "end": 57.4
+    },
+    {
+     "text": "as I have had your sympathy",
+     "start": 57.4,
+     "end": 59.1
+    },
+    {
+     "text": "and your help during the past week. First of all,",
+     "start": 59.1,
+     "end": 63.4
+    },
+    {
+     "text": "let me state the simple fact that when you",
+     "start": 63.4,
+     "end": 65.9
+    },
+    {
+     "text": "deposit money in a bank,",
+     "start": 65.9,
+     "end": 67.8
+    },
+    {
+     "text": "the bank does not put the money into a safe deposit vault.",
+     "start": 67.8,
+     "end": 71.9
+    },
+    {
+     "text": "It invests your money in many different forms of credit —",
+     "start": 71.9,
+     "end": 75.6
+    },
+    {
+     "text": "in bonds, in commercial paper,",
+     "start": 75.6,
+     "end": 77.5
+    },
+    {
+     "text": "in mortgages and in many other kinds of loans. In other words,",
+     "start": 77.5,
+     "end": 81.6
+    },
+    {
+     "text": "the bank puts your money to work to keep",
+     "start": 81.6,
+     "end": 84.1
+    },
+    {
+     "text": "the wheels of industry and of agriculture turning around.",
+     "start": 84.1,
+     "end": 87.8
+    },
+    {
+     "text": "A comparatively small part of the money that you",
+     "start": 87.8,
+     "end": 90.3
+    },
+    {
+     "text": "put into the bank is kept in currency —",
+     "start": 90.3,
+     "end": 93.6
+    },
+    {
+     "text": "an amount which in normal times is wholly sufficient",
+     "start": 93.6,
+     "end": 96.2
+    },
+    {
+     "text": "to cover the cash needs of the average citizen. In other words,",
+     "start": 96.2,
+     "end": 101.1
+    },
+    {
+     "text": "the total amount of all the currency in the",
+     "start": 101.1,
+     "end": 103.6
+    },
+    {
+     "text": "country is only a comparatively small proportion of the",
+     "start": 103.6,
+     "end": 106.5
+    },
+    {
+     "text": "total deposits in all the banks of the country.",
+     "start": 106.5,
+     "end": 109.0
+    }
+   ]
+  },
+  {
+   "seq": 11,
+   "cue_index": 11,
+   "character": "The Radio",
+   "file": "ep01v3-radio-2.mp3",
+   "ep_start": 348.2,
+   "duration": 119.1,
+   "speech_start": 0.5,
+   "speech_time": 94.7,
+   "pace_wpm": 186,
+   "segments": 49,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.5
+    },
+    {
+     "at": 5.8,
+     "dur": 1.15
+    },
+    {
+     "at": 10.0,
+     "dur": 0.43
+    },
+    {
+     "at": 13.9,
+     "dur": 0.43
+    },
+    {
+     "at": 17.4,
+     "dur": 0.63
+    },
+    {
+     "at": 19.2,
+     "dur": 0.47
+    },
+    {
+     "at": 23.6,
+     "dur": 0.7
+    },
+    {
+     "at": 25.3,
+     "dur": 0.37
+    },
+    {
+     "at": 27.2,
+     "dur": 0.42
+    },
+    {
+     "at": 32.1,
+     "dur": 0.44
+    },
+    {
+     "at": 34.2,
+     "dur": 0.49
+    },
+    {
+     "at": 36.4,
+     "dur": 0.47
+    },
+    {
+     "at": 38.4,
+     "dur": 0.95
+    },
+    {
+     "at": 41.2,
+     "dur": 0.41
+    },
+    {
+     "at": 43.1,
+     "dur": 0.43
+    },
+    {
+     "at": 47.0,
+     "dur": 0.62
+    },
+    {
+     "at": 49.3,
+     "dur": 0.37
+    },
+    {
+     "at": 51.0,
+     "dur": 0.46
+    },
+    {
+     "at": 53.1,
+     "dur": 0.34
+    },
+    {
+     "at": 54.9,
+     "dur": 0.6
+    },
+    {
+     "at": 57.9,
+     "dur": 0.4
+    },
+    {
+     "at": 60.5,
+     "dur": 0.74
+    },
+    {
+     "at": 62.5,
+     "dur": 0.44
+    },
+    {
+     "at": 64.6,
+     "dur": 0.37
+    },
+    {
+     "at": 66.0,
+     "dur": 0.34
+    },
+    {
+     "at": 67.7,
+     "dur": 0.72
+    },
+    {
+     "at": 69.2,
+     "dur": 0.47
+    },
+    {
+     "at": 70.5,
+     "dur": 0.49
+    },
+    {
+     "at": 74.2,
+     "dur": 0.48
+    },
+    {
+     "at": 75.5,
+     "dur": 0.37
+    },
+    {
+     "at": 77.6,
+     "dur": 0.41
+    },
+    {
+     "at": 79.4,
+     "dur": 0.35
+    },
+    {
+     "at": 81.3,
+     "dur": 0.39
+    },
+    {
+     "at": 83.7,
+     "dur": 0.4
+    },
+    {
+     "at": 85.4,
+     "dur": 0.44
+    },
+    {
+     "at": 86.7,
+     "dur": 0.32
+    },
+    {
+     "at": 87.4,
+     "dur": 0.35
+    },
+    {
+     "at": 90.3,
+     "dur": 0.99
+    },
+    {
+     "at": 93.2,
+     "dur": 0.37
+    },
+    {
+     "at": 94.9,
+     "dur": 0.35
+    },
+    {
+     "at": 98.1,
+     "dur": 0.65
+    },
+    {
+     "at": 102.0,
+     "dur": 0.48
+    },
+    {
+     "at": 103.9,
+     "dur": 0.42
+    },
+    {
+     "at": 106.3,
+     "dur": 0.5
+    },
+    {
+     "at": 108.2,
+     "dur": 0.39
+    },
+    {
+     "at": 110.5,
+     "dur": 0.42
+    },
+    {
+     "at": 113.1,
+     "dur": 0.39
+    },
+    {
+     "at": 115.1,
+     "dur": 0.4
+    },
+    {
+     "at": 116.5,
+     "dur": 0.46
+    },
+    {
+     "at": 118.6,
+     "dur": 0.5
+    }
+   ],
+   "phrases": [
+    {
+     "text": "What, then,",
+     "start": 0.5,
+     "end": 1.2
+    },
+    {
+     "text": "happened during the last few days of February",
+     "start": 1.2,
+     "end": 3.8
+    },
+    {
+     "text": "and the first few days of March? Because of",
+     "start": 3.8,
+     "end": 7.9
+    },
+    {
+     "text": "undermined confidence on the part of the public,",
+     "start": 7.9,
+     "end": 10.8
+    },
+    {
+     "text": "there was a general rush by a large portion",
+     "start": 10.8,
+     "end": 13.6
+    },
+    {
+     "text": "of our population to turn bank deposits into currency or gold —",
+     "start": 13.6,
+     "end": 18.4
+    },
+    {
+     "text": "a rush so great that the soundest banks couldn't",
+     "start": 18.4,
+     "end": 21.9
+    },
+    {
+     "text": "get enough currency to meet the demand.",
+     "start": 21.9,
+     "end": 24.9
+    },
+    {
+     "text": "The reason for this was that on the spur",
+     "start": 24.9,
+     "end": 28.6
+    },
+    {
+     "text": "of the moment it was,",
+     "start": 28.6,
+     "end": 30.2
+    },
+    {
+     "text": "of course,",
+     "start": 30.2,
+     "end": 30.8
+    },
+    {
+     "text": "impossible to sell perfectly sound assets of a bank",
+     "start": 30.8,
+     "end": 34.2
+    },
+    {
+     "text": "and convert them into cash,",
+     "start": 34.7,
+     "end": 36.4
+    },
+    {
+     "text": "except at panic prices far below their real value.",
+     "start": 36.9,
+     "end": 40.6
+    },
+    {
+     "text": "By the afternoon of March third, a week ago last Friday,",
+     "start": 40.6,
+     "end": 44.8
+    },
+    {
+     "text": "scarcely a bank in the country was open to",
+     "start": 44.8,
+     "end": 48.3
+    },
+    {
+     "text": "do business. Proclamations closing them,",
+     "start": 48.3,
+     "end": 50.3
+    },
+    {
+     "text": "in whole or in part,",
+     "start": 50.3,
+     "end": 52.4
+    },
+    {
+     "text": "had been issued by the Governors in almost all the states.",
+     "start": 52.4,
+     "end": 56.9
+    },
+    {
+     "text": "It was then that I issued the proclamation providing",
+     "start": 56.9,
+     "end": 60.1
+    },
+    {
+     "text": "for the national bank holiday,",
+     "start": 60.1,
+     "end": 62.5
+    },
+    {
+     "text": "and this was the first step in the Government's",
+     "start": 63.0,
+     "end": 66.6
+    },
+    {
+     "text": "reconstruction of our financial and economic fabric. The second step, last Thursday,",
+     "start": 66.6,
+     "end": 72.0
+    },
+    {
+     "text": "was the legislation promptly and patriotically passed by the",
+     "start": 72.0,
+     "end": 75.3
+    },
+    {
+     "text": "Congress confirming my proclamation and broadening my powers so",
+     "start": 75.3,
+     "end": 79.1
+    },
+    {
+     "text": "that it became possible in view of the requirement",
+     "start": 79.1,
+     "end": 82.7
+    },
+    {
+     "text": "of time to extend the holiday",
+     "start": 82.7,
+     "end": 85.1
+    },
+    {
+     "text": "and lift the ban of that holiday gradually in the days to come.",
+     "start": 85.1,
+     "end": 90.3
+    },
+    {
+     "text": "This law also gave authority to develop a program",
+     "start": 91.3,
+     "end": 94.6
+    },
+    {
+     "text": "of rehabilitation of our banking facilities.",
+     "start": 94.6,
+     "end": 96.8
+    },
+    {
+     "text": "And I want to tell our citizens in every",
+     "start": 96.8,
+     "end": 100.4
+    },
+    {
+     "text": "part of the Nation that the national Congress —",
+     "start": 100.4,
+     "end": 103.6
+    },
+    {
+     "text": "Republicans and Democrats alike —",
+     "start": 103.6,
+     "end": 105.7
+    },
+    {
+     "text": "showed by this action a devotion to public welfare",
+     "start": 105.7,
+     "end": 109.6
+    },
+    {
+     "text": "and a realization of the emergency",
+     "start": 109.6,
+     "end": 111.8
+    },
+    {
+     "text": "and the necessity for speed that it is difficult",
+     "start": 111.8,
+     "end": 115.1
+    },
+    {
+     "text": "to match in all our history.",
+     "start": 115.5,
+     "end": 118.6
+    }
+   ]
+  },
+  {
+   "seq": 12,
+   "cue_index": 12,
+   "character": "The Radio",
+   "file": "ep01v3-radio-3.mp3",
+   "ep_start": 467.3,
+   "duration": 143.3,
+   "speech_start": 0.37,
+   "speech_time": 121.7,
+   "pace_wpm": 190,
+   "segments": 44,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.37
+    },
+    {
+     "at": 5.3,
+     "dur": 0.39
+    },
+    {
+     "at": 7.9,
+     "dur": 0.33
+    },
+    {
+     "at": 9.6,
+     "dur": 0.37
+    },
+    {
+     "at": 11.5,
+     "dur": 0.54
+    },
+    {
+     "at": 13.1,
+     "dur": 0.37
+    },
+    {
+     "at": 16.5,
+     "dur": 0.39
+    },
+    {
+     "at": 20.6,
+     "dur": 0.38
+    },
+    {
+     "at": 22.2,
+     "dur": 0.74
+    },
+    {
+     "at": 26.1,
+     "dur": 0.47
+    },
+    {
+     "at": 29.0,
+     "dur": 0.6
+    },
+    {
+     "at": 34.4,
+     "dur": 0.77
+    },
+    {
+     "at": 38.4,
+     "dur": 0.38
+    },
+    {
+     "at": 41.7,
+     "dur": 0.42
+    },
+    {
+     "at": 43.9,
+     "dur": 0.34
+    },
+    {
+     "at": 46.8,
+     "dur": 0.71
+    },
+    {
+     "at": 51.6,
+     "dur": 0.36
+    },
+    {
+     "at": 54.4,
+     "dur": 0.63
+    },
+    {
+     "at": 59.3,
+     "dur": 0.54
+    },
+    {
+     "at": 61.9,
+     "dur": 0.48
+    },
+    {
+     "at": 65.6,
+     "dur": 0.73
+    },
+    {
+     "at": 69.0,
+     "dur": 0.62
+    },
+    {
+     "at": 74.6,
+     "dur": 0.73
+    },
+    {
+     "at": 76.3,
+     "dur": 0.36
+    },
+    {
+     "at": 80.1,
+     "dur": 0.58
+    },
+    {
+     "at": 81.4,
+     "dur": 0.42
+    },
+    {
+     "at": 83.8,
+     "dur": 0.31
+    },
+    {
+     "at": 87.8,
+     "dur": 0.54
+    },
+    {
+     "at": 91.6,
+     "dur": 0.4
+    },
+    {
+     "at": 94.2,
+     "dur": 0.65
+    },
+    {
+     "at": 101.3,
+     "dur": 0.41
+    },
+    {
+     "at": 104.6,
+     "dur": 0.58
+    },
+    {
+     "at": 108.5,
+     "dur": 0.48
+    },
+    {
+     "at": 113.7,
+     "dur": 0.53
+    },
+    {
+     "at": 116.3,
+     "dur": 0.45
+    },
+    {
+     "at": 120.5,
+     "dur": 0.43
+    },
+    {
+     "at": 121.9,
+     "dur": 0.34
+    },
+    {
+     "at": 124.1,
+     "dur": 0.32
+    },
+    {
+     "at": 125.5,
+     "dur": 0.73
+    },
+    {
+     "at": 128.7,
+     "dur": 0.4
+    },
+    {
+     "at": 130.8,
+     "dur": 0.36
+    },
+    {
+     "at": 135.5,
+     "dur": 0.47
+    },
+    {
+     "at": 138.9,
+     "dur": 0.42
+    },
+    {
+     "at": 140.7,
+     "dur": 0.37
+    },
+    {
+     "at": 142.9,
+     "dur": 0.42
+    }
+   ],
+   "phrases": [
+    {
+     "text": "The third stage has been the series of regulations",
+     "start": 0.4,
+     "end": 3.2
+    },
+    {
+     "text": "permitting the banks to continue their functions to take",
+     "start": 3.2,
+     "end": 6.3
+    },
+    {
+     "text": "care of the distribution of food",
+     "start": 6.3,
+     "end": 8.6
+    },
+    {
+     "text": "and household necessities and the payment of payrolls. This bank holiday,",
+     "start": 8.6,
+     "end": 13.1
+    },
+    {
+     "text": "while resulting in many cases in great inconvenience,",
+     "start": 13.5,
+     "end": 16.1
+    },
+    {
+     "text": "is affording us the opportunity to supply the currency",
+     "start": 16.1,
+     "end": 19.4
+    },
+    {
+     "text": "necessary to meet the situation.",
+     "start": 19.4,
+     "end": 21.3
+    },
+    {
+     "text": "Remember that no sound bank is a dollar worse",
+     "start": 21.3,
+     "end": 24.8
+    },
+    {
+     "text": "off than it was when it closed its doors last week.",
+     "start": 24.8,
+     "end": 28.7
+    },
+    {
+     "text": "Neither is any bank which may turn out not",
+     "start": 28.7,
+     "end": 32.1
+    },
+    {
+     "text": "to be in a position for immediate opening.",
+     "start": 32.1,
+     "end": 35.5
+    },
+    {
+     "text": "The new law allows the twelve Federal Reserve Banks",
+     "start": 35.5,
+     "end": 38.4
+    },
+    {
+     "text": "to issue additional currency on good assets",
+     "start": 38.8,
+     "end": 41.0
+    },
+    {
+     "text": "and thus the banks that reopen will be able",
+     "start": 41.0,
+     "end": 44.6
+    },
+    {
+     "text": "to meet every legitimate call.",
+     "start": 44.6,
+     "end": 46.2
+    },
+    {
+     "text": "The new currency is being sent out by the",
+     "start": 46.2,
+     "end": 49.7
+    },
+    {
+     "text": "Bureau of Engraving and Printing in large volume to",
+     "start": 49.7,
+     "end": 52.9
+    },
+    {
+     "text": "every part of the country.",
+     "start": 52.9,
+     "end": 54.4
+    },
+    {
+     "text": "It is sound currency because it is backed by actual,",
+     "start": 55.0,
+     "end": 58.3
+    },
+    {
+     "text": "good assets. Another question you will ask is this:",
+     "start": 58.3,
+     "end": 61.6
+    },
+    {
+     "text": "Why are all the banks not to be reopened",
+     "start": 61.6,
+     "end": 65.0
+    },
+    {
+     "text": "at the same time? The answer is simple",
+     "start": 65.0,
+     "end": 68.3
+    },
+    {
+     "text": "and I know you will understand it:",
+     "start": 68.3,
+     "end": 71.1
+    },
+    {
+     "text": "Your Government does not intend that the history of",
+     "start": 71.1,
+     "end": 74.0
+    },
+    {
+     "text": "the past few years shall be repeated.",
+     "start": 74.0,
+     "end": 77.3
+    },
+    {
+     "text": "We do not want and will not have another",
+     "start": 77.3,
+     "end": 80.1
+    },
+    {
+     "text": "epidemic of bank failures. As a result, we start tomorrow, Monday,",
+     "start": 80.7,
+     "end": 85.0
+    },
+    {
+     "text": "with the opening of banks in the twelve Federal Reserve Bank cities —",
+     "start": 85.0,
+     "end": 89.7
+    },
+    {
+     "text": "those banks, which on first examination by the Treasury,",
+     "start": 89.7,
+     "end": 93.0
+    },
+    {
+     "text": "have already been found to be all right.",
+     "start": 93.0,
+     "end": 96.2
+    },
+    {
+     "text": "That will be followed on Tuesday by the resumption",
+     "start": 96.2,
+     "end": 99.1
+    },
+    {
+     "text": "of all other functions by banks already found to",
+     "start": 99.1,
+     "end": 102.4
+    },
+    {
+     "text": "be sound in cities where there are recognized clearing houses.",
+     "start": 102.4,
+     "end": 106.1
+    },
+    {
+     "text": "That means about two hundred and fifty cities of",
+     "start": 106.1,
+     "end": 109.3
+    },
+    {
+     "text": "the United States. In other words,",
+     "start": 109.3,
+     "end": 111.2
+    },
+    {
+     "text": "we are moving as fast as the mechanics of",
+     "start": 111.2,
+     "end": 114.6
+    },
+    {
+     "text": "the situation will allow us.",
+     "start": 114.6,
+     "end": 116.3
+    },
+    {
+     "text": "On Wednesday and succeeding days,",
+     "start": 116.7,
+     "end": 118.3
+    },
+    {
+     "text": "banks in smaller places all through the country will resume business, of course,",
+     "start": 118.3,
+     "end": 123.2
+    },
+    {
+     "text": "to the Government's physical ability to complete its survey.",
+     "start": 123.2,
+     "end": 126.9
+    },
+    {
+     "text": "It is necessary that the reopening of banks be",
+     "start": 126.9,
+     "end": 130.1
+    },
+    {
+     "text": "extended over a period in order to permit the",
+     "start": 130.1,
+     "end": 133.3
+    },
+    {
+     "text": "banks to make applications for the necessary loans,",
+     "start": 133.3,
+     "end": 136.3
+    },
+    {
+     "text": "to obtain currency needed to meet their requirements,",
+     "start": 136.3,
+     "end": 138.9
+    },
+    {
+     "text": "and to enable the Government to make common sense checkups.",
+     "start": 139.3,
+     "end": 142.9
+    }
+   ]
+  },
+  {
+   "seq": 13,
+   "cue_index": 13,
+   "character": "The Radio",
+   "file": "ep01v3-radio-4.mp3",
+   "ep_start": 610.6,
+   "duration": 153.7,
+   "speech_start": 0.53,
+   "speech_time": 126.8,
+   "pace_wpm": 226,
+   "segments": 41,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.53
+    },
+    {
+     "at": 4.2,
+     "dur": 0.37
+    },
+    {
+     "at": 7.8,
+     "dur": 0.99
+    },
+    {
+     "at": 14.5,
+     "dur": 1.02
+    },
+    {
+     "at": 20.1,
+     "dur": 1.11
+    },
+    {
+     "at": 22.7,
+     "dur": 0.77
+    },
+    {
+     "at": 26.7,
+     "dur": 0.37
+    },
+    {
+     "at": 29.3,
+     "dur": 0.88
+    },
+    {
+     "at": 33.8,
+     "dur": 0.73
+    },
+    {
+     "at": 37.9,
+     "dur": 0.42
+    },
+    {
+     "at": 42.2,
+     "dur": 0.56
+    },
+    {
+     "at": 47.1,
+     "dur": 0.44
+    },
+    {
+     "at": 50.3,
+     "dur": 0.76
+    },
+    {
+     "at": 55.6,
+     "dur": 0.52
+    },
+    {
+     "at": 58.7,
+     "dur": 0.42
+    },
+    {
+     "at": 60.9,
+     "dur": 0.99
+    },
+    {
+     "at": 66.9,
+     "dur": 0.44
+    },
+    {
+     "at": 69.0,
+     "dur": 0.7
+    },
+    {
+     "at": 72.9,
+     "dur": 0.43
+    },
+    {
+     "at": 76.1,
+     "dur": 0.58
+    },
+    {
+     "at": 82.1,
+     "dur": 0.53
+    },
+    {
+     "at": 83.7,
+     "dur": 0.45
+    },
+    {
+     "at": 84.5,
+     "dur": 0.94
+    },
+    {
+     "at": 89.4,
+     "dur": 0.66
+    },
+    {
+     "at": 93.1,
+     "dur": 0.48
+    },
+    {
+     "at": 95.5,
+     "dur": 0.94
+    },
+    {
+     "at": 100.6,
+     "dur": 0.52
+    },
+    {
+     "at": 103.4,
+     "dur": 0.8
+    },
+    {
+     "at": 108.3,
+     "dur": 0.53
+    },
+    {
+     "at": 110.7,
+     "dur": 0.59
+    },
+    {
+     "at": 114.5,
+     "dur": 0.46
+    },
+    {
+     "at": 116.5,
+     "dur": 0.79
+    },
+    {
+     "at": 120.4,
+     "dur": 0.98
+    },
+    {
+     "at": 124.8,
+     "dur": 0.47
+    },
+    {
+     "at": 129.9,
+     "dur": 0.48
+    },
+    {
+     "at": 131.6,
+     "dur": 0.89
+    },
+    {
+     "at": 137.6,
+     "dur": 0.57
+    },
+    {
+     "at": 141.7,
+     "dur": 0.42
+    },
+    {
+     "at": 144.2,
+     "dur": 0.67
+    },
+    {
+     "at": 146.8,
+     "dur": 0.69
+    },
+    {
+     "at": 149.8,
+     "dur": 0.51
+    },
+    {
+     "at": 153.2,
+     "dur": 0.54
+    }
+   ],
+   "phrases": [
+    {
+     "text": "Please let me make it clear to you that",
+     "start": 0.5,
+     "end": 2.9
+    },
+    {
+     "text": "if your bank does not open the first day",
+     "start": 2.9,
+     "end": 5.7
+    },
+    {
+     "text": "you are by no means justified in believing that it will not open.",
+     "start": 5.7,
+     "end": 10.2
+    },
+    {
+     "text": "A bank that opens on one of the subsequent",
+     "start": 10.2,
+     "end": 12.6
+    },
+    {
+     "text": "days is in exactly the same status as the bank that opens tomorrow.",
+     "start": 12.6,
+     "end": 17.2
+    },
+    {
+     "text": "I know that many people are worrying about State",
+     "start": 17.2,
+     "end": 19.6
+    },
+    {
+     "text": "banks that are not members of the Federal Reserve System.",
+     "start": 19.6,
+     "end": 24.0
+    },
+    {
+     "text": "There is no occasion for that worry.",
+     "start": 24.0,
+     "end": 25.9
+    },
+    {
+     "text": "These banks can and will receive assistance from member banks",
+     "start": 25.9,
+     "end": 29.0
+    },
+    {
+     "text": "and from the Reconstruction Finance Corporation. And, of course,",
+     "start": 29.0,
+     "end": 32.3
+    },
+    {
+     "text": "they are under the immediate control of the State banking authorities.",
+     "start": 32.3,
+     "end": 36.0
+    },
+    {
+     "text": "These State banks are following the same course as",
+     "start": 36.0,
+     "end": 38.9
+    },
+    {
+     "text": "the National banks except that they get their licenses",
+     "start": 38.9,
+     "end": 41.3
+    },
+    {
+     "text": "to resume business from the State authorities,",
+     "start": 41.3,
+     "end": 43.8
+    },
+    {
+     "text": "and these authorities have been asked by the Secretary",
+     "start": 43.8,
+     "end": 46.1
+    },
+    {
+     "text": "of the Treasury to permit their good banks to",
+     "start": 46.1,
+     "end": 49.0
+    },
+    {
+     "text": "open up on the same schedule as the national banks.",
+     "start": 49.0,
+     "end": 52.4
+    },
+    {
+     "text": "And so I am confident that the State Banking",
+     "start": 52.4,
+     "end": 54.8
+    },
+    {
+     "text": "Departments will be as careful as the national Government",
+     "start": 54.8,
+     "end": 57.9
+    },
+    {
+     "text": "in the policy relating to the opening of banks",
+     "start": 57.9,
+     "end": 60.7
+    },
+    {
+     "text": "and will follow the same broad theory.",
+     "start": 60.7,
+     "end": 63.5
+    },
+    {
+     "text": "It is possible that when the banks resume a",
+     "start": 63.5,
+     "end": 65.9
+    },
+    {
+     "text": "very few people who have not recovered from their",
+     "start": 65.9,
+     "end": 68.7
+    },
+    {
+     "text": "fear may again begin withdrawals.",
+     "start": 68.7,
+     "end": 70.8
+    },
+    {
+     "text": "Let me make it clear to you that the",
+     "start": 70.8,
+     "end": 73.6
+    },
+    {
+     "text": "banks will take care of all needs, of course,",
+     "start": 73.6,
+     "end": 76.1
+    },
+    {
+     "text": "the hysterical demands of hoarders,",
+     "start": 76.7,
+     "end": 78.1
+    },
+    {
+     "text": "and it is my belief that hoarding during the",
+     "start": 78.1,
+     "end": 80.5
+    },
+    {
+     "text": "past week has become an exceedingly unfashionable pastime in",
+     "start": 80.5,
+     "end": 83.4
+    },
+    {
+     "text": "every part of our nation.",
+     "start": 83.4,
+     "end": 86.2
+    },
+    {
+     "text": "It needs no prophet to tell you that when",
+     "start": 86.2,
+     "end": 88.6
+    },
+    {
+     "text": "the people find that they can get their money —",
+     "start": 88.6,
+     "end": 91.8
+    },
+    {
+     "text": "that they can get it when they want it",
+     "start": 91.8,
+     "end": 94.7
+    },
+    {
+     "text": "for all legitimate purposes —",
+     "start": 94.7,
+     "end": 97.0
+    },
+    {
+     "text": "the phantom of fear will soon be laid.",
+     "start": 97.0,
+     "end": 99.1
+    },
+    {
+     "text": "People will again be glad to have their money",
+     "start": 99.1,
+     "end": 101.9
+    },
+    {
+     "text": "where it will be safely taken care of",
+     "start": 101.9,
+     "end": 104.8
+    },
+    {
+     "text": "and where they can use it conveniently at any time.",
+     "start": 104.8,
+     "end": 107.5
+    },
+    {
+     "text": "I can assure you, my friends,",
+     "start": 107.5,
+     "end": 109.6
+    },
+    {
+     "text": "that it is safer to keep your money in",
+     "start": 109.6,
+     "end": 112.6
+    },
+    {
+     "text": "a reopened bank than it is to keep it under the mattress.",
+     "start": 112.6,
+     "end": 116.2
+    },
+    {
+     "text": "The success of our whole national program depends, of course,",
+     "start": 116.2,
+     "end": 119.6
+    },
+    {
+     "text": "on the cooperation of the public —",
+     "start": 119.6,
+     "end": 122.4
+    },
+    {
+     "text": "on its intelligent support and its use of a reliable system.",
+     "start": 122.4,
+     "end": 125.8
+    },
+    {
+     "text": "Remember that the essential accomplishment of the new legislation",
+     "start": 125.8,
+     "end": 128.1
+    },
+    {
+     "text": "is that it makes it possible for banks more",
+     "start": 128.1,
+     "end": 131.0
+    },
+    {
+     "text": "readily to convert their assets into cash than was the case before.",
+     "start": 131.0,
+     "end": 135.2
+    },
+    {
+     "text": "More liberal provision has been made for banks to",
+     "start": 135.2,
+     "end": 137.6
+    },
+    {
+     "text": "borrow on these assets at the Reserve Banks",
+     "start": 138.2,
+     "end": 140.4
+    },
+    {
+     "text": "and more liberal provision has also been made for",
+     "start": 140.4,
+     "end": 143.3
+    },
+    {
+     "text": "issuing currency on the security of these good assets.",
+     "start": 143.3,
+     "end": 146.5
+    },
+    {
+     "text": "This currency is not fiat currency.",
+     "start": 146.5,
+     "end": 148.8
+    },
+    {
+     "text": "It is issued only on adequate security,",
+     "start": 148.8,
+     "end": 151.1
+    },
+    {
+     "text": "and every good bank has an abundance of such security.",
+     "start": 151.1,
+     "end": 153.2
+    }
+   ]
+  },
+  {
+   "seq": 14,
+   "cue_index": 14,
+   "character": "The Radio",
+   "file": "ep01v3-radio-5.mp3",
+   "ep_start": 764.3,
+   "duration": 166.6,
+   "speech_start": 0.51,
+   "speech_time": 135.0,
+   "pace_wpm": 200,
+   "segments": 51,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.51
+    },
+    {
+     "at": 2.2,
+     "dur": 0.84
+    },
+    {
+     "at": 7.4,
+     "dur": 0.73
+    },
+    {
+     "at": 13.5,
+     "dur": 0.7
+    },
+    {
+     "at": 20.4,
+     "dur": 0.92
+    },
+    {
+     "at": 24.5,
+     "dur": 0.45
+    },
+    {
+     "at": 26.5,
+     "dur": 0.38
+    },
+    {
+     "at": 28.4,
+     "dur": 0.43
+    },
+    {
+     "at": 30.6,
+     "dur": 0.65
+    },
+    {
+     "at": 33.2,
+     "dur": 0.73
+    },
+    {
+     "at": 40.3,
+     "dur": 0.8
+    },
+    {
+     "at": 45.7,
+     "dur": 0.7
+    },
+    {
+     "at": 50.2,
+     "dur": 0.59
+    },
+    {
+     "at": 54.8,
+     "dur": 0.63
+    },
+    {
+     "at": 57.9,
+     "dur": 0.62
+    },
+    {
+     "at": 62.3,
+     "dur": 0.73
+    },
+    {
+     "at": 66.2,
+     "dur": 0.36
+    },
+    {
+     "at": 67.5,
+     "dur": 0.77
+    },
+    {
+     "at": 71.9,
+     "dur": 0.43
+    },
+    {
+     "at": 74.1,
+     "dur": 0.7
+    },
+    {
+     "at": 76.7,
+     "dur": 0.63
+    },
+    {
+     "at": 80.3,
+     "dur": 0.42
+    },
+    {
+     "at": 83.2,
+     "dur": 0.61
+    },
+    {
+     "at": 86.8,
+     "dur": 0.72
+    },
+    {
+     "at": 91.4,
+     "dur": 0.75
+    },
+    {
+     "at": 94.6,
+     "dur": 0.63
+    },
+    {
+     "at": 95.7,
+     "dur": 0.46
+    },
+    {
+     "at": 97.8,
+     "dur": 0.66
+    },
+    {
+     "at": 101.9,
+     "dur": 0.5
+    },
+    {
+     "at": 105.9,
+     "dur": 0.85
+    },
+    {
+     "at": 111.1,
+     "dur": 0.82
+    },
+    {
+     "at": 114.6,
+     "dur": 0.41
+    },
+    {
+     "at": 118.9,
+     "dur": 0.43
+    },
+    {
+     "at": 120.9,
+     "dur": 0.56
+    },
+    {
+     "at": 124.9,
+     "dur": 0.82
+    },
+    {
+     "at": 126.3,
+     "dur": 0.46
+    },
+    {
+     "at": 130.2,
+     "dur": 0.42
+    },
+    {
+     "at": 132.0,
+     "dur": 0.57
+    },
+    {
+     "at": 133.8,
+     "dur": 0.63
+    },
+    {
+     "at": 137.0,
+     "dur": 0.6
+    },
+    {
+     "at": 139.0,
+     "dur": 0.4
+    },
+    {
+     "at": 142.5,
+     "dur": 0.79
+    },
+    {
+     "at": 144.6,
+     "dur": 0.7
+    },
+    {
+     "at": 148.5,
+     "dur": 0.62
+    },
+    {
+     "at": 151.0,
+     "dur": 0.66
+    },
+    {
+     "at": 155.1,
+     "dur": 0.68
+    },
+    {
+     "at": 158.3,
+     "dur": 0.8
+    },
+    {
+     "at": 160.1,
+     "dur": 0.37
+    },
+    {
+     "at": 161.1,
+     "dur": 0.43
+    },
+    {
+     "at": 163.6,
+     "dur": 0.68
+    },
+    {
+     "at": 164.9,
+     "dur": 0.4
+    },
+    {
+     "at": 166.2,
+     "dur": 0.47
+    }
+   ],
+   "phrases": [
+    {
+     "text": "One more point before I close. There will be, of course,",
+     "start": 0.5,
+     "end": 4.5
+    },
+    {
+     "text": "some banks unable to reopen without being reorganized.",
+     "start": 4.5,
+     "end": 6.8
+    },
+    {
+     "text": "The new law allows the Government to assist in",
+     "start": 6.8,
+     "end": 10.2
+    },
+    {
+     "text": "making these reorganizations quickly and effectively",
+     "start": 10.2,
+     "end": 12.0
+    },
+    {
+     "text": "and even allows the Government to subscribe to at",
+     "start": 12.0,
+     "end": 15.4
+    },
+    {
+     "text": "least a part of any new capital that may be required.",
+     "start": 15.4,
+     "end": 18.6
+    },
+    {
+     "text": "I hope you can see, my friends,",
+     "start": 18.6,
+     "end": 21.6
+    },
+    {
+     "text": "from this essential recital of what your Government is",
+     "start": 21.6,
+     "end": 24.2
+    },
+    {
+     "text": "doing that there is nothing complex,",
+     "start": 24.2,
+     "end": 26.5
+    },
+    {
+     "text": "nothing radical in the process.",
+     "start": 26.9,
+     "end": 28.4
+    },
+    {
+     "text": "We have had a bad banking situation.",
+     "start": 28.9,
+     "end": 31.6
+    },
+    {
+     "text": "Some of our bankers had shown themselves either incompetent",
+     "start": 31.6,
+     "end": 35.2
+    },
+    {
+     "text": "or dishonest in their handling of the people's funds.",
+     "start": 35.2,
+     "end": 37.9
+    },
+    {
+     "text": "They had used the money entrusted to them in speculations",
+     "start": 37.9,
+     "end": 41.7
+    },
+    {
+     "text": "and unwise loans. This was, of course,",
+     "start": 41.7,
+     "end": 43.9
+    },
+    {
+     "text": "not true in the vast majority of our banks,",
+     "start": 43.9,
+     "end": 47.3
+    },
+    {
+     "text": "but it was true in enough of them to",
+     "start": 47.3,
+     "end": 49.9
+    },
+    {
+     "text": "shock the people of the United States,",
+     "start": 49.9,
+     "end": 52.5
+    },
+    {
+     "text": "for a time,",
+     "start": 52.5,
+     "end": 53.4
+    },
+    {
+     "text": "into a sense of insecurity and to put them",
+     "start": 53.4,
+     "end": 56.7
+    },
+    {
+     "text": "into a frame of mind where they did not differentiate,",
+     "start": 56.7,
+     "end": 60.4
+    },
+    {
+     "text": "but seemed to assume that the acts of a",
+     "start": 60.4,
+     "end": 63.9
+    },
+    {
+     "text": "comparative few had tainted them all.",
+     "start": 63.9,
+     "end": 65.6
+    },
+    {
+     "text": "And so it became the Government's job to straighten",
+     "start": 65.6,
+     "end": 69.5
+    },
+    {
+     "text": "out this situation and do it as quickly as possible.",
+     "start": 69.5,
+     "end": 72.9
+    },
+    {
+     "text": "And that job is being performed.",
+     "start": 72.9,
+     "end": 75.4
+    },
+    {
+     "text": "I do not promise you that every bank will be reopened",
+     "start": 75.4,
+     "end": 79.4
+    },
+    {
+     "text": "or that individual losses will not be suffered,",
+     "start": 79.4,
+     "end": 82.3
+    },
+    {
+     "text": "but there will be no losses that possibly could be avoided;",
+     "start": 82.3,
+     "end": 86.2
+    },
+    {
+     "text": "and there would have been more",
+     "start": 86.2,
+     "end": 88.7
+    },
+    {
+     "text": "and greater losses had we continued to drift.",
+     "start": 88.7,
+     "end": 91.1
+    },
+    {
+     "text": "I can even promise you salvation for some, at least,",
+     "start": 91.1,
+     "end": 95.5
+    },
+    {
+     "text": "of the sorely pressed banks.",
+     "start": 95.5,
+     "end": 97.5
+    },
+    {
+     "text": "We shall be engaged not merely in reopening sound banks",
+     "start": 97.5,
+     "end": 101.2
+    },
+    {
+     "text": "but in the creation of more sound banks through reorganization.",
+     "start": 101.2,
+     "end": 104.7
+    },
+    {
+     "text": "It has been wonderful to me to catch the",
+     "start": 104.7,
+     "end": 108.3
+    },
+    {
+     "text": "note of confidence from all over the country.",
+     "start": 108.3,
+     "end": 110.7
+    },
+    {
+     "text": "I can never be sufficiently grateful to the people",
+     "start": 110.7,
+     "end": 114.3
+    },
+    {
+     "text": "for the loyal support that they have given me",
+     "start": 114.3,
+     "end": 117.4
+    },
+    {
+     "text": "in their acceptance of the judgment that has dictated our course,",
+     "start": 117.4,
+     "end": 121.7
+    },
+    {
+     "text": "even though all our processes may not have seemed",
+     "start": 121.7,
+     "end": 124.5
+    },
+    {
+     "text": "clear to them. After all,",
+     "start": 124.5,
+     "end": 127.4
+    },
+    {
+     "text": "there is an element in the readjustment of our",
+     "start": 127.4,
+     "end": 130.2
+    },
+    {
+     "text": "financial system more important than currency,",
+     "start": 130.6,
+     "end": 132.9
+    },
+    {
+     "text": "more important than gold,",
+     "start": 132.9,
+     "end": 134.7
+    },
+    {
+     "text": "and that is the confidence of the people themselves.",
+     "start": 134.7,
+     "end": 138.0
+    },
+    {
+     "text": "Confidence and courage are the essentials of success in carrying out our plan.",
+     "start": 138.0,
+     "end": 142.5
+    },
+    {
+     "text": "You people must have faith;",
+     "start": 143.2,
+     "end": 144.6
+    },
+    {
+     "text": "you must not be stampeded by rumors or guesses.",
+     "start": 145.3,
+     "end": 148.1
+    },
+    {
+     "text": "Let us unite in banishing fear.",
+     "start": 148.1,
+     "end": 150.7
+    },
+    {
+     "text": "We have provided the machinery to restore our financial system,",
+     "start": 150.7,
+     "end": 154.5
+    },
+    {
+     "text": "and it is up to you to support and make it work.",
+     "start": 154.5,
+     "end": 159.8
+    },
+    {
+     "text": "It is your problem, my friends,",
+     "start": 159.8,
+     "end": 162.5
+    },
+    {
+     "text": "your problem no less than it is mine.",
+     "start": 162.5,
+     "end": 165.9
+    },
+    {
+     "text": "Together we cannot fail.",
+     "start": 165.9,
+     "end": 166.2
+    }
+   ]
+  },
+  {
+   "seq": 15,
+   "cue_index": 7,
+   "character": "Grand",
+   "file": "ep01v3-grand-afterglow-1.mp3",
+   "ep_start": 931.0,
+   "duration": 32.9,
+   "speech_start": 0.46,
+   "speech_time": 21.9,
+   "pace_wpm": 209,
+   "segments": 13,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.46
+    },
+    {
+     "at": 1.9,
+     "dur": 0.78
+    },
+    {
+     "at": 3.3,
+     "dur": 0.74
+    },
+    {
+     "at": 4.6,
+     "dur": 0.73
+    },
+    {
+     "at": 8.1,
+     "dur": 1.0
+    },
+    {
+     "at": 10.9,
+     "dur": 0.67
+    },
+    {
+     "at": 13.8,
+     "dur": 0.82
+    },
+    {
+     "at": 15.7,
+     "dur": 1.04
+    },
+    {
+     "at": 19.7,
+     "dur": 0.94
+    },
+    {
+     "at": 22.5,
+     "dur": 1.08
+    },
+    {
+     "at": 26.1,
+     "dur": 0.88
+    },
+    {
+     "at": 28.5,
+     "dur": 0.73
+    },
+    {
+     "at": 30.1,
+     "dur": 0.48
+    },
+    {
+     "at": 32.2,
+     "dur": 0.7
+    }
+   ],
+   "phrases": [
+    {
+     "text": "Well. Did you hear how he talked? Slow. Plain.",
+     "start": 0.5,
+     "end": 4.6
+    },
+    {
+     "text": "Not one fancy word he didn't explain.",
+     "start": 5.3,
+     "end": 7.3
+    },
+    {
+     "text": "He told the people the truth —",
+     "start": 7.3,
+     "end": 10.3
+    },
+    {
+     "text": "that some banks would not open again,",
+     "start": 10.3,
+     "end": 12.9
+    },
+    {
+     "text": "and he didn't hide it —",
+     "start": 12.9,
+     "end": 15.4
+    },
+    {
+     "text": "and because he told the truth about the hard part,",
+     "start": 15.4,
+     "end": 19.4
+    },
+    {
+     "text": "they believed him about the rest.",
+     "start": 19.4,
+     "end": 22.2
+    },
+    {
+     "text": "And the very next morning,",
+     "start": 22.2,
+     "end": 24.7
+    },
+    {
+     "text": "do you know what happened? People lined up again —",
+     "start": 24.7,
+     "end": 28.5
+    },
+    {
+     "text": "but this time, to put their money back in.",
+     "start": 29.2,
+     "end": 32.2
+    }
+   ]
+  },
+  {
+   "seq": 16,
+   "cue_index": 8,
+   "character": "Grand",
+   "file": "ep01v3-grand-afterglow-2.mp3",
+   "ep_start": 963.9,
+   "duration": 30.8,
+   "speech_start": 0.8,
+   "speech_time": 19.2,
+   "pace_wpm": 175,
+   "segments": 11,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.8
+    },
+    {
+     "at": 3.9,
+     "dur": 1.08
+    },
+    {
+     "at": 7.1,
+     "dur": 1.2
+    },
+    {
+     "at": 9.4,
+     "dur": 0.55
+    },
+    {
+     "at": 12.0,
+     "dur": 0.93
+    },
+    {
+     "at": 15.0,
+     "dur": 1.44
+    },
+    {
+     "at": 17.6,
+     "dur": 0.96
+    },
+    {
+     "at": 19.6,
+     "dur": 0.9
+    },
+    {
+     "at": 22.6,
+     "dur": 0.87
+    },
+    {
+     "at": 24.1,
+     "dur": 1.03
+    },
+    {
+     "at": 27.5,
+     "dur": 0.88
+    },
+    {
+     "at": 29.9,
+     "dur": 0.87
+    }
+   ],
+   "phrases": [
+    {
+     "text": "That's the thing I want you to carry from this night:",
+     "start": 0.8,
+     "end": 5.7
+    },
+    {
+     "text": "fear grows in the dark,",
+     "start": 5.7,
+     "end": 8.6
+    },
+    {
+     "text": "and it shrinks when somebody turns on a light",
+     "start": 8.6,
+     "end": 13.3
+    },
+    {
+     "text": "and tells the truth plainly.",
+     "start": 13.3,
+     "end": 15.0
+    },
+    {
+     "text": "When you're scared — of anything —",
+     "start": 16.4,
+     "end": 19.6
+    },
+    {
+     "text": "ask for the true story, all of it,",
+     "start": 20.5,
+     "end": 24.1
+    },
+    {
+     "text": "and listen the whole way through, the way you just did.",
+     "start": 25.1,
+     "end": 29.9
+    }
+   ]
+  },
+  {
+   "seq": 17,
+   "cue_index": 16,
+   "character": "Nadia",
+   "file": "ep01v3-nadia-afterglow.mp3",
+   "ep_start": 994.7,
+   "duration": 4.5,
+   "speech_start": 0.0,
+   "speech_time": 3.6,
+   "pace_wpm": 181,
+   "segments": 2,
+   "pauses": [
+    {
+     "at": 2.8,
+     "dur": 0.37
+    },
+    {
+     "at": 4.0,
+     "dur": 0.48
+    }
+   ],
+   "phrases": [
+    {
+     "text": "He said, \"Together we cannot fail.\" I wrote that one down.",
+     "start": 0.0,
+     "end": 4.0
+    }
+   ]
+  },
+  {
+   "seq": 18,
+   "cue_index": 18,
+   "character": "June",
+   "file": "ep01v3-june-afterglow.mp3",
+   "ep_start": 999.1,
+   "duration": 2.3,
+   "speech_start": 0.31,
+   "speech_time": 1.5,
+   "pace_wpm": 324,
+   "segments": 1,
+   "pauses": [
+    {
+     "at": 0.0,
+     "dur": 0.31
+    },
+    {
+     "at": 1.8,
+     "dur": 0.49
+    }
+   ],
+   "phrases": [
+    {
+     "text": "I wasn't scared.",
+     "start": 0.3,
+     "end": 0.9
+    },
+    {
+     "text": "He sounded like a grandpa.",
+     "start": 0.9,
+     "end": 1.8
+    }
+   ]
+  },
+  {
+   "seq": 19,
+   "cue_index": 9,
+   "character": "Grand",
+   "file": "ep01v3-grand-goodnight.mp3",
+   "ep_start": 1001.4,
+   "duration": 26.0,
+   "speech_start": 0.0,
+   "speech_time": 13.8,
+   "pace_wpm": 196,
+   "segments": 10,
+   "pauses": [
+    {
+     "at": 1.3,
+     "dur": 1.28
+    },
+    {
+     "at": 3.6,
+     "dur": 0.94
+    },
+    {
+     "at": 6.6,
+     "dur": 1.27
+    },
+    {
+     "at": 9.8,
+     "dur": 0.32
+    },
+    {
+     "at": 10.1,
+     "dur": 1.29
+    },
+    {
+     "at": 13.4,
+     "dur": 1.11
+    },
+    {
+     "at": 16.0,
+     "dur": 1.72
+    },
+    {
+     "at": 19.0,
+     "dur": 1.66
+    },
+    {
+     "at": 21.6,
+     "dur": 0.93
+    },
+    {
+     "at": 23.4,
+     "dur": 1.12
+    },
+    {
+     "at": 25.4,
+     "dur": 0.63
+    }
+   ],
+   "phrases": [
+    {
+     "text": "He did, didn't he? All right, my loves.",
+     "start": 0.0,
+     "end": 4.9
+    },
+    {
+     "text": "One question to take to bed with you:",
+     "start": 4.9,
+     "end": 8.5
+    },
+    {
+     "text": "when somebody you love is frightened,",
+     "start": 8.5,
+     "end": 11.9
+    },
+    {
+     "text": "what true thing could you say to help them",
+     "start": 11.9,
+     "end": 15.7
+    },
+    {
+     "text": "feel brave? Think on it in your sleep. Goodnight,",
+     "start": 15.7,
+     "end": 22.8
+    },
+    {
+     "text": "Nadia. Goodnight, Theo. Goodnight, June.",
+     "start": 22.8,
+     "end": 25.4
+    }
+   ]
+  }
+ ],
+ "method": "Pauses/segments measured from rendered audio (ffmpeg silencedetect -35dB, min 0.30s). Phrase times: script phrases aligned across measured speech segments at each cue's own pace."
+}

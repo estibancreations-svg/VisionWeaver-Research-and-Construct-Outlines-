@@ -1,0 +1,47 @@
+{
+  "approved_for_publish": true,
+  "assembly": {
+    "mode": "still"
+  },
+  "audio": {
+    "provided": [
+      "~/workspace/your_files/fireside-audio/ep01-on-the-bank-crisis-fdr-s-first-fireside--solemn-pillar.mp3"
+    ]
+  },
+  "characters": [
+    {
+      "approved": true,
+      "look_ref": "~/workspace/your_files/fireside-images/ep01.png",
+      "name": "The Radio",
+      "voice": "solemn-pillar"
+    }
+  ],
+  "metadata": {
+    "description": "Eight days into his presidency, with the nation's banks closed for a week, Roosevelt sat before a microphone on a Sunday evening and explained the banking system in plain language. Some sixty million people listened. The first fireside chat.\n\nFireside \u2014 the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio",
+    "tags": [
+      "FDR",
+      "fireside chat",
+      "Great Depression",
+      "1933",
+      "historic speeches",
+      "American history"
+    ],
+    "title": "On the Bank Crisis \u2014 FDR's First Fireside Chat (1933) | Fireside"
+  },
+  "name": "fireside-ep01-looptest",
+  "notes": "Loop v1 test run: one story through all stages untouched. Single 5s animation of the ep01 cover married to the full ep01 audio.",
+  "output_dir": "~/workspace/your_files/fireside-video",
+  "output_name": "ep01-looptest.mp4",
+  "publish_privacy": "private",
+  "shots": [
+    {
+      "duration": 5,
+      "id": "ep01-anim",
+      "image": "~/workspace/your_files/fireside-images/ep01.png",
+      "prompt": "Warm vintage radio on a wooden table by a fireplace, gentle flickering firelight, subtle cinematic push-in, dust motes in warm light, cozy and still",
+      "ratio": "1280:720"
+    }
+  ],
+  "approved_at": "2026-10-19T20:32:29.272Z",
+  "sync_note": "2026-10-19T15:51 loop runner sync: Steve approved for publish on the Hold Queue card; approval stamped into job file. Publish gate now clear for next run."
+}

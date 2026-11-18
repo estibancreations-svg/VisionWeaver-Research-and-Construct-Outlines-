@@ -1,0 +1,152 @@
+# Supabase CLI settings for the Standalone CRM.
+# `supabase config push` copies the [auth] settings below to the linked hosted project,
+# so the Site URL and redirect URLs no longer need to be typed in the dashboard.
+# APP_URL is read from your shell when you run the setup script (e.g. https://crm.example.com).
+project_id = "standalone-crm"
+
+[api]
+enabled = true
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+major_version = 17
+
+[db.seed]
+# Mock data is loaded only by scripts/setup-test-run.sh, never automatically.
+enabled = false
+
+[auth]
+enabled = true
+site_url = "env(APP_URL)"
+additional_redirect_urls = [
+  "env(APP_URL)/auth/confirm", "env(APP_URL)/auth/callback",
+  "http://localhost:3000/auth/confirm", "http://localhost:3000/auth/callback",
+]
+jwt_expiry = 3600
+enable_refresh_token_rotation = true
+refresh_token_reuse_interval = 10
+# Logins are created only by admins (Edge Function manage-logins) or by the setup scripts.
+enable_signup = false
+enable_anonymous_sign_ins = false
+minimum_password_length = 10
+password_requirements = "letters_digits"
+# Lets a signed-in person connect Google, Apple, Microsoft or GitHub to their existing login.
+enable_manual_linking = true
+
+[auth.rate_limit]
+email_sent = 2
+sign_in_sign_ups = 30
+token_verifications = 30
+
+[auth.mfa]
+max_enrolled_factors = 10
+
+# Two-step codes from an authenticator app (free).
+[auth.mfa.totp]
+enroll_enabled = true
+verify_enabled = true
+
+[auth.sms]
+# Phone sign-in. Turn on after choosing a texting provider (paid per message) and adding its keys below.
+enable_signup = false
+enable_confirmations = true
+template = "Your CRM sign-in code is {{ .Code }}"
+max_frequency = "60s"
+
+[auth.sms.twilio]
+enabled = false
+account_sid = "env(TWILIO_ACCOUNT_SID)"
+message_service_sid = "env(TWILIO_MESSAGE_SERVICE_SID)"
+auth_token = "[secret value withheld]"
+
+# Sign-in providers. Each one stays off until its keys are set in your shell when you run
+# `supabase config push`, then you flip enabled = true. Keys never go in Git or in Vercel.
+[auth.external.google]
+enabled = false
+client_id = "env(GOOGLE_CLIENT_ID)"
+secret = "[secret value withheld]"
+skip_nonce_check = false
+
+[auth.external.apple]
+enabled = false
+client_id = "env(APPLE_SERVICES_ID)"
+secret = "[secret value withheld]"
+
+[auth.external.azure]
+enabled = false
+client_id = "env(AZURE_CLIENT_ID)"
+secret = "[secret value withheld]"
+url = "https://login.microsoftonline.com/common"
+
+[auth.external.github]
+enabled = false
+client_id = "env(GITHUB_CLIENT_ID)"
+secret = "[secret value withheld]"
+
+[auth.email]
+enable_signup = false
+double_confirm_changes = true
+enable_confirmations = true
+secure_password_change = true
+max_frequency = "1m0s"
+
+# Sign-in links and reset links open /auth/confirm with a one-time token, so they work on any
+# device (not only the browser that asked for them).
+[auth.email.template.magic_link]
+subject = "Your CRM sign-in link"
+content_path = "./supabase/templates/magic_link.html"
+
+[auth.email.template.recovery]
+subject = "Reset your CRM password"
+content_path = "./supabase/templates/recovery.html"
+
+[auth.email.template.email_change]
+subject = "Confirm your new CRM email"
+content_path = "./supabase/templates/email_change.html"
+
+# Custom email sender (needed before sign-in links reach anyone outside your Supabase team).
+# Fill these in your shell, set enabled = true, then `supabase config push` — or upload an
+# "smtp" entry in the connections file and press "Switch on" in the app.
+[auth.email.smtp]
+enabled = false
+host = "env(SMTP_HOST)"
+port = 587
+user = "env(SMTP_USER)"
+pass = "env(SMTP_PASS)"
+admin_email = "env(SMTP_SENDER_EMAIL)"
+sender_name = "CRM"
+
+[functions.manage-logins]
+enabled = true
+# The function verifies the caller's token itself (works with asymmetric signing keys).
+verify_jwt = false
+
+[functions.account]
+enabled = true
+verify_jwt = false
+
+[functions.handoff]
+enabled = true
+verify_jwt = false
+
+[functions.connections]
+enabled = true
+verify_jwt = false
+
+[functions.setup-owner]
+enabled = true
+# Public on purpose: only emails the installer-chosen OWNER_EMAIL (or needs the one-time SETUP_CODE),
+# and locks forever once an agency exists.
+verify_jwt = false
+
+[functions.thelma-gateway]
+enabled = true
+# Signed requests only (HMAC with THELMA_GATEWAY_SECRET); writes pending requests, never acts.
+verify_jwt = false
+
+[functions.payments]
+enabled = true
+# Checks the signed-in token itself, and Stripe's signature for webhooks.
+verify_jwt = false

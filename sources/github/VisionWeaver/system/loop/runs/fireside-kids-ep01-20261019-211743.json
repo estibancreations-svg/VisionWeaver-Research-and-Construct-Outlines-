@@ -1,0 +1,68 @@
+{
+  "job": "fireside-kids-ep01",
+  "job_file": "jobs/fireside-kids-ep01.json",
+  "started_utc": "2026-10-19T21:17:43Z",
+  "dry_run": false,
+  "stages": {
+    "cast": {
+      "status": "ok",
+      "detail": {
+        "characters": [
+          {
+            "name": "Nannie",
+            "voice_id": "avocado_v2:vdc_2561",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/grandparent-render-1.webp"
+          },
+          {
+            "name": "Papi",
+            "voice_id": "avocado_v2:briggs",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/grandparent-render-2.webp"
+          },
+          {
+            "name": "Wai Po",
+            "voice_id": "avocado_v2:TruthTeller",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/grandparent-render-3.webp"
+          },
+          {
+            "name": "Grand",
+            "voice_id": "avocado_v2:myrtle",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/grandparent-render-4.webp"
+          }
+        ]
+      }
+    },
+    "voice": {
+      "status": "ok",
+      "detail": {
+        "files": [
+          "/home/hatch/workspace/your_files/fireside-audio/kids-ep01-narration.mp3"
+        ]
+      }
+    },
+    "animate": {
+      "status": "ok",
+      "detail": {
+        "shots": [
+          {
+            "id": "kids-ep01-teller",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/kids-ep01-teller.mp4",
+            "reused": true
+          }
+        ],
+        "credits": 0
+      }
+    },
+    "assemble": {
+      "status": "ok",
+      "detail": {
+        "master": "/home/hatch/workspace/your_files/fireside-video/kids-ep01.mp4",
+        "reused": true
+      }
+    },
+    "publish": {
+      "status": "gate-stop",
+      "detail": "approved_for_publish not set; artifacts staged, nothing published"
+    }
+  },
+  "status": "staged"
+}

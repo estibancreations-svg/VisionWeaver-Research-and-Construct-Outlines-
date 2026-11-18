@@ -1,0 +1,112 @@
+{
+  "job": "fireside-ep01-v3",
+  "job_file": "jobs/fireside-ep01-v3.json",
+  "started_utc": "2026-10-23T17:49:43Z",
+  "dry_run": false,
+  "stages": {
+    "cast": {
+      "status": "ok",
+      "detail": {
+        "characters": [
+          {
+            "name": "Grand",
+            "voice_id": "avocado_v2:myrtle",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3-realistic/grand-proof-01.png"
+          },
+          {
+            "name": "Nadia",
+            "voice_id": "avocado_v2:vd2_r8_rep1k_0033_v068_28k_g5k",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3-realistic/nadia-ref.jpg"
+          },
+          {
+            "name": "Theo",
+            "voice_id": "near-silent",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3-realistic/theo-ref.jpg"
+          },
+          {
+            "name": "June",
+            "voice_id": "avocado_v2:vdc_NOID21",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3-realistic/june-ref.jpg"
+          },
+          {
+            "name": "The Radio",
+            "voice_id": "avocado_v2:vdc_5723",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/ep01.png"
+          },
+          {
+            "name": "The Room",
+            "voice_id": "near-silent",
+            "look_ref": "~/workspace/goals/fireside-series-production/files/fireside-images/v3-realistic/room-set-realistic.jpg"
+          }
+        ]
+      }
+    },
+    "voice": {
+      "status": "ok",
+      "detail": {
+        "files": [
+          "/home/hatch/workspace/your_files/fireside-audio/ep01-on-the-bank-crisis-fdr-s-first-fireside--solemn-pillar.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-gather.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-1.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-2.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-3.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-explain-4.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-answer-nadia.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-answer-june.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-afterglow-1.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-afterglow-2.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-grand-goodnight.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-1.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-2.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-3.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-4.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-radio-5.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-nadia-question.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-nadia-afterglow.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-june-question.mp3",
+          "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-june-afterglow.mp3"
+        ]
+      }
+    },
+    "animate": {
+      "status": "ok",
+      "detail": {
+        "shots": [
+          {
+            "id": "v3r-ep01-gather",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/v3r-ep01-gather.mp4",
+            "task_id": "bef3924d-09ae-4ad3-99cf-be307c83d225",
+            "credits": 120
+          },
+          {
+            "id": "v3r-ep01-explain",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/v3r-ep01-explain.mp4",
+            "task_id": "3e6e0b9d-7376-43b6-b15f-0e212ac00f00",
+            "credits": 120
+          },
+          {
+            "id": "v3r-ep01-listen-wide",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/v3r-ep01-listen-wide.mp4",
+            "task_id": "bb398357-2fb3-47a9-ace8-3d60f6b32066",
+            "credits": 120
+          },
+          {
+            "id": "v3r-ep01-listen-close",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/v3r-ep01-listen-close.mp4",
+            "task_id": "e5a39fd7-f25e-4a42-9415-18b6300cddc2",
+            "credits": 120
+          },
+          {
+            "id": "v3r-ep01-afterglow",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/v3r-ep01-afterglow.mp4",
+            "task_id": "14a740ee-55c4-4267-9146-afb63552605c",
+            "credits": 120
+          }
+        ],
+        "credits": 600
+      }
+    }
+  },
+  "status": "failed",
+  "error": "RuntimeError: python3 /home/hatch/workspace/goals/crossroads-of-identity-episode-1-production/files/assembler/assemble.py /home/hatch/workspace/visionweaver/loop/jobs/fireside-ep01-v3r-edl.json -o failed: ERROR: missing audio ~/workspace/visionweaver/loop/jobs/v3r-audio/ep01v3-grand-gather.mp3\n"
+}

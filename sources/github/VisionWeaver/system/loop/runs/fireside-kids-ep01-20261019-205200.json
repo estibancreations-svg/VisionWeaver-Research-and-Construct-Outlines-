@@ -1,0 +1,9 @@
+{
+  "job": "fireside-kids-ep01",
+  "job_file": "jobs/fireside-kids-ep01.json",
+  "started_utc": "2026-10-19T20:52:00Z",
+  "dry_run": false,
+  "stages": {},
+  "status": "gate-stop",
+  "gate": "gate characters-approved: not approved -> Nannie, Papi, Wai Po, Grand"
+}

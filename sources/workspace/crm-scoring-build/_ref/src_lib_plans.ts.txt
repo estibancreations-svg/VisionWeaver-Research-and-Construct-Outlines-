@@ -1,0 +1,180 @@
+/**
+ * Plans, features, channels and app connectors.
+ * The database (migration 08: public.plans, private.ws_has_feature, private.channel_feature,
+ * private.app_feature) is the real guard; this file only labels things for the screens.
+ * Prices are SUGGESTED — about 30% under GoHighLevel's list prices — until the Owner sets them.
+ */
+
+export const FEATURES = [
+  "crm",
+  "email",
+  "internal_chat",
+  "calendar",
+  "templates",
+  "courses",
+  "community",
+  "social_planner",
+  "storage",
+  "websites",
+  "ads",
+  "social_inbox",
+  "whatsapp",
+  "reviews",
+  "payments",
+  "sms",
+  "zoom",
+  "facetime",
+  "thelma_agents",
+  "api",
+] as const;
+export type Feature = (typeof FEATURES)[number];
+
+export const FEATURE_LABEL: Record<Feature, string> = {
+  crm: "Contacts, companies, deals and tasks",
+  email: "Professional email (3 addresses per sub-account)",
+  internal_chat: "Internal team chat",
+  calendar: "Calendar and appointments",
+  templates: "Industry kits and templates",
+  courses: "Courses and training",
+  community: "Community board",
+  social_planner: "Social planner (post to connected pages)",
+  storage: "Google Drive, Dropbox, OneDrive and Box",
+  websites: "Websites",
+  ads: "Advertising campaigns and lead tracking",
+  social_inbox: "Messenger, Instagram and LinkedIn messages",
+  whatsapp: "WhatsApp",
+  reviews: "Review requests",
+  payments: "Payments: card, Apple Pay, Google Pay, Link, bank",
+  sms: "Text messages (SMS)",
+  zoom: "Zoom meetings",
+  facetime: "FaceTime links",
+  thelma_agents: "T.H.E.L.M.A. assistants and agents",
+  api: "API access",
+};
+
+export type PlanId = "owner" | "essentials" | "growth" | "pro";
+export type Plan = {
+  id: PlanId;
+  name: string;
+  monthly: number;
+  annual: number;
+  maxSubAccounts: number;
+  websitesPerSub: number;
+  websitesPerAccount: number;
+  features: readonly Feature[];
+  billable: boolean;
+  /** GoHighLevel list price this tier is compared with (USD per month), if any. */
+  compareWith?: { name: string; monthly: number };
+};
+
+const BASE: Feature[] = ["crm", "email", "internal_chat", "calendar", "templates", "courses", "community", "social_planner", "storage", "websites"];
+const GROWTH: Feature[] = [...BASE, "ads", "social_inbox", "whatsapp", "reviews", "payments"];
+const PRO: Feature[] = [...GROWTH, "sms", "zoom", "facetime", "thelma_agents", "api"];
+
+/** Must match the rows inserted into public.plans (migration 08). */
+export const PLANS: Plan[] = [
+  { id: "owner", name: "Owner copy", monthly: 0, annual: 0, maxSubAccounts: 75, websitesPerSub: 1, websitesPerAccount: 75, features: PRO, billable: false },
+  { id: "essentials", name: "Essentials", monthly: 67, annual: 670, maxSubAccounts: 3, websitesPerSub: 1, websitesPerAccount: 3, features: BASE, billable: true, compareWith: { name: "GoHighLevel Starter", monthly: 97 } },
+  { id: "growth", name: "Growth", monthly: 207, annual: 2070, maxSubAccounts: 75, websitesPerSub: 1, websitesPerAccount: 6, features: GROWTH, billable: true, compareWith: { name: "GoHighLevel Unlimited", monthly: 297 } },
+  { id: "pro", name: "Pro", monthly: 347, annual: 3470, maxSubAccounts: 75, websitesPerSub: 2, websitesPerAccount: 12, features: PRO, billable: true, compareWith: { name: "GoHighLevel Agency Pro", monthly: 497 } },
+];
+
+export const ADDONS = [
+  { id: "extra_mailbox", name: "Extra email address", monthly: 4, unit: "per address", note: "Beyond the 3 included per sub-account (Owner, Admin, Accounting)." },
+  { id: "extra_website", name: "Extra website", monthly: 7, unit: "per website", note: "Beyond the plan's website allowance." },
+  { id: "whatsapp", name: "WhatsApp line", monthly: 7, unit: "per sub-account", note: "Plus WhatsApp/Meta message fees at cost.", compare: 10 },
+  { id: "client_portal", name: "Branded client portal", monthly: 34, unit: "per sub-account", note: "Customer logins for invoices, bookings and courses.", compare: 49 },
+  { id: "seo", name: "SEO and listings", monthly: 55, unit: "per sub-account", note: "Search visibility and directory listings.", compare: 79 },
+  { id: "usage", name: "Texts, calls, email sends and AI", monthly: 0, unit: "at cost + margin", note: "Passed through from the provider; margin to be set." },
+] as const;
+
+/** Percent saved compared with the GoHighLevel list price (rounded down). */
+export function savingsPercent(ours: number, theirs: number): number {
+  if (theirs <= 0) return 0;
+  return Math.floor(((theirs - ours) / theirs) * 100);
+}
+
+export function planById(id: string | null | undefined): Plan {
+  return PLANS.find((p) => p.id === id) ?? PLANS[0];
+}
+
+export function hasFeature(features: readonly string[] | null | undefined, f: Feature): boolean {
+  return Boolean(features?.includes(f));
+}
+
+/** Cheapest paid plan that includes a feature (for "Upgrade to …" hints). */
+export function planFor(f: Feature): Plan | undefined {
+  return PLANS.filter((p) => p.billable).find((p) => p.features.includes(f));
+}
+
+/* ---------- Inbox channels ---------- */
+export const CHANNELS = ["internal", "email", "sms", "whatsapp", "messenger", "instagram", "linkedin", "webchat", "zoom", "facetime"] as const;
+export type Channel = (typeof CHANNELS)[number];
+export const CHANNEL_LABEL: Record<Channel, string> = {
+  internal: "Team chat",
+  email: "Email",
+  sms: "Text (SMS)",
+  whatsapp: "WhatsApp",
+  messenger: "Facebook Messenger",
+  instagram: "Instagram DM",
+  linkedin: "LinkedIn",
+  webchat: "Website chat",
+  zoom: "Zoom",
+  facetime: "FaceTime",
+};
+/** Must match private.channel_feature (migration 08). */
+export const CHANNEL_FEATURE: Record<Channel, Feature> = {
+  internal: "internal_chat",
+  email: "email",
+  sms: "sms",
+  whatsapp: "whatsapp",
+  messenger: "social_inbox",
+  instagram: "social_inbox",
+  linkedin: "social_inbox",
+  webchat: "crm",
+  zoom: "zoom",
+  facetime: "facetime",
+};
+
+/* ---------- App connectors ---------- */
+export type AppInfo = { id: string; name: string; group: "Storage" | "Calendar & mail" | "Social" | "Advertising" | "Calls & messages" | "Payments"; feature: Feature; how: string };
+/** Must match private.app_feature (migration 08). */
+export const APPS: AppInfo[] = [
+  { id: "google_drive", name: "Google Drive", group: "Storage", feature: "storage", how: "Sign in with Google; files stay in Drive." },
+  { id: "dropbox", name: "Dropbox", group: "Storage", feature: "storage", how: "Sign in with Dropbox; files stay in Dropbox." },
+  { id: "onedrive", name: "OneDrive", group: "Storage", feature: "storage", how: "Sign in with Microsoft; files stay in OneDrive." },
+  { id: "box", name: "Box", group: "Storage", feature: "storage", how: "Sign in with Box." },
+  { id: "google_calendar", name: "Google Calendar", group: "Calendar & mail", feature: "calendar", how: "Two-way calendar sync." },
+  { id: "outlook_calendar", name: "Outlook Calendar", group: "Calendar & mail", feature: "calendar", how: "Two-way calendar sync." },
+  { id: "outlook_mail", name: "Outlook / Microsoft 365 mail", group: "Calendar & mail", feature: "email", how: "Hosts the business mailboxes, or links an existing one." },
+  { id: "gmail", name: "Gmail / Google Workspace", group: "Calendar & mail", feature: "email", how: "Hosts the business mailboxes, or links an existing one." },
+  { id: "facebook", name: "Facebook Page", group: "Social", feature: "social_planner", how: "Meta sign-in; post and read page messages." },
+  { id: "instagram", name: "Instagram", group: "Social", feature: "social_planner", how: "Business account linked to a Facebook Page." },
+  { id: "linkedin", name: "LinkedIn", group: "Social", feature: "social_planner", how: "LinkedIn sign-in; post to a company page." },
+  { id: "x", name: "X (Twitter)", group: "Social", feature: "social_planner", how: "X sign-in; posting may need a paid X API plan." },
+  { id: "tiktok", name: "TikTok", group: "Social", feature: "social_planner", how: "TikTok business sign-in." },
+  { id: "youtube", name: "YouTube", group: "Social", feature: "social_planner", how: "Google sign-in." },
+  { id: "pinterest", name: "Pinterest", group: "Social", feature: "social_planner", how: "Pinterest business sign-in." },
+  { id: "threads", name: "Threads", group: "Social", feature: "social_planner", how: "Meta sign-in." },
+  { id: "google_business", name: "Google Business Profile", group: "Social", feature: "social_planner", how: "Google sign-in; posts, reviews and listing details." },
+  { id: "google_ads", name: "Google Ads", group: "Advertising", feature: "ads", how: "Google sign-in; reads results, tracks leads." },
+  { id: "meta_ads", name: "Meta Ads (Facebook/Instagram)", group: "Advertising", feature: "ads", how: "Meta sign-in; reads results, tracks leads." },
+  { id: "tiktok_ads", name: "TikTok Ads", group: "Advertising", feature: "ads", how: "TikTok sign-in." },
+  { id: "linkedin_ads", name: "LinkedIn Ads", group: "Advertising", feature: "ads", how: "LinkedIn sign-in." },
+  { id: "whatsapp", name: "WhatsApp Business", group: "Calls & messages", feature: "whatsapp", how: "WhatsApp Business number through Meta or Twilio." },
+  { id: "twilio_sms", name: "Text messages (Twilio)", group: "Calls & messages", feature: "sms", how: "A Twilio number per sub-account; carrier registration required in the US." },
+  { id: "zoom", name: "Zoom", group: "Calls & messages", feature: "zoom", how: "Zoom sign-in; the app creates meetings and saves the join link." },
+  { id: "facetime", name: "FaceTime", group: "Calls & messages", feature: "facetime", how: "No Apple API: create the link on an iPhone, iPad or Mac and paste it on the appointment. Android and Windows guests join in Chrome or Edge." },
+  { id: "stripe", name: "Stripe (card, Apple Pay, Google Pay, Link, bank)", group: "Payments", feature: "payments", how: "One Stripe account per agency; wallets switch on in the Stripe Dashboard." },
+];
+export const APP_GROUPS = ["Calendar & mail", "Storage", "Social", "Advertising", "Calls & messages", "Payments"] as const;
+
+export const SOCIAL_PLATFORMS = ["facebook", "instagram", "linkedin", "x", "tiktok", "youtube", "pinterest", "threads", "google_business"] as const;
+export const PAYMENT_METHODS = [
+  { id: "card", name: "Cards" },
+  { id: "apple_pay", name: "Apple Pay" },
+  { id: "google_pay", name: "Google Pay" },
+  { id: "link", name: "Link (Stripe)" },
+  { id: "ach", name: "Bank transfer (ACH)" },
+  { id: "tap_to_pay", name: "Tap to Pay (phone app)" },
+] as const;

@@ -1,0 +1,163 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getWorkspace } from "@/lib/session";
+import { loadOptions } from "@/lib/options";
+import { fullName, money, relativeTime, shortDate } from "@/lib/format";
+import { Avatar, Badge, Empty, PageHead } from "@/components/ui";
+import { ContactForm, NoteForm, TaskForm } from "@/components/record-forms";
+import { SubmitButton } from "@/components/forms";
+import { addNote, saveContact, saveTask, setArchived, setTaskStatus } from "../../actions";
+
+export default async function ContactDetail({ params }: { params: Promise<{ ws: string; id: string }> }) {
+  const { ws, id } = await params;
+  const ctx = await getWorkspace(ws);
+  const sb = ctx.supabase;
+  const { data: c } = await sb.from("contacts").select("*, companies(id, name)").eq("id", id).eq("workspace_id", ws).maybeSingle();
+  if (!c) notFound();
+  const [opts, deals, tasks, notes, acts] = await Promise.all([
+    loadOptions(sb, ws),
+    sb.from("deals").select("id, title, amount, status").eq("contact_id", id).eq("workspace_id", ws).is("archived_at", null),
+    sb.from("tasks").select("id, title, due_at, status, priority").eq("contact_id", id).eq("workspace_id", ws).is("archived_at", null).order("due_at"),
+    sb.from("notes").select("id, body, created_at").eq("contact_id", id).eq("workspace_id", ws).order("created_at", { ascending: false }),
+    sb.from("activities").select("id, summary, created_at").eq("entity_id", id).eq("workspace_id", ws).order("created_at", { ascending: false }).limit(10),
+  ]);
+  const name = fullName(c);
+  const co = c.companies as { id: string; name: string } | null;
+  const tags = (c.tags ?? []) as string[];
+
+  return (
+    <div className="stack-lg">
+      <PageHead eyebrow="Contact" title={name} back={{ href: `/w/${ws}/contacts`, label: "Contacts" }} />
+      <div className="grid-2">
+        <section className="card stack">
+          <div className="row">
+            <Avatar name={name} />
+            <div className="list-main">
+              <div className="list-title">{c.title ?? "Contact"}</div>
+              <div className="list-sub">{co ? <Link href={`/w/${ws}/companies/${co.id}`}>{co.name}</Link> : "No company"}</div>
+            </div>
+            <Badge value={c.status} />
+          </div>
+          <dl className="kv">
+            <dt>Email</dt>
+            <dd>{c.email ? <a href={`mailto:${c.email}`}>{c.email}</a> : "—"}</dd>
+            <dt>Phone</dt>
+            <dd>{c.phone ? <a href={`tel:${c.phone}`}>{c.phone}</a> : "—"}</dd>
+            <dt>Source</dt>
+            <dd>{c.source ?? "—"}</dd>
+            <dt>Tags</dt>
+            <dd>{tags.length ? tags.map((t) => <span key={t} className="badge badge-plain" style={{ marginRight: 6 }}>{t}</span>) : "—"}</dd>
+            <dt>Added</dt>
+            <dd>{shortDate(c.created_at, ctx.ws.timezone)}</dd>
+          </dl>
+          {ctx.canWrite ? (
+            <details className="disclosure">
+              <summary>Edit contact</summary>
+              <div style={{ marginTop: 14 }}>
+                <ContactForm action={saveContact.bind(null, ws, id)} v={c} companies={opts.companies} suggestedTags={ctx.ws.suggested_tags ?? []} submit="Save changes" />
+              </div>
+            </details>
+          ) : null}
+          {ctx.canWrite ? (
+            <form action={setArchived.bind(null, ws)}>
+              <input type="hidden" name="table" value="contacts" />
+              <input type="hidden" name="id" value={id} />
+              <input type="hidden" name="archive" value={c.archived_at ? "0" : "1"} />
+              <SubmitButton className="btn btn-ghost btn-sm btn-danger" pendingText="…" confirmText={c.archived_at ? undefined : `Archive ${name}? You can restore it later.`} confirmLabel="Archive">
+                {c.archived_at ? "Restore contact" : "Archive contact"}
+              </SubmitButton>
+            </form>
+          ) : null}
+        </section>
+
+        <section className="card stack">
+          <div className="card-head" style={{ marginBottom: 0 }}>
+            <h2>Deals</h2>
+            {ctx.canWrite ? (
+              <Link className="btn btn-ghost btn-sm" href={`/w/${ws}/deals/new?contact=${id}`}>
+                + New deal
+              </Link>
+            ) : null}
+          </div>
+          {(deals.data ?? []).length === 0 ? (
+            <p className="faint">No deals yet.</p>
+          ) : (
+            <ul className="plain-list">
+              {(deals.data ?? []).map((d) => (
+                <li key={d.id} className="spread">
+                  <Link href={`/w/${ws}/deals/${d.id}`} style={{ fontWeight: 700 }}>
+                    {d.title}
+                  </Link>
+                  <span className="row">
+                    <span className="faint">{money(d.amount)}</span>
+                    <Badge value={d.status} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <h2>Tasks</h2>
+          {(tasks.data ?? []).length === 0 ? <p className="faint">No tasks.</p> : (
+            <ul className="plain-list">
+              {(tasks.data ?? []).map((t) => (
+                <li key={t.id} className="spread">
+                  <div>
+                    <div style={{ fontWeight: 700, textDecoration: t.status === "done" ? "line-through" : undefined }}>{t.title}</div>
+                    <div className="faint">{shortDate(t.due_at, ctx.ws.timezone)}</div>
+                  </div>
+                  {ctx.canWrite && t.status !== "done" ? (
+                    <form action={setTaskStatus.bind(null, ws)}>
+                      <input type="hidden" name="id" value={t.id} />
+                      <input type="hidden" name="status" value="done" />
+                      <SubmitButton className="btn btn-sm" pendingText="…">Done</SubmitButton>
+                    </form>
+                  ) : (
+                    <Badge value={t.status} />
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+          {ctx.canWrite ? (
+            <details className="disclosure">
+              <summary>Add a task</summary>
+              <div style={{ marginTop: 12 }}>
+                <TaskForm action={saveTask.bind(null, ws, null)} defaults={{ contact_id: id }} />
+              </div>
+            </details>
+          ) : null}
+        </section>
+      </div>
+
+      <div className="grid-2">
+        <section className="card stack">
+          <h2>Notes</h2>
+          {ctx.canWrite ? <NoteForm action={addNote.bind(null, ws)} link={{ contact_id: id }} /> : null}
+          {(notes.data ?? []).length === 0 ? (
+            <Empty title="No notes yet" />
+          ) : (
+            <ul className="plain-list">
+              {(notes.data ?? []).map((n) => (
+                <li key={n.id}>
+                  <p style={{ whiteSpace: "pre-wrap" }}>{n.body}</p>
+                  <div className="faint">{relativeTime(n.created_at)}</div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+        <section className="card stack">
+          <h2>History</h2>
+          <ul className="plain-list">
+            {(acts.data ?? []).map((a) => (
+              <li key={a.id} className="spread">
+                <span>{a.summary}</span>
+                <span className="faint">{relativeTime(a.created_at)}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+    </div>
+  );
+}

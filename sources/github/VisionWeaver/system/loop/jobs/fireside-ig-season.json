@@ -1,0 +1,160 @@
+{
+  "name": "fireside-ig-season",
+  "notes": "Fireside season finish on Instagram, run BY the VisionWeaver loop (Steve's standing directive, Oct 20 2026 23:34 CDT: everything runs in and through VisionWeaver). Episodes 11-30; eps 1-12 already live. Ep 29 enabled Oct 21 2026: Steve picked V3 (historically accurate order); the staged master ep29.mp4 already matches v3 (48.6s) so no rebuild was needed.",
+  "approval_basis": "Steve, Oct 20 2026: 'Finish out the season of post like these and then wait for the entire set' + 23:34 CDT directive (system runs it; small decisions are Jason's). Captions verbatim from ig-season-push.py. Ep 29: Steve picked V3, Oct 21 2026 15:52 CDT.",
+  "approved_for_publish": true,
+  "characters": [],
+  "assembly": {
+    "mode": "prebuilt"
+  },
+  "masters": [
+    "/home/hatch/workspace/your_files/fireside-video/ep11.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep12.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep13.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep14.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep15.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep16.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep17.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep18.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep19.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep20.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep21.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep22.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep23.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep24.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep25.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep26.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep27.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep28.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep29.mp4",
+    "/home/hatch/workspace/your_files/fireside-video/ep30.mp4"
+  ],
+  "publish_target": "instagram",
+  "instagram": {
+    "account_id": "17841415108317181",
+    "username": "firesideclippings",
+    "done_file": "~/workspace/fireside/ig-season-done.txt",
+    "episodes": [
+      {
+        "id": "ep11",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep11.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep11.png",
+        "caption": "Ep 11 — Give Me Liberty — Patrick Henry (March 23, 1775)\n\nIn a Richmond church, with war against Britain weeks away, Henry rose and demanded Virginia arm itself. No transcript was taken at the time — these are the words witnesses swore he spoke.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep12",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep12.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep12.png",
+        "caption": "Ep 12 — Times That Try Men’s Souls — Thomas Paine (December 1776)\n\nWashington’s army was collapsing — desertions, defeat, winter coming. He ordered Paine’s new pamphlet read aloud to the troops. Days later, they crossed the Delaware.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep13",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep13.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep13.png",
+        "caption": "Ep 13 — What to the Slave Is the Fourth of July? — Frederick Douglass (July 5, 1852)\n\nInvited to celebrate Independence Day in Rochester, New York, the formerly enslaved Douglass turned the occasion into an indictment.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep14",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep14.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep14.png",
+        "caption": "Ep 14 — Ain’t I a Woman? — Sojourner Truth (1851)\n\nBorn into slavery, freed, and six feet of conviction, Truth rose at a women’s rights convention where some said women were too delicate for the vote.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep15",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep15.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep15.png",
+        "caption": "Ep 15 — We, the Whole People — Susan B. Anthony (1873)\n\nArrested for voting, Anthony toured the country arguing her case before her trial — that the Constitution already gave women the ballot. She was convicted. She never paid the fine.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep16",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep16.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep16.png",
+        "caption": "Ep 16 — I Will Fight No More Forever — Chief Joseph (October 5, 1877)\n\nAfter a 1,400-mile retreat with his people, the Nez Perce chief surrendered in the Montana snow — forty miles from freedom in Canada.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep17",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep17.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep17.png",
+        "caption": "Ep 17 — Cross of Gold — William Jennings Bryan (July 9, 1896)\n\nAt thirty-six, Bryan seized the Democratic convention with a defense of silver money — and of the working people crushed by the gold standard.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep18",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep18.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep18.png",
+        "caption": "Ep 18 — The Man in the Arena — Theodore Roosevelt (April 23, 1910)\n\nA year out of the presidency, Roosevelt spoke at the Sorbonne in Paris and gave the world its most quoted defense of daring greatly.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep19",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep19.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep19.png",
+        "caption": "Ep 19 — The Welfare of All of Us — Theodore Roosevelt (August 31, 1910)\n\nAt Osawatomie, Kansas, Roosevelt laid out his “New Nationalism” — that government must serve human welfare over property. A creed that split his party.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep20",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep20.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep20.png",
+        "caption": "Ep 20 — The World Must Be Made Safe for Democracy — Woodrow Wilson (April 2, 1917)\n\nWilson, re-elected on the promise of peace, asked Congress for war against Germany — and gave the century its mission statement.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep21",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep21.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep21.png",
+        "caption": "Ep 21 — I Hate War — FDR at Chautauqua (August 14, 1936)\n\nWith the world sliding toward war again, Roosevelt stood before a peaceful lakeside audience in New York and spoke from what he had seen as a young Navy man.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep22",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep22.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep22.png",
+        "caption": "Ep 22 — One Bomb on Hiroshima — Truman (August 6, 1945)\n\nReturning from Potsdam aboard the USS Augusta, Truman announced that a new kind of weapon had been used — and warned Japan of what refusal to surrender would bring.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep23",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep23.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep23.png",
+        "caption": "Ep 23 — We Shall Overcome — LBJ to Congress (March 15, 1965)\n\nA week after Bloody Sunday in Selma, Johnson addressed a joint session of Congress and demanded the Voting Rights Act — borrowing the anthem of the movement itself.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep24",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep24.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep24.png",
+        "caption": "Ep 24 — The Military-Industrial Complex — Eisenhower’s Farewell (January 17, 1961)\n\nThe old general, leaving office after eight years of peace, used his farewell to warn the nation about the thing he knew best. He had built the machine. He feared the machine.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep25",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep25.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep25.png",
+        "caption": "Ep 25 — Atoms for Peace — Eisenhower at the UN (December 8, 1953)\n\nBefore the United Nations, Eisenhower proposed turning the atom from a weapon into a servant — offering an international atomic energy agency.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep26",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep26.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep26.png",
+        "caption": "Ep 26 — Ask Not — JFK’s Inaugural (January 20, 1961)\n\nSnow on the ground, the youngest elected president took the oath and asked the country for something instead of promising it something. One sentence. A generation’s assignment.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep27",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep27.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep27.png",
+        "caption": "Ep 27 — We Choose to Go to the Moon — JFK at Rice (September 12, 1962)\n\nAt Rice University stadium, Kennedy committed America to the moon — not because it was easy, but because it was hard.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep28",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep28.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep28.png",
+        "caption": "Ep 28 — We All Breathe the Same Air — JFK’s Strategy of Peace (June 10, 1963)\n\nAt American University, Kennedy spoke past the Cold War to the Soviet people themselves — the speech Khrushchev called the greatest by any American president.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep29",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep29.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep29.png",
+        "caption": "Ep 29 — The Torch Has Been Passed — JFK’s Inaugural, continued (January 20, 1961)\n\nFrom the same frozen noon came the Cold War’s most quoted pledge — that America would pay any price, bear any burden, meet any hardship, support any friend, oppose any foe, to assure the survival and the success of liberty.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      },
+      {
+        "id": "ep30",
+        "video": "/home/hatch/workspace/your_files/fireside-video/ep30.mp4",
+        "cover": "/home/hatch/workspace/your_files/fireside-images/ep30.png",
+        "caption": "Ep 30 — Tear Down This Wall — Reagan at Brandenburg Gate (June 12, 1987)\n\nHis own advisors tried to cut the line. Reagan kept it — and spoke it with the Wall behind him. Two years later, the wall came down.\n\nFireside — the talks America heard on the radio, spoken again. Every episode stays true to the facts: the radio sets the scene, then speaks the real words verbatim. New episodes daily. #FiresideRadio"
+      }
+    ]
+  }
+}

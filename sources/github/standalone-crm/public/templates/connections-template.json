@@ -1,0 +1,89 @@
+{
+  "about": "T.H.E.L.M.A. CRM Complete connections file. Fill in what you have, delete the rest, then upload it under Connections (or in the first-sign-in walk-through). Keys are stored encrypted and never shown again. Do NOT put website passwords here.",
+  "connections": [
+    {
+      "name": "Google sign-in",
+      "type": "oauth",
+      "provider": "google",
+      "site": "https://console.cloud.google.com/apis/credentials",
+      "client_id": "PASTE-CLIENT-ID.apps.googleusercontent.com",
+      "client_secret": "PASTE-CLIENT-SECRET"
+    },
+    {
+      "name": "Microsoft sign-in",
+      "type": "oauth",
+      "provider": "microsoft",
+      "site": "https://entra.microsoft.com",
+      "client_id": "PASTE-APPLICATION-CLIENT-ID",
+      "client_secret": "PASTE-CLIENT-SECRET-VALUE",
+      "tenant": "common"
+    },
+    {
+      "name": "GitHub sign-in",
+      "type": "oauth",
+      "provider": "github",
+      "site": "https://github.com/settings/developers",
+      "client_id": "PASTE-CLIENT-ID",
+      "client_secret": "PASTE-CLIENT-SECRET"
+    },
+    {
+      "name": "Vercel sign-in",
+      "type": "oauth",
+      "provider": "vercel",
+      "site": "https://vercel.com/account",
+      "client_id": "PASTE-CLIENT-ID",
+      "client_secret": "PASTE-CLIENT-SECRET"
+    },
+    {
+      "name": "Apple sign-in (paid)",
+      "type": "oauth",
+      "provider": "apple",
+      "site": "https://developer.apple.com/account",
+      "client_id": "PASTE-SERVICES-ID",
+      "client_secret": "PASTE-GENERATED-CLIENT-SECRET-JWT"
+    },
+    {
+      "name": "Phone texts (paid)",
+      "type": "sms",
+      "provider": "twilio",
+      "site": "https://console.twilio.com",
+      "account_sid": "ACxxxxxxxx",
+      "auth_token": "PASTE-AUTH-TOKEN",
+      "message_service_sid": "MGxxxxxxxx"
+    },
+    {
+      "name": "Email sender",
+      "type": "smtp",
+      "provider": "smtp",
+      "site": "https://resend.com",
+      "host": "smtp.resend.com",
+      "port": "587",
+      "user": "resend",
+      "password": "PASTE-SMTP-PASSWORD-OR-API-KEY",
+      "sender_email": "crm@yourdomain.com",
+      "sender_name": "Your Business CRM"
+    },
+    {
+      "name": "Supabase access token",
+      "type": "platform",
+      "provider": "supabase",
+      "site": "https://supabase.com/dashboard/account/tokens",
+      "access_token": "sbp_PASTE-TOKEN",
+      "notes": "Used to switch the sign-in options above on. You can delete this connection afterwards and revoke the token in Supabase."
+    },
+    {
+      "name": "Example tool API",
+      "type": "api_key",
+      "provider": "example",
+      "site": "https://api.example.com",
+      "api_key": "PASTE-API-KEY"
+    },
+    {
+      "name": "Example MCP server",
+      "type": "mcp",
+      "provider": "example-mcp",
+      "mcp_url": "https://mcp.example.com/sse",
+      "token": "PASTE-TOKEN-IF-NEEDED"
+    }
+  ]
+}

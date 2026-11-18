@@ -1,0 +1,56 @@
+{
+  "job": "fireside-ep01-looptest",
+  "job_file": "jobs/fireside-ep01-looptest.json",
+  "started_utc": "2026-10-23T02:02:28Z",
+  "dry_run": false,
+  "stages": {
+    "cast": {
+      "status": "ok",
+      "detail": {
+        "characters": [
+          {
+            "name": "The Radio",
+            "voice_id": "avocado_v2:vdc_5723",
+            "look_ref": "~/workspace/your_files/fireside-images/ep01.png"
+          }
+        ]
+      }
+    },
+    "voice": {
+      "status": "ok",
+      "detail": {
+        "files": [
+          "/home/hatch/workspace/your_files/fireside-audio/ep01-on-the-bank-crisis-fdr-s-first-fireside--solemn-pillar.mp3"
+        ]
+      }
+    },
+    "animate": {
+      "status": "ok",
+      "detail": {
+        "shots": [
+          {
+            "id": "ep01-anim",
+            "file": "/home/hatch/workspace/visionweaver/loop/runs/ep01-anim.mp4",
+            "reused": true
+          }
+        ],
+        "credits": 0
+      }
+    },
+    "assemble": {
+      "status": "ok",
+      "detail": {
+        "master": "/home/hatch/workspace/your_files/fireside-video/ep01-looptest.mp4",
+        "reused": true
+      }
+    },
+    "publish": {
+      "status": "ok",
+      "detail": {
+        "packet": "/home/hatch/workspace/visionweaver/loop/runs/fireside-ep01-looptest.publish.json",
+        "note": "staged for Publisher; upload runs on APPROVED"
+      }
+    }
+  },
+  "status": "complete"
+}

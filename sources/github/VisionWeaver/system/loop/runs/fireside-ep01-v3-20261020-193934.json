@@ -1,0 +1,9 @@
+{
+  "job": "fireside-ep01-v3",
+  "job_file": "jobs/fireside-ep01-v3.json",
+  "started_utc": "2026-10-21T00:39:34Z",
+  "dry_run": true,
+  "stages": {},
+  "status": "gate-stop",
+  "gate": "gate characters-approved: not approved -> Grand, Nadia, Theo, June, The Room"
+}

@@ -1,0 +1,709 @@
+{
+ "title": "Fireside Ep 1 v3 \u2014 On the Bank Crisis",
+ "output": {
+  "width": 1280,
+  "height": 720,
+  "fps": 30
+ },
+ "shots": [
+  {
+   "id": "gather-01",
+   "file": "v3-ep01-gather.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "gather-02",
+   "file": "v3-ep01-gather.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "gather-03",
+   "file": "v3-ep01-gather.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-01",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-02",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-03",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-04",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-05",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-06",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-07",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-08",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-09",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-10",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-11",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-12",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-13",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-14",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-15",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-16",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-17",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-18",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-19",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-20",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-21",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "explain-22",
+   "file": "v3-ep01-explain.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-01",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-02",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-03",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-04",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-05",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-06",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-07",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-08",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-09",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-10",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-11",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-12",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-13",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-14",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-15",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-16",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-17",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-18",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-19",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-20",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-21",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-22",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-23",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-24",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-25",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-26",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-27",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-28",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-29",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-30",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-31",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-32",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-33",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-34",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-35",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-36",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-37",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-38",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-39",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-40",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-41",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-42",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-43",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-44",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-45",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-46",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-47",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-48",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-49",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-50",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-51",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-52",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-53",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-54",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-55",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-56",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-57",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-58",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-59",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-60",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-61",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-62",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-63",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-64",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-65",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-66",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-67",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-68",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-69",
+   "file": "v3-ep01-listen-wide.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "radio-70",
+   "file": "v3-ep01-listen-close.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-01",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-02",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-03",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-04",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-05",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-06",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-07",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-08",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-09",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  },
+  {
+   "id": "afterglow-10",
+   "file": "v3-ep01-afterglow.mp4",
+   "duration": 10.042
+  }
+ ],
+ "audio": [
+  {
+   "file": "ep01v3-grand-gather.mp3",
+   "anchor": {
+    "shot": "gather-01",
+    "offset": 0.3
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-gather.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-1.mp3",
+   "anchor": {
+    "shot": "explain-01",
+    "offset": 0.3
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-1.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-2.mp3",
+   "anchor": {
+    "shot": "explain-05",
+    "offset": 4.145
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-2.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-3.mp3",
+   "anchor": {
+    "shot": "explain-08",
+    "offset": 3.992
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-3.mp3"
+  },
+  {
+   "file": "ep01v3-grand-explain-4.mp3",
+   "anchor": {
+    "shot": "explain-12",
+    "offset": 1.454
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-explain-4.mp3"
+  },
+  {
+   "file": "ep01v3-nadia-question.mp3",
+   "anchor": {
+    "shot": "explain-15",
+    "offset": 3.389
+   },
+   "gain": 1.0,
+   "label": "Nadia: ep01v3-nadia-question.mp3"
+  },
+  {
+   "file": "ep01v3-grand-answer-nadia.mp3",
+   "anchor": {
+    "shot": "explain-15",
+    "offset": 7.729
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-answer-nadia.mp3"
+  },
+  {
+   "file": "ep01v3-june-question.mp3",
+   "anchor": {
+    "shot": "explain-19",
+    "offset": 6.03
+   },
+   "gain": 1.0,
+   "label": "June: ep01v3-june-question.mp3"
+  },
+  {
+   "file": "ep01v3-grand-answer-june.mp3",
+   "anchor": {
+    "shot": "explain-19",
+    "offset": 9.218
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-answer-june.mp3"
+  },
+  {
+   "file": "ep01v3-radio-1.mp3",
+   "anchor": {
+    "shot": "radio-01",
+    "offset": 0.3
+   },
+   "gain": 1.0,
+   "label": "Radio: ep01v3-radio-1.mp3"
+  },
+  {
+   "file": "ep01v3-radio-2.mp3",
+   "anchor": {
+    "shot": "radio-11",
+    "offset": 9.693
+   },
+   "gain": 1.0,
+   "label": "Radio: ep01v3-radio-2.mp3"
+  },
+  {
+   "file": "ep01v3-radio-3.mp3",
+   "anchor": {
+    "shot": "radio-23",
+    "offset": 8.531
+   },
+   "gain": 1.0,
+   "label": "Radio: ep01v3-radio-3.mp3"
+  },
+  {
+   "file": "ep01v3-radio-4.mp3",
+   "anchor": {
+    "shot": "radio-38",
+    "offset": 1.484
+   },
+   "gain": 1.0,
+   "label": "Radio: ep01v3-radio-4.mp3"
+  },
+  {
+   "file": "ep01v3-radio-5.mp3",
+   "anchor": {
+    "shot": "radio-53",
+    "offset": 4.829
+   },
+   "gain": 1.0,
+   "label": "Radio: ep01v3-radio-5.mp3"
+  },
+  {
+   "file": "ep01v3-grand-afterglow-1.mp3",
+   "anchor": {
+    "shot": "afterglow-01",
+    "offset": 0.3
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-afterglow-1.mp3"
+  },
+  {
+   "file": "ep01v3-grand-afterglow-2.mp3",
+   "anchor": {
+    "shot": "afterglow-04",
+    "offset": 3.603
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-afterglow-2.mp3"
+  },
+  {
+   "file": "ep01v3-nadia-afterglow.mp3",
+   "anchor": {
+    "shot": "afterglow-07",
+    "offset": 4.746
+   },
+   "gain": 1.0,
+   "label": "Nadia: ep01v3-nadia-afterglow.mp3"
+  },
+  {
+   "file": "ep01v3-june-afterglow.mp3",
+   "anchor": {
+    "shot": "afterglow-07",
+    "offset": 9.734
+   },
+   "gain": 1.0,
+   "label": "June: ep01v3-june-afterglow.mp3"
+  },
+  {
+   "file": "ep01v3-grand-goodnight.mp3",
+   "anchor": {
+    "shot": "afterglow-08",
+    "offset": 2.472
+   },
+   "gain": 1.0,
+   "label": "Grand: ep01v3-grand-goodnight.mp3"
+  }
+ ],
+ "captions": "/home/hatch/workspace/goals/fireside-series-production/files/fireside-audio/ep01v3-captions.ass"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "standalone-crm",
+  "version": "2.0.0",
+  "private": true,
+  "description": "T.H.E.L.M.A. CRM Complete (Trusted Hub for Engagement, Leads, Marketing & Automation) — multi-sub-account CRM — installable mobile web app (Next.js + Supabase + Vercel)",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"tests/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"tests/**/*.ts\"",
+    "verify": "npm run lint && npm run typecheck && npm test",
+    "vercel-build": "npm run verify && next build"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5",
+    "@fontsource-variable/manrope": "^5",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.114.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "next": "16.4.0",
+    "react": "^19",
+    "react-dom": "^19",
+    "server-only": "^0.0.1",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.0",
+    "prettier": "^3",
+    "typescript": "~5.9",
+    "vitest": "^5"
+  }
+}

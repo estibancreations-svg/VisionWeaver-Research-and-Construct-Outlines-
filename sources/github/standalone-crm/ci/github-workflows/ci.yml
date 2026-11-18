@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  app:
+    name: Lint, typecheck, unit tests, build
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: sb_publishable_ci_placeholder
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install (clean)
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npx next build
+      - name: Check the browser bundle has no secret keys
+        run: |
+          if grep -rEl "service_role|sb_secret_|SUPABASE_SERVICE_ROLE_KEY" .next/static; then
+            echo "Secret-looking value found in client bundle" && exit 1
+          fi
+          echo "No secret keys in client bundle"
+
+  database:
+    name: Migrations + tenant isolation (RLS) tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      PGHOST: localhost
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: postgres
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply platform shim + migrations
+        run: |
+          psql -v ON_ERROR_STOP=1 -q -f scripts/local-supabase-shim.sql
+          for f in supabase/migrations/*.sql; do echo "== $f"; psql -v ON_ERROR_STOP=1 -q -f "$f"; done
+      - name: Seed 75 mock sub-accounts
+        run: |
+          psql -v ON_ERROR_STOP=1 -q \
+            -c "select set_config('seed.owner_email','owner@crm-demo.test',false), set_config('seed.demo_password','ci-only-password-1',false)" \
+            -f supabase/seed/mock_75_subaccounts.sql
+          psql -tA -c "select 'sub-accounts=' || count(*) from public.workspaces"
+      - name: RLS isolation tests
+        run: psql -v ON_ERROR_STOP=1 -f supabase/tests/rls_isolation.sql
