@@ -1,0 +1,19 @@
+Original name: LAYER_DIAGRAM.txt
+Drive ID: 1hwEa2DPW1g9WY8onwnC62U6HGpe80MMp
+Parent folder: _00_THELMA_AI_SUITE/T.H.E.L.M.A. Dump/
+Modified: 2025-12-18T21:24:42.000Z
+
+T.H.E.L.M.A. Canonical Layers (v2)
+
+1) Governance & Access
+2) Orchestration & Workflow Routing
+3) Automation (n8n compatible)
+4) Partner & Marketplace (portal, proofs, payouts, discounts)
+5) Logistics Mapping (LAND ONLY)
+6) Data Commerce (governed, aggregated)
+7) Interface Layer (responsive web)
+8) Observability (logs/metrics/incidents)
+
+Non-goals:
+- Prompt libraries (external)
+- Maritime/aviation routing (buffer only; feature-flagged)
