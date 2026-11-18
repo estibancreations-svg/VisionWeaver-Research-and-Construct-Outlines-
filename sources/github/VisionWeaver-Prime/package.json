@@ -1,0 +1,11 @@
+{
+  "name": "visionweaver-prime",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VisionWeaver Prime - static front end with a Supabase back end (fresh, dedicated deployment).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "quality": "node scripts/prime-release-check.mjs && node scripts/build.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

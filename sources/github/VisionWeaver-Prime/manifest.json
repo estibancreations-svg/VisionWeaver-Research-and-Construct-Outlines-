@@ -1,0 +1,42 @@
+{
+  "text": {
+    "index.html": "48b3a7070c90b28e25f9e0acd8a04ce4296984ef635daccdae5eeb3f937cc849",
+    "config.js": "a256cdb5504975cc440105608248b0878af1088815c189ec694c8f953556a5c4",
+    "registry.js": "e76348ba5d42ab04ec7a3f277020556c138016877be792ae67d3faed64c61365",
+    "content.js": "9be24869d4b7cd723c8f9b190360682fbeebbdbb3a09c7718768647d8a4b9864"
+  },
+  "assets": {
+    "feature_avatar-engineering.jpg": "d1a7bbd1cdad5095dbea380729c3075ebde30a368381c68797d4a1fdfa2ed57b",
+    "feature_create-produce.jpg": "364b3644438b0d7230ea80960936da9b56db41b16c9776d4208785acd13eca73",
+    "feature_design-commercial.jpg": "26f841aa7a4ce01d2de1993f612caaf0011297eb9c239ecd8b96a0a9ef48deab",
+    "feature_distribution-growth.jpg": "b86c7ffd3a2d7c5348821410e1a6f758b17f0d84d99e8f7401e14feda9a6c3f1",
+    "feature_finance-accounting.jpg": "21b07c999d3cddf6fcfeaf45aa62b620937bb5ac6fd3dccdc4bc36b4546173dd",
+    "feature_it-security.jpg": "beea72fcd21925ee8905fffa7f17d71c6dffc44c288f597a362ec4d8f71f4ff3",
+    "feature_media-library.jpg": "ba852efd6316e37cbd2331b3269d6e107bc277029b062ac18847b4c5ee5c284c",
+    "feature_post-production.jpg": "fe495c5f7f48ab4759e63ebc8a1ff8c1d027dd6dcb47590802ea245e4abee87f",
+    "feature_quality-audit.jpg": "e466f113c59e2e08d65c103aababfa2a2c948578b485af234162e955b50b3c35",
+    "feature_resources.jpg": "11642a042e5003ae284dbf26b6d96aad596cd230cba32c774185e721d31115c2",
+    "feature_teams.jpg": "fb414e17462396523c1aeb620852d67d51650cca5b17ebf2b8ed2189280c539f",
+    "feature_worlds-locations.jpg": "018c53d73aaf0739a4d924d4016ba8a0956599ba4807a82caf3b9ea544967a03",
+    "hero_director.jpg": "0498dfb7d7dd708fd430d1a2f924e65a6f7d0c7430d8d2647fc4eee568c6ce4a"
+  },
+  "appParts": [
+    {"file": "src/app.01.js", "sha256": "86a1f61201f2c0321ecc9182c3aca5a7b9128541715959d90f11d4b6c73d6e5a"},
+    {"file": "src/app.02.js", "sha256": "c6a17df84ee94a7173826c337d5e4a552e992f46b981bf2b68fa55aa18c8beb6"},
+    {"file": "src/app.03.js", "sha256": "daf813348d422f1dcae1f179ac8b538ca5ba87bc86e79b0eb0a27a26a79a9ffd"},
+    {"file": "src/app.04.js", "sha256": "c45f10c46a1689f75cbf9d20ec8049370c90c650a0db1d960afb8743346cfc5c"},
+    {"file": "src/app.05.js", "sha256": "749bf56d4a413fd378b756b5e983334c45ca18ae8da48de8044488cc139f2c96"},
+    {"file": "src/app.06.js", "sha256": "11b0663cca0a9d3ab5533ba1f222d1fa264acc12833ad5149e4773b062cf6408"},
+    {"file": "src/app.07.js", "sha256": "59fac3c341c95d07fbcc3e560b9de3221f29066289faaef0ef398afa84dce94d"},
+    {"file": "src/app.08.js", "sha256": "1bd7144efc42524f47c69a4c5b092c8c3d0804c3ad4218d7ff7f9645b9a95133"},
+    {"file": "src/app.09.js", "sha256": "1e624911c9e0b13d6fb3888db7b33989db3032a7144a22548cb9a1f98c3e00bb"},
+    {"file": "src/app.10.js", "sha256": "95a8631a3a2d23bde25ec2f9a9c7dd9c7b5fed214006487b0b304daa2ded8f51"},
+    {"file": "src/app.11.js", "sha256": "0492526fff05a304ad2e78e65561ec268c93535f869ea3bcfb1099806382654d"},
+    {"file": "src/app.12.js", "sha256": "c27cb05a81792350dcc4ac5611d916280dc97842f7c6d6b148159293b8d2773c"},
+    {"file": "src/app.13.js", "sha256": "9abc6badebed386d8a66b81580412d30af37ec584a57f9b770ba58e93fc6a407"},
+    {"file": "src/app.14.js", "sha256": "ae6981f6caf745264b86bb904760c9798970fc66d4343782fd84fcb0af301be8"},
+    {"file": "src/app.15.js", "sha256": "a39e4a0274cf0fe502e2f3ecea4d953f5b79eaa8eaf20b5fc06354ba04e3bfe2"},
+    {"file": "src/app.16.js", "sha256": "3b202fe83f8eef0ee8d8105e3540fc03726033936f26aac1b18276c4ce79be81"},
+    {"file": "src/app.17.js", "sha256": "47cae5d26c1d16bb711cb3dd6521ee732b94ecfa86f8f850b00a6ea58aebd164"}
+  ]
+}

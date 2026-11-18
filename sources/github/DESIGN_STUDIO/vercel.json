@@ -1,0 +1,73 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/handler?__dsRoute=:path*"
+    },
+    {
+      "source": "/mcp",
+      "destination": "/api/handler?__dsRoute=mcp"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/home",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/home",
+      "permanent": false
+    },
+    {
+      "source": "/director",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/home",
+      "permanent": false
+    },
+    {
+      "source": "/director/",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/home",
+      "permanent": false
+    },
+    {
+      "source": "/director/:path*",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/home",
+      "permanent": false
+    },
+    {
+      "source": "/design-studio",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/design-studio",
+      "permanent": false
+    },
+    {
+      "source": "/design-studio/",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/design-studio",
+      "permanent": false
+    },
+    {
+      "source": "/design-studio/:path*",
+      "destination": "https://master-ceo-dashboard.vercel.app/systems/visionweaver/design-studio",
+      "permanent": false
+    }
+  ]
+}
