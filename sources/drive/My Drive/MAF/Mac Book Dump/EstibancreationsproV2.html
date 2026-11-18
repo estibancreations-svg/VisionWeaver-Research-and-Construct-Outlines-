@@ -1,0 +1,598 @@
+Original name: EstibancreationsproV2.html
+Drive ID: 1qVcFm11yA2oZvLZjf1VVWYaG-p35lpul
+Parent folder: My Drive/MAF/Mac Book Dump/
+Modified: 2025-10-01T04:03:09.000Z
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estiban Creations Hub - Books, Animated Series, and Merch</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #0F0F0F;
+            font-family: 'Inter', sans-serif;
+            color: #E5E7EB;
+        }
+        /* Custom Font for Headings */
+        .font-serif {
+            font-family: 'Georgia', 'Playfair Display', serif;
+        }
+        /* Primary Button Style */
+        .btn-primary {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #D4AF37, #FFBF00);
+            color: #1A1A1A;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.6);
+        }
+        /* Secondary Button Style */
+        .btn-secondary {
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            color: #D4AF37;
+            border: 2px solid #D4AF37;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: #FFBF00;
+        }
+        /* Grain Effect */
+        .bg-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -10;
+            pointer-events: none;
+        }
+        /* Book Cover Placeholder for better visual consistency */
+        .book-cover {
+            background-color: #374151; /* Gray-700 */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="bg-grain"></div>
+
+    <!-- Main Content Root -->
+    <div id="root" class="min-h-screen pt-[70px]">
+        <!-- Content will be rendered here by JavaScript -->
+    </div>
+
+    <!-- Firebase SDKs (Required for auth mock-up) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        
+        // --- GLOBAL STATE & FIREBASE SETUP ---
+        
+        // Global variables provided by the Canvas environment (mocked if missing)
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+        
+        let app, auth, db;
+        let currentPage = 'home';
+        let isAuthenticated = false;
+        let userId = null;
+        let isAuthReady = false;
+
+        // --- BOOK DATA ---
+
+        // Helper function to generate placeholder standalone books to reach 65 total
+        const generatePlaceholderBooks = (startId, count) => {
+            const placeholders = [];
+            for (let i = 0; i < count; i++) {
+                const id = startId + i;
+                placeholders.push({
+                    id: id,
+                    series: 'Standalone',
+                    title: `The Other Door ${i + 1}`,
+                    subtitle: `Exploring a new corner of identity.`,
+                    theme: `A unique, focused narrative that stands alone from the series.`,
+                    price: parseFloat((15.00 + (id % 10) * 0.5).toFixed(2)),
+                    genre: (id % 2 === 0 ? 'Fantasy' : 'Sci-Fi'),
+                    rating: 4.2,
+                    pages: 280 + (id * 5),
+                    coverUrl: `https://placehold.co/600x900/555/FFF?text=Placeholder+${id}` 
+                });
+            }
+            return placeholders;
+        };
+
+        // 7 Books in the Core Series - Updated with uploaded cover URLs
+        const crossroadsSeriesData = [
+          { id: 1, series: 'Crossroads of Identity', title: 'Convergence', subtitle: 'Where paths first cross', theme: 'The start of a grand, generational journey focusing on one young artist\'s path.', price: 19.99, genre: 'LGBTQ+ Literary', rating: 4.8, pages: 320, coverUrl: 'uploaded:book_one_cover_updated.jpg-0e348f1a-a9dd-4098-97a4-b5f1aa8c2aac' },
+          { id: 2, series: 'Crossroads of Identity', title: 'Foundations', subtitle: 'The making of an identity', theme: 'A deep dive into historical context and the roots of the community.', price: 21.99, genre: 'Historical Fiction', rating: 4.6, pages: 400, coverUrl: 'uploaded:book_two_cover_updated.jpg-9abe9788-c673-495d-8d1f-b2b1171edd20' },
+          { id: 3, series: 'Crossroads of Identity', title: 'Revelations', subtitle: 'Echoes of the past', theme: 'Exploring relationships between mentors and the next generation of activists.', price: 22.99, genre: 'Family Saga', rating: 4.9, pages: 450, coverUrl: 'uploaded:book_three_cover_updated.jpg-3f51f0f7-8c8a-4006-b355-40ab9b2bf70a' },
+          { id: 4, series: 'Crossroads of Identity', title: 'Expansion', subtitle: 'The city holds its breath', theme: 'Multiple storylines converge in a major metropolitan crisis, testing alliances.', price: 20.99, genre: 'Thriller', rating: 4.5, pages: 350, coverUrl: 'uploaded:book_four_cover_new.jpg-bc45623d-a3ba-41bf-ae75-39d2611bbc60' },
+          { id: 5, series: 'Crossroads of Identity', title: 'Legacy', subtitle: 'A new self emerges', theme: 'Focus on personal growth, transition, and self-acceptance amidst conflict.', price: 18.99, genre: 'Personal Memoir', rating: 4.7, pages: 300, coverUrl: 'uploaded:book_five_cover_new.jpg-d7bc3e58-d5e2-4d59-b82c-d93bb579dea5' },
+          { id: 6, series: 'Crossroads of Identity', title: 'Transformation', subtitle: 'Scattered threads', theme: 'The characters spread across the world, exploring global identity and belonging.', price: 23.99, genre: 'Travel Adventure', rating: 4.4, pages: 420, coverUrl: 'uploaded:book_six_cover_new.jpg-9cc1661d-d35c-4bd7-80ed-6e8c579546d2' },
+          { id: 7, series: 'Crossroads of Identity', title: 'Evolution', subtitle: 'The final confluence', theme: 'A powerful conclusion where all major characters return to face their shared destiny.', price: 24.99, genre: 'Epic Finale', rating: 5.0, pages: 500, coverUrl: 'uploaded:book_seven_cover_corrected.jpg-356b76a4-a47b-47b1-949c-19d67dfa82d8' },
+        ];
+
+        // Specific Standalones
+        const uniqueStandaloneData = [
+            { id: 8, series: 'Standalone', title: 'The Tub', subtitle: 'A reflection on solitude and resilience.', theme: 'A powerful, introspective narrative focusing on a single character\'s moment of crisis.', price: 17.50, genre: 'Literary Fiction', rating: 4.9, pages: 250, coverUrl: 'https://placehold.co/600x900/1E90FF/FFF?text=The+Tub' },
+            { id: 9, series: 'Standalone', title: 'This Is Your Life', subtitle: 'Every choice leads to this moment.', theme: 'A non-linear story examining destiny, fate, and the ripple effects of small decisions.', price: 25.00, genre: 'Philosophical Drama', rating: 4.6, pages: 380, coverUrl: 'https://placehold.co/600x900/FF6347/FFF?text=Your+Life' },
+        ];
+
+        // Remaining 56 Placeholder Standalones (Total: 7 + 2 + 56 = 65)
+        const placeholderStandalones = generatePlaceholderBooks(10, 56);
+
+        const bookData = [...crossroadsSeriesData, ...uniqueStandaloneData, ...placeholderStandalones];
+        
+        const crossroadsSeries = bookData.filter(book => book.series === 'Crossroads of Identity');
+        const standalones = bookData.filter(book => book.series === 'Standalone');
+        
+        // --- UTILITY FUNCTIONS ---
+
+        // Function to safely set new page and re-render
+        function showPage(pageId) {
+            currentPage = pageId;
+            render();
+            window.scrollTo(0, 0); 
+        }
+
+        // --- AUTH & FIREBASE INITIALIZATION ---
+
+        if (Object.keys(firebaseConfig).length > 0) {
+            app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+
+            const setupAuth = async () => {
+                try {
+                    if (initialAuthToken) {
+                        await signInWithCustomToken(auth, initialAuthToken);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                } catch (error) {
+                    console.error("Firebase Sign-in Error:", error.message);
+                }
+            };
+
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    isAuthenticated = true;
+                    userId = user.uid;
+                } else {
+                    isAuthenticated = false;
+                    userId = null;
+                }
+                isAuthReady = true;
+                render(); // Re-render once auth state is confirmed
+            });
+
+            setupAuth();
+        } else {
+            isAuthReady = true;
+        }
+
+        // --- COMPONENTS (As JS Functions returning HTML strings) ---
+
+        const Header = () => `
+            <header class="fixed w-full top-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-yellow-800/20 shadow-lg">
+                <nav class="container mx-auto px-4 sm:px-8 flex justify-between items-center py-4">
+                    <div class="text-3xl font-extrabold font-serif bg-gradient-to-r from-yellow-500 via-amber-300 to-yellow-600 bg-clip-text text-transparent tracking-tighter">
+                        Estiban Creations
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <ul class="hidden md:flex space-x-8 text-sm font-semibold uppercase">
+                            <li><button class="text-gray-300 hover:text-yellow-400 transition relative group" data-page="home">Home</button></li>
+                            <li><button class="text-gray-300 hover:text-yellow-400 transition relative group" data-page="books">Books & Store</button></li>
+                            <li><button class="text-gray-300 hover:text-yellow-400 transition relative group" data-page="animated">Racheticity</button></li>
+                            <li><button class="text-gray-300 hover:text-yellow-400 transition relative group" data-page="dashboard">Dashboard</button></li>
+                        </ul>
+                        <div class="space-x-2">
+                            ${isAuthenticated ? `
+                                <button class="bg-red-600 text-white px-4 py-2 text-sm font-bold uppercase rounded-md shadow-lg hover:bg-red-700 transition" data-action="signout">
+                                    Sign Out
+                                </button>
+                            ` : `
+                                <button class="bg-transparent text-yellow-500 border border-yellow-500 px-4 py-2 text-sm font-bold uppercase rounded-md hover:bg-yellow-500 hover:text-gray-900 transition" data-page="login">
+                                    Login
+                                </button>
+                                <button class="bg-gradient-to-r from-yellow-500 to-amber-500 text-gray-900 px-4 py-2 text-sm font-bold uppercase rounded-md shadow-xl hover:shadow-yellow-500/50 transition" data-page="register">
+                                    Join
+                                </button>
+                            `}
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        `;
+
+        const BookCard = (book) => `
+            <div
+                class="book-card-item bg-gray-800/80 backdrop-blur-sm border border-yellow-800/30 p-4 sm:p-6 flex flex-col transition duration-500 hover:shadow-2xl hover:shadow-yellow-700/40 cursor-pointer rounded-lg"
+                data-page="book${book.id}"
+            >
+                <div class="relative h-64 mb-4 overflow-hidden shadow-xl shadow-black/70 rounded-md">
+                    <div 
+                        class="book-cover w-full h-full transition duration-500 hover:scale-105" 
+                        style="background-image: url('${book.coverUrl}');"
+                    ></div>
+                    <div class="absolute top-0 right-0 w-10 h-10 flex items-center justify-center text-xl font-serif font-black bg-gradient-to-br from-yellow-500 to-amber-300 text-gray-900 shadow-lg rounded-bl-lg">
+                        ${book.id}
+                    </div>
+                </div>
+                <h3 class="font-serif text-2xl font-bold mb-1 text-yellow-400 leading-tight">${book.title}</h3>
+                <p class="text-yellow-200 text-sm italic mb-3">${book.subtitle}</p>
+                <p class="text-gray-300 flex-grow mb-4 text-xs line-clamp-3">${book.theme}</p>
+                <div class="mt-auto">
+                    <p class="text-2xl font-extrabold text-yellow-500 font-serif mb-3">$${book.price.toFixed(2)}</p>
+                    <button class="btn-secondary w-full flex items-center justify-center" data-page="book${book.id}">
+                        <i class="fas fa-search mr-2"></i> View Details
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        const OverviewCard = (title, description, icon, link, backgroundUrl, isExternal = false) => `
+            <div 
+                class="group relative h-96 overflow-hidden rounded-lg shadow-2xl shadow-yellow-900/50 transition duration-500 hover:scale-[1.02] cursor-pointer"
+                data-page="${isExternal ? link : link}"
+                data-external="${isExternal}"
+            >
+                <div 
+                    class="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-110"
+                    style="background-image: url('${backgroundUrl}');"
+                >
+                    <div class="absolute inset-0 bg-black opacity-60 group-hover:opacity-40 transition duration-500"></div>
+                </div>
+
+                <div class="relative p-8 h-full flex flex-col justify-end">
+                    <i class="text-6xl text-yellow-500 mb-4 ${icon}"></i>
+                    <h3 class="text-3xl font-extrabold font-serif text-white mb-2 leading-tight">
+                        ${title}
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-base">${description}</p>
+                    <div class="mt-4">
+                        <span class="bg-yellow-500 text-gray-900 px-4 py-2 font-bold uppercase text-sm rounded-full inline-flex items-center group-hover:bg-amber-300 transition">
+                            <i class="fas fa-arrow-right mr-2"></i> ${isExternal ? 'Visit Store' : 'Discover'}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        const Stat = (label, value) => `
+            <div>
+                <div class="text-xs uppercase tracking-wider text-yellow-200">${label}</div>
+                <div class="text-xl font-bold text-yellow-400">${value}</div>
+            </div>
+        `;
+
+        const BookSection = (book) => {
+            let synopsis = '';
+            if (book.series === 'Standalone') {
+                synopsis = '"' + book.title + '" is a powerful, self-contained journey. It operates as its own "door" in the Estiban Creations Hallway, offering a complete and immersive experience outside of the main series narrative. Follow the intense emotional landscape defined by the theme: ' + book.theme;
+            } else {
+                synopsis = 'Book ' + book.id + ' in the "Crossroads of Identity" series. This chapter is a crucial piece of the multi-generational saga, exploring: ' + book.theme;
+            }
+            return `
+                <div class="min-h-screen pt-32 pb-16 bg-gray-950/70 border-t border-b border-yellow-800/50">
+                    <div class="container mx-auto px-4 sm:px-8 text-center">
+                        <h1 class="text-5xl md:text-6xl font-extrabold font-serif mb-2 bg-gradient-to-r from-yellow-500 to-amber-300 bg-clip-text text-transparent leading-tight">${book.title}</h1>
+                        <p class="text-xl italic text-gray-300 mb-8">
+                            ${book.subtitle} (${book.series === 'Standalone' ? 'Standalone Title' : 'Crossroads Series Book ' + book.id})
+                        </p>
+
+                        <div class="max-w-xl mx-auto relative shadow-2xl shadow-yellow-800/50 rounded-lg overflow-hidden">
+                            <img 
+                                src="${book.coverUrl}" 
+                                alt="${book.title} cover" 
+                                class="w-full h-auto shadow-2xl shadow-black/80 transition duration-500 hover:scale-105 book-cover"
+                                style="aspect-ratio: 2/3; object-fit: cover;"
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x900/555/FFF?text=Image+Load+Error';"
+                            />
+                        </div>
+
+                        <div class="max-w-3xl mx-auto mt-12 text-left bg-gray-800/50 p-8 rounded-lg border border-yellow-800/30">
+                            <h2 class="text-3xl font-serif font-bold text-yellow-400 mb-4">Synopsis</h2>
+                            <p class="text-gray-200 text-lg leading-relaxed mb-6">
+                                ${synopsis}
+                            </p>
+                            
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-center border-t border-yellow-800/50 pt-4">
+                                ${Stat("Genre", book.genre)}
+                                ${Stat("Pages", book.pages)}
+                                ${Stat("Rating", book.rating)}
+                                ${Stat("Price", '$' + book.price.toFixed(2))}
+                            </div>
+
+                            <h3 class="text-3xl font-serif font-bold text-yellow-400 mb-4 mt-8">Purchase Options (The Key Maker's Doors)</h3>
+                            <div class="flex justify-center space-x-4 mt-6 flex-wrap gap-4">
+                                <!-- Purchase links are decorative only in this mock-up -->
+                                <button class="btn-primary flex items-center">
+                                    <i class="fas fa-book-reader mr-2"></i> KDP (Amazon)
+                                </button>
+                                <button class="btn-secondary flex items-center">
+                                    <i class="fas fa-store mr-2"></i> Borders/B&N
+                                </button>
+                                <button class="btn-secondary flex items-center">
+                                    <i class="fas fa-globe mr-2"></i> Other Retailers
+                                </button>
+                            </div>
+
+                            <div class="text-center mt-12">
+                                <button class="btn-secondary py-3 px-8 text-lg" data-page="books">
+                                    <i class="fas fa-arrow-left mr-2"></i> Back to Collections
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        };
+        
+        const AuthForm = (title, isLogin) => {
+            let userIdText = userId ? 'User ID: ' + userId : 'Sign in to unlock your Ratchet subscriptions and personalized content.';
+            let switchText = isLogin ? "Don't have an account?" : "Already a member?";
+            let switchBtn = isLogin ? 'Join Now' : 'Login Here';
+            let switchPage = isLogin ? 'register' : 'login';
+            return `
+                <div class="min-h-screen pt-32 pb-16 flex items-start justify-center">
+                    <div class="w-full max-w-md bg-gray-800/80 backdrop-blur-lg p-8 sm:p-10 border border-yellow-800/50 shadow-2xl shadow-yellow-900/40 rounded-lg">
+                        <h2 class="text-4xl font-serif font-bold text-center mb-6 bg-gradient-to-r from-yellow-500 to-amber-300 bg-clip-text text-transparent">${title}</h2>
+                        <p class="text-center text-gray-400 mb-8">
+                            ${userIdText}
+                        </p>
+                        
+                        <div class="bg-yellow-500 text-gray-900 p-4 text-center mb-6 font-bold flex items-center justify-center space-x-2 rounded-md">
+                            <i class="fas fa-fingerprint text-2xl"></i>
+                            <span>Use Biometric Auth (Not Implemented)</span>
+                        </div>
+
+                        <form class="space-y-6" id="auth-form" data-action="${isLogin ? 'login' : 'register'}">
+                            <div class="space-y-2">
+                                <label for="email" class="block text-sm font-semibold uppercase text-gray-300">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full p-3 bg-gray-700/70 border border-yellow-800/50 text-white focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition rounded-md" placeholder="you@estibancreations.pro" required />
+                            </div>
+                            <div class="space-y-2">
+                                <label for="password" class="block text-sm font-semibold uppercase text-gray-300">Password</label>
+                                <input type="password" id="password" name="password" class="w-full p-3 bg-gray-700/70 border border-yellow-800/50 text-white focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition rounded-md" placeholder="********" required />
+                            </div>
+                            <button type="submit" class="btn-primary w-full py-3 text-lg">
+                                ${isLogin ? 'Secure Sign In' : 'Create Account'}
+                            </button>
+                        </form>
+
+                        <p class="text-center mt-6 text-gray-400">
+                            ${switchText}
+                            <button class="text-yellow-400 hover:text-yellow-300 font-semibold ml-1" data-page="${switchPage}">
+                                ${switchBtn}
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            `;
+        };
+        
+        const ContentPlaceholder = (title, subtitle) => {
+            let userIdHtml = '';
+            if (isAuthReady && userId) {
+                userIdHtml = '<p class="text-sm mt-4 text-gray-500">Current User ID: <span class="text-yellow-500 break-all">' + userId + '</span></p>';
+            }
+            return `
+                <div class="min-h-screen pt-32 pb-16 flex items-center justify-center bg-gray-950">
+                    <div class="text-center p-8 bg-gray-800/80 border border-yellow-800/30 rounded-lg shadow-xl">
+                        <h2 class="text-4xl font-serif font-bold text-yellow-400 mb-4">${title}</h2>
+                        <p class="text-gray-300 text-lg max-w-xl mx-auto">${subtitle}</p>
+                        <button class="btn-primary mt-6" data-page="register">
+                            <i class="fas fa-crown mr-2"></i> Subscribe Now for Full Access
+                        </button>
+                        ${userIdHtml}
+                    </div>
+                </div>
+            `;
+        };
+
+
+        // --- RENDERING LOGIC ---
+
+        function getPageContent(page) {
+            if (page === 'home') {
+                const overviewCards = [
+                    OverviewCard("The Library", "Explore our comprehensive collections, including the 'Crossroads of Identity' series and unique Standalone Works.", "fas fa-book-reader", "books", crossroadsSeries[0].coverUrl, false),
+                    OverviewCard("Animated Universe", "Unlock the world of our animation series, exclusive content, and behind-the-scenes material with a membership.", "fas fa-video", "animated", "uploaded:1564966084377.png-03169452-78e1-482a-9539-25ed90945251", false),
+                    OverviewCard("Badazz Wearables", "Visit our official store for exclusive clothing and merchandise inspired by the Crossroads universe and Racheticity.", "fas fa-tshirt", "https://badazzwearables.store", "uploaded:6e3233de-ebac-4f59-862a-b92a09141a51.jpg-7dfb6b28-9ba3-4285-b2ce-7ae1da7ebc3f", true)
+                ].join('');
+
+                return `
+                    <section class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(47, 79, 79, 0.8) 100%)">
+                        <div class="container mx-auto px-4 sm:px-8 text-center py-20">
+                            <h1 class="text-7xl md:text-8xl font-extrabold font-serif mb-6 bg-gradient-to-r from-yellow-500 via-amber-300 to-yellow-600 bg-clip-text text-transparent tracking-tighter shadow-xl shadow-black/50">
+                                Estiban Creations Hub
+                            </h1>
+                            <p class="text-2xl md:text-3xl font-light text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed">
+                                Your access point to 65+ books, the **Racheticity** animated series, and multi-platform content.
+                            </p>
+                            <div class="flex justify-center space-x-6 flex-wrap">
+                                <button class="btn-primary py-4 px-8 text-lg" data-page="books">
+                                    <i class="fas fa-book-open mr-2"></i> Explore All Books
+                                </button>
+                                <button class="btn-secondary py-4 px-8 text-lg" data-page="animated">
+                                    <i class="fas fa-video mr-2"></i> Racheticity
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="py-20 bg-gray-900">
+                        <div class="container mx-auto px-4 sm:px-8">
+                            <h2 class="text-4xl md:text-5xl font-extrabold font-serif text-center mb-12 bg-gradient-to-r from-yellow-500 to-amber-300 bg-clip-text text-transparent">Your Creative Journey Begins</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                ${overviewCards}
+                            </div>
+                        </div>
+                    </section>
+                `;
+            }
+
+            if (page === 'books') {
+                const seriesCards = crossroadsSeries.map(BookCard).join('');
+                // Only show the first 8 standalones to keep the page length reasonable
+                const standaloneCards = standalones.slice(0, 8).map(BookCard).join(''); 
+                const hiddenCount = standalones.length - 8;
+                
+                return `
+                    <section class="min-h-screen pt-32 pb-16 bg-gray-950">
+                        <div class="container mx-auto px-4 sm:px-8">
+                            <h2 class="text-4xl md:text-5xl font-extrabold font-serif text-center mb-4 bg-gradient-to-r from-yellow-500 to-amber-300 bg-clip-text text-transparent">The Library. Knowledge and Adventures Untold.</h2>
+                            <p class="text-center text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+                                Explore our full catalogue of works, featuring the 'Crossroads of Identity' saga and dozens of powerful standalone titles.
+                            </p>
+
+                            <div class="mb-16">
+                                <h3 class="text-3xl font-bold font-serif text-yellow-500 mb-8 border-b border-yellow-800/50 pb-2">Crossroads of Identity: The Featured Series</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                                    ${seriesCards}
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-3xl font-bold font-serif text-yellow-500 mb-8 border-b border-yellow-800/50 pb-2">Standalone Works (${standalones.length} Titles)</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                                    ${standaloneCards}
+                                </div>
+                                <div class="text-center mt-12">
+                                    <p class="text-gray-500 italic">...and ${hiddenCount > 0 ? hiddenCount : 0} more powerful standalone titles.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            }
+
+            if (page.startsWith('book')) {
+                const bookId = parseInt(page.replace('book', ''), 10);
+                const book = bookData.find(b => b.id === bookId);
+                return book ? BookSection(book) : `<div class="text-center pt-32 text-white">Book Not Found</div>`;
+            }
+
+            if (page === 'login') {
+                return AuthForm("Member Login", true);
+            }
+            
+            if (page === 'register') {
+                return AuthForm("New Member Registration", false);
+            }
+
+            if (page === 'animated') {
+                return ContentPlaceholder('Animated Universe Access', 'This is the access point for **Racheticity**. Here you would find the secure, membership-gated video player and content management tools, complete with links to your social media shorts.');
+            }
+
+            if (page === 'dashboard') {
+                return ContentPlaceholder('Dashboard', 'This is where logged-in members would manage their subscriptions, view reading lists, and access personalized content.');
+            }
+
+            return `<div class="text-center pt-32 text-white">404 - Page Not Found</div>`;
+        }
+
+        function render() {
+            const root = document.getElementById('root');
+            const content = getPageContent(currentPage);
+            
+            // Render the Header and Main content
+            root.innerHTML = Header() + `<main>${content}</main>`;
+        }
+        
+        // --- EVENT DELEGATION (Handling all clicks) ---
+
+        document.addEventListener('click', (event) => {
+            const target = event.target.closest('[data-page], [data-external], [data-action]');
+            if (!target) return;
+
+            // Handle External Link
+            if (target.dataset.external === 'true' && target.dataset.page) {
+                window.open(target.dataset.page, '_blank');
+                return;
+            }
+
+            // Handle Internal Page Change
+            if (target.dataset.page) {
+                event.preventDefault(); // Stop default button/link behavior
+                showPage(target.dataset.page);
+                return;
+            }
+
+            // Handle Sign Out
+            if (target.dataset.action === 'signout' && auth) {
+                event.preventDefault();
+                auth.signOut().then(() => {
+                    console.log("User signed out.");
+                    showPage('home'); // Redirect to home after sign out
+                }).catch((error) => {
+                    console.error("Sign out error:", error);
+                });
+                return;
+            }
+        });
+
+        // Handle Auth Form Submission (Mock)
+        document.addEventListener('submit', (event) => {
+            if (event.target.id === 'auth-form') {
+                event.preventDefault();
+                const formAction = event.target.dataset.action;
+                const email = event.target.email.value;
+                
+                // Mock success message (cannot use alert)
+                console.log((formAction.toUpperCase()) + ' successful for email: ' + email);
+                alert('Authentication Mock: ' + formAction.toUpperCase() + ' successful for ' + email + '. Check console.');
+                
+                // In a real app, this is where you'd call:
+                // if (formAction === 'login') { signInWithEmailAndPassword(auth, email, password); }
+                // else { createUserWithEmailAndPassword(auth, email, password); }
+                
+                showPage('dashboard'); // Redirect to dashboard on mock success
+            }
+        });
+
+        // Initial render when the script loads
+        window.onload = render;
+
+    </script>
+</body>
+</html>
