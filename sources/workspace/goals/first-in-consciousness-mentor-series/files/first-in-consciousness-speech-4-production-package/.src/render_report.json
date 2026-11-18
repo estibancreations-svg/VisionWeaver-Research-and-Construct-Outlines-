@@ -1,0 +1,473 @@
+{
+  "ok": true,
+  "pdf": "/home/hatch/workspace/goals/first-in-consciousness-mentor-series/files/first-in-consciousness-speech-4-production-package/first-in-consciousness-speech-4-production-package.pdf",
+  "pages": 0,
+  "pngs": [],
+  "fonts": {
+    "missing": [],
+    "unused": [],
+    "used": [
+      "Liberation Sans",
+      "Liberation Serif"
+    ],
+    "expected": [
+      "Liberation Sans:400",
+      "Liberation Sans:700",
+      "Liberation Serif:400",
+      "Liberation Serif:700"
+    ]
+  },
+  "overflow": [],
+  "text_floor": [
+    {
+      "index": 0,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 353,
+          "max_node_chars": 220,
+          "sample": "VisionWeaver · First in Consciousness · "
+        },
+        {
+          "pt": 9,
+          "chars": 205,
+          "max_node_chars": 205,
+          "sample": "How to use this file: produce scenes in "
+        },
+        {
+          "pt": 10.5,
+          "chars": 514,
+          "max_node_chars": 112,
+          "sample": "First in Consciousness"
+        },
+        {
+          "pt": 12,
+          "chars": 237,
+          "max_node_chars": 237,
+          "sample": "Speech 4 production package. The full sc"
+        },
+        {
+          "pt": 17,
+          "chars": 16,
+          "max_node_chars": 16,
+          "sample": "Episode at a glance"
+        },
+        {
+          "pt": 30,
+          "chars": 20,
+          "max_node_chars": 10,
+          "sample": "The Sitting"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 23,
+          "max_node_chars": 23,
+          "sample": "Approved Script · Verbatim"
+        },
+        {
+          "pt": 9,
+          "chars": 149,
+          "max_node_chars": 149,
+          "sample": "Speaker is Okta throughout, telling her "
+        },
+        {
+          "pt": 10.5,
+          "chars": 126,
+          "max_node_chars": 113,
+          "sample": "Delivery note."
+        },
+        {
+          "pt": 11.5,
+          "chars": 432,
+          "max_node_chars": 432,
+          "sample": "No student story until mine is done. Tha"
+        },
+        {
+          "pt": 12.5,
+          "chars": 30,
+          "max_node_chars": 26,
+          "sample": "Hook"
+        },
+        {
+          "pt": 16,
+          "chars": 52,
+          "max_node_chars": 52,
+          "sample": "“Before I teach you about failure, let m"
+        },
+        {
+          "pt": 17,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The script is the source - these words d"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "Approved Script · Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 287,
+          "max_node_chars": 127,
+          "sample": "Delivery notes for this section."
+        },
+        {
+          "pt": 11.5,
+          "chars": 772,
+          "max_node_chars": 521,
+          "sample": "The storm caught us on the ridge. We spe"
+        },
+        {
+          "pt": 17,
+          "chars": 37,
+          "max_node_chars": 37,
+          "sample": "The storm, the apology, and the second w"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "Approved Script · Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 156,
+          "max_node_chars": 143,
+          "sample": "Delivery note."
+        },
+        {
+          "pt": 11.5,
+          "chars": 526,
+          "max_node_chars": 526,
+          "sample": "Hear me. Failure is not the opposite of "
+        },
+        {
+          "pt": 12.5,
+          "chars": 7,
+          "max_node_chars": 7,
+          "sample": "Reframe"
+        },
+        {
+          "pt": 17,
+          "chars": 22,
+          "max_node_chars": 22,
+          "sample": "Failure is the curriculum"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 33,
+          "max_node_chars": 33,
+          "sample": "Approved Script · Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 316,
+          "max_node_chars": 152,
+          "sample": "Where this sits in the episode."
+        },
+        {
+          "pt": 11.5,
+          "chars": 550,
+          "max_node_chars": 275,
+          "sample": "So tonight, write the failure. Write it "
+        },
+        {
+          "pt": 12.5,
+          "chars": 21,
+          "max_node_chars": 13,
+          "sample": "Practice"
+        },
+        {
+          "pt": 17,
+          "chars": 31,
+          "max_node_chars": 31,
+          "sample": "Keep the lesson. Release the ledger."
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 39,
+          "max_node_chars": 39,
+          "sample": "Crossroads Standards · Mapped to This Ep"
+        },
+        {
+          "pt": 8.8,
+          "chars": 36,
+          "max_node_chars": 18,
+          "sample": "Crossroads standard"
+        },
+        {
+          "pt": 9.2,
+          "chars": 1431,
+          "max_node_chars": 271,
+          "sample": "Pipeline order"
+        },
+        {
+          "pt": 10.5,
+          "chars": 305,
+          "max_node_chars": 218,
+          "sample": "The standards already set for Crossroads"
+        },
+        {
+          "pt": 17,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The Crossroads standard governs this epi"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 29,
+          "max_node_chars": 29,
+          "sample": "Scene Map · 12 Scenes · 6-12 Minutes"
+        },
+        {
+          "pt": 8.8,
+          "chars": 41,
+          "max_node_chars": 13,
+          "sample": "#"
+        },
+        {
+          "pt": 9,
+          "chars": 149,
+          "max_node_chars": 149,
+          "sample": "Setting: a fireside sitting at dusk; the"
+        },
+        {
+          "pt": 9.2,
+          "chars": 1289,
+          "max_node_chars": 93,
+          "sample": "1"
+        },
+        {
+          "pt": 17,
+          "chars": 40,
+          "max_node_chars": 40,
+          "sample": "Scenes 1-6 - the sitting, the promise, t"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 18,
+          "max_node_chars": 18,
+          "sample": "Scene Map · Continued"
+        },
+        {
+          "pt": 8.8,
+          "chars": 41,
+          "max_node_chars": 13,
+          "sample": "#"
+        },
+        {
+          "pt": 9,
+          "chars": 141,
+          "max_node_chars": 141,
+          "sample": "Payoff placement: Scene 12 lands at 70-8"
+        },
+        {
+          "pt": 9.2,
+          "chars": 1633,
+          "max_node_chars": 127,
+          "sample": "7"
+        },
+        {
+          "pt": 17,
+          "chars": 41,
+          "max_node_chars": 41,
+          "sample": "Scenes 7-12 - the apology, the lesson, t"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 50,
+          "max_node_chars": 45,
+          "sample": "First in Consciousness - Speech 4 Produc"
+        },
+        {
+          "pt": 8.5,
+          "chars": 31,
+          "max_node_chars": 31,
+          "sample": "Posting Package · Processing Status"
+        },
+        {
+          "pt": 9,
+          "chars": 205,
+          "max_node_chars": 77,
+          "sample": "No posting day or time is set for this e"
+        },
+        {
+          "pt": 10,
+          "chars": 115,
+          "max_node_chars": 110,
+          "sample": "Tags:"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1244,
+          "max_node_chars": 364,
+          "sample": "Long title:"
+        },
+        {
+          "pt": 12.5,
+          "chars": 53,
+          "max_node_chars": 26,
+          "sample": "Short - 45-60 second beat sheet"
+        },
+        {
+          "pt": 17,
+          "chars": 36,
+          "max_node_chars": 36,
+          "sample": "Ready to post - when the episode is prod"
+        }
+      ]
+    }
+  ],
+  "image_resolution": [
+    {
+      "index": 0,
+      "images": [
+        {
+          "rendered_w": 656.9,
+          "natural_w": 2048,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "images": []
+    },
+    {
+      "index": 2,
+      "images": []
+    },
+    {
+      "index": 3,
+      "images": []
+    },
+    {
+      "index": 4,
+      "images": []
+    },
+    {
+      "index": 5,
+      "images": []
+    },
+    {
+      "index": 6,
+      "images": []
+    },
+    {
+      "index": 7,
+      "images": []
+    },
+    {
+      "index": 8,
+      "images": [
+        {
+          "rendered_w": 174.7,
+          "natural_w": 2048,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        },
+        {
+          "rendered_w": 63.8,
+          "natural_w": 1152,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    }
+  ],
+  "geometry": {
+    "failures": [],
+    "advisories": []
+  },
+  "gate_failures": [],
+  "advisories": [
+    "most text renders at 9.2pt, below the 10pt body target; acceptable only when the brief asks for a compact document"
+  ]
+}
