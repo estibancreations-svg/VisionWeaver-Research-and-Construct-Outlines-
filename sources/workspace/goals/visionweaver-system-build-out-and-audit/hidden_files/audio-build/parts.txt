@@ -1,0 +1,6 @@
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/chunk-01.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/chunk-02.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/chunk-03.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/chunk-04.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/chunk-05.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/chunk-06.mp3'

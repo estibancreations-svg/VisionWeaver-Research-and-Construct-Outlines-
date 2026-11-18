@@ -1,0 +1,3 @@
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/system-3-director-studio-part01.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/system-3-director-studio-part02.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/system-3-director-studio-parts.mp3'

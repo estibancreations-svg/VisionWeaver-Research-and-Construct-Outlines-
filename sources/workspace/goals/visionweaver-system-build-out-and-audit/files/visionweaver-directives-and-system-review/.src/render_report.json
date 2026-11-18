@@ -1,0 +1,646 @@
+{
+  "ok": true,
+  "pdf": "/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/files/visionweaver-directives-and-system-review/visionweaver-directives-and-system-review.pdf",
+  "pages": 0,
+  "pngs": [],
+  "fonts": {
+    "missing": [],
+    "unused": [],
+    "used": [
+      "Liberation Sans",
+      "Liberation Serif",
+      "DejaVu Sans"
+    ],
+    "expected": [
+      "Liberation Sans:400",
+      "Liberation Sans:700",
+      "Liberation Serif:700"
+    ]
+  },
+  "overflow": [],
+  "text_floor": [
+    {
+      "index": 0,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 123,
+          "max_node_chars": 83,
+          "sample": "Direct and clear"
+        },
+        {
+          "pt": 8.5,
+          "chars": 314,
+          "max_node_chars": 283,
+          "sample": "VisionWeaver  ·  Finalization Review"
+        },
+        {
+          "pt": 10.5,
+          "chars": 751,
+          "max_node_chars": 420,
+          "sample": "Verdict, up front."
+        },
+        {
+          "pt": 13,
+          "chars": 146,
+          "max_node_chars": 146,
+          "sample": "The operating directives that teach the "
+        },
+        {
+          "pt": 30,
+          "chars": 37,
+          "max_node_chars": 22,
+          "sample": "VisionWeaver Directives"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 8.5,
+          "chars": 23,
+          "max_node_chars": 14,
+          "sample": "Part"
+        },
+        {
+          "pt": 9,
+          "chars": 273,
+          "max_node_chars": 98,
+          "sample": "A — Directives"
+        },
+        {
+          "pt": 10,
+          "chars": 191,
+          "max_node_chars": 156,
+          "sample": "The standard this document is written to"
+        },
+        {
+          "pt": 10.5,
+          "chars": 769,
+          "max_node_chars": 243,
+          "sample": "A directive is not advice. It is a progr"
+        },
+        {
+          "pt": 11,
+          "chars": 81,
+          "max_node_chars": 37,
+          "sample": "The stage chain (Directive 12, in one li"
+        },
+        {
+          "pt": 19,
+          "chars": 22,
+          "max_node_chars": 22,
+          "sample": "How to read the directives"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 938,
+          "max_node_chars": 192,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 33,
+          "max_node_chars": 18,
+          "sample": "D1 — One track at a time"
+        },
+        {
+          "pt": 19,
+          "chars": 21,
+          "max_node_chars": 21,
+          "sample": "Part A — Directives D1–D2"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1314,
+          "max_node_chars": 244,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 36,
+          "max_node_chars": 22,
+          "sample": "D3 — Originality lock (IP)"
+        },
+        {
+          "pt": 19,
+          "chars": 21,
+          "max_node_chars": 21,
+          "sample": "Part A — Directives D3–D4"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1114,
+          "max_node_chars": 352,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 59,
+          "max_node_chars": 37,
+          "sample": "D5 — Character continuity — the board sy"
+        },
+        {
+          "pt": 19,
+          "chars": 21,
+          "max_node_chars": 21,
+          "sample": "Part A — Directives D5–D6"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1475,
+          "max_node_chars": 566,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 48,
+          "max_node_chars": 31,
+          "sample": "D7 — Prompt standard"
+        },
+        {
+          "pt": 19,
+          "chars": 21,
+          "max_node_chars": 21,
+          "sample": "Part A — Directives D7–D8"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1162,
+          "max_node_chars": 335,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 32,
+          "max_node_chars": 17,
+          "sample": "D9 — Delivery format"
+        },
+        {
+          "pt": 19,
+          "chars": 22,
+          "max_node_chars": 22,
+          "sample": "Part A — Directives D9–D10"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1540,
+          "max_node_chars": 414,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 70,
+          "max_node_chars": 44,
+          "sample": "D11 — Weekly engine and posting"
+        },
+        {
+          "pt": 19,
+          "chars": 23,
+          "max_node_chars": 23,
+          "sample": "Part A — Directives D11–D12"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 84,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1528,
+          "max_node_chars": 508,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 41,
+          "max_node_chars": 26,
+          "sample": "D13 — Balance rule"
+        },
+        {
+          "pt": 19,
+          "chars": 23,
+          "max_node_chars": 23,
+          "sample": "Part A — Directives D13–D14"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1424,
+          "max_node_chars": 343,
+          "sample": "Directive:"
+        },
+        {
+          "pt": 11.5,
+          "chars": 37,
+          "max_node_chars": 21,
+          "sample": "D15 — No-assumption rule"
+        },
+        {
+          "pt": 19,
+          "chars": 23,
+          "max_node_chars": 23,
+          "sample": "Part A — Directives D15–D16"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 8.5,
+          "chars": 43,
+          "max_node_chars": 16,
+          "sample": "Lineage"
+        },
+        {
+          "pt": 9,
+          "chars": 1161,
+          "max_node_chars": 217,
+          "sample": "vw3 workspace"
+        },
+        {
+          "pt": 10,
+          "chars": 253,
+          "max_node_chars": 212,
+          "sample": "Finding 1 — the canonical question is op"
+        },
+        {
+          "pt": 10.5,
+          "chars": 217,
+          "max_node_chars": 217,
+          "sample": "Four UI lineages claim to be VisionWeave"
+        },
+        {
+          "pt": 19,
+          "chars": 25,
+          "max_node_chars": 25,
+          "sample": "Part B — What is actually saved"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1679,
+          "max_node_chars": 451,
+          "sample": "The stage chain in D12 exists as a metho"
+        },
+        {
+          "pt": 11,
+          "chars": 153,
+          "max_node_chars": 44,
+          "sample": "Finding 2 — There is no executing pipeli"
+        },
+        {
+          "pt": 19,
+          "chars": 31,
+          "max_node_chars": 31,
+          "sample": "The saved system, finding by finding"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10,
+          "chars": 314,
+          "max_node_chars": 300,
+          "sample": "Net assessment:"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1470,
+          "max_node_chars": 473,
+          "sample": "You said it directly: “VisionWeaver's me"
+        },
+        {
+          "pt": 11,
+          "chars": 201,
+          "max_node_chars": 53,
+          "sample": "Finding 6 — Memory is the missing layer,"
+        },
+        {
+          "pt": 19,
+          "chars": 28,
+          "max_node_chars": 28,
+          "sample": "What you may not see from the front"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 8.5,
+          "chars": 273,
+          "max_node_chars": 255,
+          "sample": "Item"
+        },
+        {
+          "pt": 9,
+          "chars": 1236,
+          "max_node_chars": 287,
+          "sample": "VisionWeaver move to new Senior accounts"
+        },
+        {
+          "pt": 19,
+          "chars": 25,
+          "max_node_chars": 25,
+          "sample": "Holds, risks, and stale items"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1751,
+          "max_node_chars": 212,
+          "sample": "Do not rebuild the interface. Build the "
+        },
+        {
+          "pt": 11,
+          "chars": 91,
+          "max_node_chars": 34,
+          "sample": "Phase 0 — Rule, in writing (no code)"
+        },
+        {
+          "pt": 19,
+          "chars": 40,
+          "max_node_chars": 40,
+          "sample": "Part C — Rebuild outline (recommendation"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 10.5,
+          "chars": 1415,
+          "max_node_chars": 240,
+          "sample": "Store character boards, scene boards, JS"
+        },
+        {
+          "pt": 11,
+          "chars": 141,
+          "max_node_chars": 47,
+          "sample": "Phase 3 — Boards and prompts as data"
+        },
+        {
+          "pt": 19,
+          "chars": 24,
+          "max_node_chars": 24,
+          "sample": "Rebuild outline, continued"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "runs": [
+        {
+          "pt": 8,
+          "chars": 85,
+          "max_node_chars": 83,
+          "sample": "VisionWeaver — Directives and System Rev"
+        },
+        {
+          "pt": 8.5,
+          "chars": 127,
+          "max_node_chars": 113,
+          "sample": "Decision"
+        },
+        {
+          "pt": 9,
+          "chars": 625,
+          "max_node_chars": 58,
+          "sample": "☐"
+        },
+        {
+          "pt": 10.5,
+          "chars": 772,
+          "max_node_chars": 272,
+          "sample": "Season 1 packages for Speeches 1–8 exist"
+        },
+        {
+          "pt": 11,
+          "chars": 66,
+          "max_node_chars": 66,
+          "sample": "Production start checklist — with these "
+        },
+        {
+          "pt": 19,
+          "chars": 23,
+          "max_node_chars": 23,
+          "sample": "Decisions only you can make"
+        }
+      ]
+    }
+  ],
+  "image_resolution": [
+    {
+      "index": 0,
+      "images": []
+    },
+    {
+      "index": 1,
+      "images": []
+    },
+    {
+      "index": 2,
+      "images": []
+    },
+    {
+      "index": 3,
+      "images": []
+    },
+    {
+      "index": 4,
+      "images": []
+    },
+    {
+      "index": 5,
+      "images": []
+    },
+    {
+      "index": 6,
+      "images": []
+    },
+    {
+      "index": 7,
+      "images": []
+    },
+    {
+      "index": 8,
+      "images": []
+    },
+    {
+      "index": 9,
+      "images": []
+    },
+    {
+      "index": 10,
+      "images": []
+    },
+    {
+      "index": 11,
+      "images": []
+    },
+    {
+      "index": 12,
+      "images": []
+    },
+    {
+      "index": 13,
+      "images": []
+    },
+    {
+      "index": 14,
+      "images": []
+    },
+    {
+      "index": 15,
+      "images": []
+    },
+    {
+      "index": 16,
+      "images": []
+    }
+  ],
+  "geometry": {
+    "failures": [],
+    "advisories": []
+  },
+  "gate_failures": [],
+  "advisories": []
+}

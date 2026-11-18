@@ -1,0 +1,2 @@
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/system-1-vw3-master-ceo-dashboard-part01.mp3'
+file '/home/hatch/workspace/goals/visionweaver-system-build-out-and-audit/hidden_files/audio-build/system-1-vw3-master-ceo-dashboard-parts.mp3'

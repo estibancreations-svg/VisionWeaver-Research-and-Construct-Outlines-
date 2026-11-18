@@ -1,0 +1,65 @@
+System 4 — VisionWeaver Prime, a dedicated front end with its own Supabase project
+
+What this system is: a fresh, dedicated VisionWeaver front end with its own Supabase project, in the repository estibancreations-svg/VisionWeaver-Prime, created 10 October 2026 and last committed 12 October 2026. Its README states it is not a fork or copy of the earlier VisionWeaver repository. It is a static single-page app in vanilla JavaScript with hash routing. It has 27 pages in three groups: core 10, production 10, governance 7, each with V1, V2, and V3 views. Its live address is visionweaver-prime-estibancreations101.vercel.app. Its layout files are index.html, config.js, registry.js, and content.js, covering page shell, public config, page registry, and per-page view content, plus app files numbered 01 onward. Its configuration hardcodes the Supabase project azoqszhhmmkyqztubgem, and its migration files carry its own foundation schema, seed reference data, and live workspace schema, which are unrelated to the vw tables and to the production log and social post queue tables. Page names, groups, views, and purposes below come from its registry file exactly as written there.
+
+Core pages
+
+Home Dashboard. Group core. Primary view V1. Views: Cinematic Dashboard, Studio Overview, Project Focus. Purpose: VisionWeaver Prime landing, featured real projects, active project, production pipeline, connection health, recent activity.
+
+Vision Builder. Group core. Primary view V1. Views: Creative Command Canvas, Blueprint and Dependencies, Concept-to-Production Map. Purpose: prompt-to-project intake for videos, images, books and movies; model selection, references and approval.
+
+Strategic Planner. Group core. Primary view V1. Views: Strategic Command Center, Scenario and Roadmap Studio, Goals, Risks and Outcomes. Purpose: plan, align, execute and measure objectives, milestones, dependency and cost.
+
+Initiatives. Group core. Primary view V2. Views: Initiative Overview, Initiative Pipeline, Impact and Dependencies. Purpose: Kanban with Intake, Planning, Progress, Review, Completed; live records and drag and drop with audit.
+
+Programs and Projects. Group core. Primary view V2. Views: Portfolio Command, Program and Project Workspace, Timeline and Dependencies. Purpose: project portfolio, episodes, tasks, production stage, asset lineage and project permissions.
+
+AI Co-Pilot. Group core. Primary view V2. Views: AI Command Center, Agent Workflow Center, Specialist Marketplace. Purpose: orchestrate THELMA, research, content, video, compliance, CMGIO and quality agents; human approval.
+
+CMI. Group core. Primary view V1. Views: Creative and Market Intelligence, Signals and Trends, Opportunity Intelligence. Purpose: creative and market intelligence with attributable sources and observed trends; no fabricated analytics.
+
+Directors Guild. Group core. Primary view V2. Views: Guild Overview, Review and Decision Queue, Department Workrooms. Purpose: department submissions, shot and keyframe approval, revision queue, explicit publishing authorization.
+
+Teams. Group core. Primary view V1. Views: Organization Command, Authority and Handoff Map, Workforce and Agent Capacity. Purpose: people, membership, invitations, team tasks, department collaboration.
+
+C-Suite. Group core. Primary view V1. Views: Executive Team, Authority and Handoff Map, Agent Operations. Purpose: executive agents including THELMA and CMGIO; delegation, role-based authority, reports.
+
+Production pages
+
+Create and Produce. Group production. Primary view V1. Views: Creation Launcher, Production Workflow, Provider Workbench. Purpose: start a book, commercial, film, image, series or clip; select project, lock references, and run preflight.
+
+Book Creation. Group production. Primary view V1. Views: Book Command Center, Writing Workspace, Publishing Pipeline. Purpose: series canon, manuscripts, chapter-to-episode, adaptation, cover, edits, publication; preserve approved Book Creation page.
+
+Avatar Engineering. Group production. Primary view V2. Views: Avatar Overview, Avatar State Studio, 360 Engineering. Purpose: a Cast Board, Character Detail Specifications Board, 360 View Board; 32 default, 16 wardrobe, 64 expansion.
+
+Worlds and Locations. Group production. Primary view V2. Views: Cinematic Grid, Interactive Map, World Builder Studio. Purpose: real-world location packs, geospatial anchors, time and place evidence, weather and acoustics, offscreen state and rights.
+
+Design Studio. Group production. Primary view V2. Views: Create Grid, Design Workspace, Catalogue Builder. Purpose: avatar and scene design, catalog, performance, effects, private licensing and store, history and safe publishing.
+
+Design and Commercial. Group production. Primary view V1. Views: Campaign Command Grid, Interactive Commercial Studio, Placement and Performance. Purpose: brief, script, brand and product lock, 30 second storyboard, scene, voice, and text cards, variants and approvals.
+
+Scene and Production. Group production. Primary view V1. Views: Production Workspace, Timeline and Continuity, Scene Operations. Purpose: shot list, storyboard, maps, camera, face, and light locks, clip continuation, stitching, sound and generation.
+
+Media Library. Group production. Primary view V2. Views: Asset Overview, Search and Filter, Collections and Lineage. Purpose: versioned images, video, audio, text, reference packs, thumbnails, provenance, rights and reuse.
+
+Post Production. Group production. Primary view V1. Views: Edit and Finish Desk, Color, Audio and VFX, AI Finishing and Delivery. Purpose: timeline editing, audio and voiceover, color, effects, captions, stitch, export 16:9 and 9:16.
+
+Distribution and Growth. Group production. Primary view V2. Views: Distribution Overview, Content Pipeline, Analytics and Growth. Purpose: approval-led YouTube, TikTok, Instagram, and Facebook publication, repurposing, campaign insights.
+
+Governance pages
+
+Quality and Audit. Group governance. Primary view V1. Views: Quality Command Center, Evidence and Verification, Release Gate and Audit Trail. Purpose: the Auditor, VERITAS, Quality Control Agency, rights, immutable evidence, THELMA acknowledgment.
+
+Finance and Accounting. Group governance. Primary view V1. Views: Financial Command Center, Project Budget and Cost Control, Accounting and Revenue Operations. Purpose: real budgets, cost and credit ledger, invoices, revenue, subscriptions, provider spend, approvals.
+
+IT and Security. Group governance. Primary view V2. Views: IT and Security Command, Security and Infrastructure, Security, Reliability and Incidents. Purpose: provider connection inventory, RBAC, zero-trust policy, backups, logs, service health and incidents.
+
+Resources. Group governance. Primary view V2. Views: Resource Library, Resources Hub, Collections and Collaboration. Purpose: training, tutorials, workflows, templates, production guides, licensed sources.
+
+Assets and Knowledge. Group governance. Primary view V2. Views: Assets Overview, Assets Library, Collections and Knowledge. Purpose: canon, scripts, approved visual references, knowledge base, asset rights, source evidence.
+
+Reports and Insights. Group governance. Primary view V2. Views: Executive Reporting, Intelligence and Reporting, Insight Explorer. Purpose: real system and production metrics, provenance, filters, export, scheduled reporting.
+
+Settings. Group governance. Primary view V2. Views: Quick Settings, Visual Views and System Control, Advanced Administration. Purpose: per-page V1, V2, and V3 selections, theme, provider connections, team roles, notifications and permissions.
+
+That is the full page list for VisionWeaver Prime.

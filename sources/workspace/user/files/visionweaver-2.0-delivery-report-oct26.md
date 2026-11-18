@@ -1,0 +1,26 @@
+# VisionWeaver 2.0 — Rebuild Delivery
+## October 26, 2026
+
+Steve, it's rebuilt. VisionWeaver 2.0 is one system now — one file, one model, built from everything the research found missing and everything we already had that worked — and it is already sitting in your accounts. Here is the whole of it.
+
+## What 2.0 is
+
+Sixteen sections, numbered once each, in the order work actually flows. Home, with the KPI glance. Projects, where Open Project lands on the project itself. Create and Produce, where the intake form builds the project record, runs the seven-check preflight, and queues the job — the blank dead-end a new user hit in version one is gone, because the form is the path. Worlds, with a filter that filters. Characters. Books, with the lane that ends at KDP. The Media Library, with search and type filters that work. The QC and Edit Studio, carrying the Episode 1 window and the edit-model stage — edit on the spot, built into our surface. The Hold Queue. The Voice Library. Then the three sections you ordered added: Socials and Distribution, carrying the full canonical listing — YouTube, TikTok, Instagram, Facebook, X, Yahoo, Etsy, and Amazon with KDP. KPI and Reports, driven by one data object, so Home, KPI, and Finance can never contradict each other again — the version-one defect fixed by construction, not by promise. And Connections, the MCP and API doors: Runway, OpenAI and ChatGPT, Claude, Google AI Studio, Zapier, Dropbox, Drive, GitHub, and Supabase — each with its real status, Higgsfield marked reference-only, exactly per your direction. Then the Save Map and Storage, where the memory rules live in the system: masters in the Dropbox hub with receipts, handoffs in the Drive Master Folder, provider outputs pulled down on completion, wrong files to quarantine. Plans and Tiers, the one big model outlined under its four tiers — Starter, Studio, Pro, and the Flagship at the top. And Settings, where sign-in stands exactly as it was — email and password, the three social buttons in their current state — untouched, as you ordered, so the system builds up and out from an accurate start.
+
+The two launches you asked for are the front door. Launch Blank, and a clean new-user system opens: workspace created automatically, empty shelves, the guided first production one tap away — that is where your operations walkthrough begins, checklist in hand. Launch Demo, and the system opens on the work already done: Fireside Episode 1 at its QC gate, the Kids episode, Crossroads Parts 1 and 2 with their true states, the Secretary, all six queue cards — so you can finish the work from inside the system.
+
+## The archive
+
+Version one is archived, as you ordered: a full snapshot — the loop, the queue database, the audit map, the repair plan, the register, the outline — in an archive folder with its own index. One judgment call to flag: the live version-one loop is still in place and runnable, because it is the engine under the demo work you are about to finish. The archive holds its complete snapshot; retiring the live copy is one word from you once 2.0 passes your walkthrough. Nothing was deleted.
+
+## The accounts — updated
+
+GitHub: pushed. VisionWeaver 2.0 sits in your VisionWeaver repository on the main branch, commit a87e505f — index and readme, verified at the head. Dropbox: uploaded to the hub, Estiban Creations, VisionWeaver, visionweaver-2.0 — both files, byte counts confirmed. Google Drive: a VisionWeaver folder created in the Master Folder's Working section, both files inside. Three of the five are done and verified.
+
+Two are not, and here is precisely why. Vercel: the project list reads fine, but creating the 2.0 project was refused — the connection's token does not carry write access to your team scope, and Vercel requires you to grant that team access; the connector has no tool that can ask for it. The deployment files are packaged and ready; the moment that access is granted, the deploy is one step and 2.0 gets its public link. Supabase: there is no Supabase connector in this system at all — nothing to write through. That update needs your project reference and the same dashboard step as your earlier systems; 2.0's data lives in the workspace with full export until then. Both blockers are named with their fixes; neither blocks your walkthrough, because the system is fully usable from the copies already in your accounts and attached here.
+
+## Verification
+
+Before any of this reached you: both script blocks pass syntax checks; fourteen render tests pass across both modes — every section renders, the socials carry X and Amazon KDP, the tiers carry the Flagship, the settings carry sign-in unchanged, the blank mode opens truly empty and the demo opens on the real work; the GitHub push was verified at the branch head after a restart interrupted the first attempt — I checked the head before retrying, so nothing was double-pushed; and the Dropbox receipts match the local byte counts.
+
+Your moves, when ready: open the blank launch and walk it with the checklist; grant the Vercel team access and I deploy on the spot; and the Episode 1 verdict still waits at its gate, unchanged by all of this — 2.0 was built around that gate, not over it.

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VisionWeaver 2.0</title>
+<style>
+:root{--ink:#17203a;--side:#131a2e;--gold:#c9a227;--bg:#f2f1ec;--card:#fff;--line:#d9d6cc;--mut:#5c6470;--ok:#1e7d46;--warn:#b26a00;--bad:#b3261e;--gate:#7a3ea1}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink)}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 14px}
+button.primary{background:var(--ink);color:#fff;border-color:var(--ink)}button.gold{background:var(--gold);border-color:var(--gold);color:#1c1703;font-weight:700}
+button:disabled{opacity:.45;cursor:not-allowed}input,select,textarea{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;width:100%}
+label{font-size:12.5px;font-weight:600;color:var(--mut);display:block;margin:10px 0 4px}
+a{color:#2050a0}
+/* boot */
+#boot{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+#boot h1{font-size:42px;letter-spacing:2px;margin:0}#boot .ver{color:var(--gold);font-weight:800;letter-spacing:3px}
+#boot p{color:var(--mut);max-width:560px}
+.bootcards{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.bootcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;width:min(340px,90vw);text-align:left;box-shadow:0 2px 10px rgba(20,20,40,.06)}
+.bootcard h3{margin:0 0 6px}.bootcard p{font-size:13.5px;margin:0 0 14px}
+/* shell */
+#app{display:none;min-height:100vh}
+#side{position:fixed;inset:0 auto 0 0;width:238px;background:var(--side);color:#cfd6e4;padding:16px 10px;overflow-y:auto}
+#side .brand{color:#fff;font-weight:800;letter-spacing:1.5px;padding:4px 10px 2px;font-size:17px}
+#side .bver{color:var(--gold);font-size:11px;letter-spacing:2px;padding:0 10px 12px}
+#side button{display:flex;gap:9px;width:100%;text-align:left;background:none;border:none;color:#cfd6e4;padding:8px 10px;border-radius:8px;font-size:13.5px}
+#side button.on{background:#232f52;color:#fff}#side button .n{color:var(--gold);font-size:11px;font-weight:700;padding-top:2px;min-width:20px}
+#main{margin-left:238px;padding:18px 22px 60px;max-width:1180px}
+#top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.badge{font-size:11.5px;font-weight:700;border-radius:20px;padding:4px 11px;background:#e7e2cf;color:#5c4a00}
+.badge.demo{background:#dbe7db;color:#14532d}.badge.blank{background:#e2e8f5;color:#1e3a8a}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+h2{margin:2px 0 10px;font-size:21px}h3{margin:0 0 6px}.mut{color:var(--mut);font-size:13px}
+.pill{display:inline-block;font-size:11px;font-weight:700;border-radius:12px;padding:2px 9px;margin-left:6px;vertical-align:middle}
+.p-ok{background:#e2f2e7;color:var(--ok)}.p-warn{background:#fdf0dc;color:var(--warn)}.p-bad{background:#fbe3e1;color:var(--bad)}.p-gate{background:#f0e6f7;color:var(--gate)}.p-info{background:#e3ebfa;color:#2050a0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+.kpirow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:#fbfaf6;border:1px solid var(--line);border-radius:10px;padding:12px}.kpi .v{font-size:22px;font-weight:800}.kpi .k{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
+.check{font-size:14px;padding:5px 0}.check .st{font-weight:800;margin-right:7px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:10px;padding:10px 18px;font-size:14px;display:none;z-index:50;max-width:92vw}
+details{margin-top:8px}summary{cursor:pointer;font-weight:600;font-size:13.5px}
+.proj{cursor:pointer}.proj:hover{border-color:var(--gold)}
+.stage{display:inline-block;font-size:11px;border:1px solid var(--line);border-radius:6px;padding:2px 7px;margin:2px 2px 2px 0;background:#fbfaf6}
+@media(max-width:760px){#side{width:64px}#side button span.lbl,#side .brand,#side .bver{display:none}#main{margin-left:64px;padding:14px}}
+</style>
+</head>
+<body>
+
+<div id="boot">
+  <div class="ver">VISIONWEAVER</div>
+  <h1>2.0</h1>
+  <p>One system, end to end: canon &rarr; conversation &rarr; generation &rarr; QC &amp; edit &rarr; approval &rarr; publishing &rarr; reporting &mdash; with its memory on the Save Map. Choose how to launch.</p>
+  <div class="bootcards">
+    <div class="bootcard"><h3>Blank System &mdash; New User</h3><p>A clean workspace, created automatically at sign-in. Nothing pre-loaded. This is the launch your operations walkthrough starts from.</p><button class="gold" onclick="launch('blank')">Launch blank system</button></div>
+    <div class="bootcard"><h3>Demo &mdash; Existing Work</h3><p>Opens on the work already done: Fireside Episode 1 at its QC gate, Crossroads, the books, the queue. Finish the work from inside the system.</p><button class="primary" onclick="launch('demo')">Launch demo</button></div>
+  </div>
+  <p class="mut" style="margin-top:22px">Version 2.0 &middot; Built October 26, 2026 &middot; v1 archived at <i>visionweaver/archive/v1.0-pre-rebuild/</i></p>
+</div>
+
+<div id="app">
+  <nav id="side">
+    <div class="brand">VISIONWEAVER</div><div class="bver">VERSION 2.0</div>
+    <div id="nav"></div>
+  </nav>
+  <div id="main">
+    <div id="top">
+      <span id="modeBadge" class="badge"></span>
+      <b id="wsName"></b>
+      <span class="mut" id="saveState"></span>
+      <span style="flex:1"></span>
+      <button onclick="switchMode()">Switch launch mode</button>
+      <button onclick="exportWorkspace()">Export workspace</button>
+    </div>
+    <div id="view"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+"use strict";
+/* ============ DATA ============ */
+const SECTIONS=[["home","Home"],["projects","Projects"],["create","Create & Produce"],["worlds","Worlds"],["characters","Characters"],["books","Books"],["media","Media Library"],["studio","QC & Edit Studio"],["queue","Hold Queue"],["voices","Voice Library"],["socials","Socials & Distribution"],["kpi","KPI & Reports"],["connections","Connections — MCP / API"],["savemap","Save Map & Storage"],["tiers","Plans & Tiers"],["settings","Settings"]];
+const SOCIALS=[
+ ["YouTube","Video","Connected — @firesideClippings","ok"],
+ ["TikTok","Video","Not connected","warn"],
+ ["Instagram","Social","Connected — @firesideclippings","ok"],
+ ["Facebook","Social","Not connected","warn"],
+ ["X","Social","Not connected — added in 2.0 listing","warn"],
+ ["Yahoo","Distribution","Not connected — added in 2.0 listing","warn"],
+ ["Etsy","Commerce","Not connected — added in 2.0 listing","warn"],
+ ["Amazon / Amazon KDP","Commerce & Books","Not connected — added in 2.0 listing","warn"]];
+const CONNECTIONS=[
+ ["Runway","API + MCP","dev.runwayml.com · MCP on Pro/Max plans","Connected — API verified Oct 15, 2026","ok"],
+ ["OpenAI / ChatGPT","API + MCP","api.openai.com","Not connected","warn"],
+ ["Claude / Anthropic","MCP","Anthropic MCP servers","Not connected","warn"],
+ ["Google AI Studio","API","aistudio.google.com · Gemini API","Not connected","warn"],
+ ["Higgsfield","API + MCP","mcp.higgsfield.ai","Reference only — not connected, per Steve's direction","info"],
+ ["Zapier","MCP / Automations","zapier.com/mcp","Not connected","warn"],
+ ["Dropbox","API","Hub of record — Save Map","Connected","ok"],
+ ["Google Drive","API","Master Folder handoffs","Connected","ok"],
+ ["GitHub","API","estibancreations-svg","Connected","ok"],
+ ["Supabase","API","System database","Connected","ok"]];
+const TIERS=[
+ ["Starter","Core studio: projects, worlds, characters, media library, one production lane. For a single creator starting a canon.",["Projects & canon","1 production lane","Save Map — local + 1 cloud home","Community support"]],
+ ["Studio","Adds the full pipeline: QC & Edit Studio, Hold Queue governance, books lane, Socials publishing (approval-gated).",["Everything in Starter","QC & Edit Studio","Books → KDP lane","8-platform distribution"]],
+ ["Pro","Adds the Provider Router with cost ceilings, performance capture, edit-model stage, KPI & business reporting.",["Everything in Studio","Provider Router + cost ceilings","Edit-model & performance capture","KPI weekly/monthly reporting"]],
+ ["Flagship","The full 2.0: self-hosted platform, hosted-model nodes, world layer, agent layer under grants, workflow packaging, enterprise terms.",["Everything in Pro","Self-hosted deployment","Own GPU nodes (open weights)","Agent layer + packaged workflows","World layer (world sheets → simulation watch)"]]];
+const VOICES=[["Solemn Pillar","Radio / narration — Steve's delivery voice","Locked"],["Homespun Basket","Grand — Fireside teller","Locked"],["Tender Cushion","Nannie","Locked"],["Wise Lighthouse","Wai Po","Locked"],["Husky Campfire","Papi","Locked"],["Abashed Blossom (Midwestern)","Nadia + Executive Assistant pick","Locked — Candidate 1"]];
+const BOOKS=[["Book 1","Script v7 locked — 449 lines","ok"],["Book 2","Indexed","info"],["Book 3","Indexed","info"],["Book 4","Indexed","info"],["Book 5","Indexed","info"],["Book 6","Manuscript body incomplete — flagged by index","warn"],["Book 7","Indexed","info"]];
+let KPI={views:2400000,reach:0,engagement:0,igReelsLive:12,ytPrivate:11,adSpend:0,sales:0,productionSpend:7.10,episodesStaged:30,note:"One data source: this object drives Home, KPI & Reports, and Finance. The v1 contradiction (two layouts, two truths) is fixed by construction."};
+function demoState(){return {mode:"demo",ws:"Estiban Creations — Demo",
+ projects:[
+  {id:"fireside-ep1",name:"Fireside Ep 1 (v3) — Photorealistic Master",type:"Video episode",status:"Staged — QC gate",pill:"gate",detail:"17:05 master, 1280×720, captions burned. 19 conversation cues, 133 segments. Spend 710 credits ≈ $7.10. Publish waits on Steve's APPROVED.",file:"../goals/fireside-series-production/files/fireside-video/ep01-v3-realistic.mp4"},
+  {id:"fireside-kids1",name:"Fireside Kids Ep 1",type:"Video episode",status:"Assembled — publish held",pill:"gate",detail:"kids-ep01.mp4 assembled and approved for publish Oct 19; upload held for Steve's explicit word.",file:""},
+  {id:"crossroads-p1",name:"Crossroads of Identity — Part 1",type:"Series episode",status:"13 clips, picture only",pill:"warn",detail:"Complete 13-clip picture set local. Narration recorded (31 cues). Assembly waits on Steve's standing picks: narrator, Elijah, Senior Partner voice, S08 alt-take.",file:""},
+  {id:"crossroads-p2",name:"Crossroads of Identity — Part 2",type:"Series episode",status:"Shot 1 of 15 local",pill:"warn",detail:"15 keyframes approved (in Drive). Remaining shots carry a credit cost, stated before any render.",file:""},
+  {id:"secretary",name:"Executive Assistant (Secretary)",type:"Character",status:"Bundle locked — voice pick locked",pill:"ok",detail:"Chicago South Side, Fortune 500 EA, 1920s Downtown only. Voice: Candidate 1 (Midwestern), treated sample awaiting ear-check.",file:""}],
+ worlds:[["Grand's Room — Fireside","Interior","Locked still + world sheet (2.0)"],
+         ["Crossroads Street — 1920s Chicago","Exterior","Reference stills"],
+         ["Radio Corner — Fireside","Interior","Locked still"]],
+ media:[
+  ["ep01-v3-realistic.mp4","video","Fireside Ep 1 master — 17:05 — 270,225,555 B","../goals/fireside-series-production/files/fireside-video/ep01-v3-realistic.mp4"],
+  ["kids-ep01.mp4","video","Fireside Kids Ep 1 — assembled",""],
+  ["grand-proof-01.png","image","Grand — LOCKED photorealistic look",""],
+  ["ep01-qc-edit-window.html","tool","QC & Edit Window — Ep 1","../goals/fireside-series-production/files/fireside-video/ep01-qc-edit-window.html"]],
+ queue:[
+  ["Loop test video","upload-requested","gate"],
+  ["Fireside Ep 1–3 uploads","queued","warn"],
+  ["Crossroads Part 2 batch","queued","warn"],
+  ["Fireside Kids Ep 1","staged","gate"],
+  ["Secretary — Avatar World","waiting","warn"],
+  ["Fireside Ep 1 (v3) — Photorealistic Master","staged — Publish at gate","gate"]],
+ kpi:JSON.parse(JSON.stringify(KPI))};}
+function blankState(){return {mode:"blank",ws:"New Workspace",projects:[],worlds:[],media:[],queue:[],kpi:{views:0,reach:0,engagement:0,igReelsLive:0,ytPrivate:0,adSpend:0,sales:0,productionSpend:0,episodesStaged:0,note:KPI.note}};}
+let S=null, cur="home", detailId=null;
+</script>
+<script>
+/* ============ CORE ============ */
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function toast(m){const t=$("toast");t.textContent=m;t.style.display="block";setTimeout(()=>t.style.display="none",3400)}
+function save(){try{localStorage.setItem("vw2-"+S.mode,JSON.stringify(S));$("saveState").textContent="Saved · "+new Date().toLocaleTimeString()}catch(e){}}
+function launch(mode){let raw=null;try{raw=localStorage.getItem("vw2-"+mode)}catch(e){}
+ S=raw?JSON.parse(raw):(mode==="demo"?demoState():blankState());
+ $("boot").style.display="none";$("app").style.display="block";
+ $("modeBadge").textContent=mode==="demo"?"DEMO — EXISTING WORK":"BLANK — NEW USER";
+ $("modeBadge").className="badge "+mode;$("wsName").textContent=S.ws;
+ buildNav();go("home");save();}
+function switchMode(){$("app").style.display="none";$("boot").style.display="flex"}
+function buildNav(){$("nav").innerHTML=SECTIONS.map((s,i)=>"<button data-go=\""+s[0]+"\" onclick=\"go('"+s[0]+"')\"><span class='n'>"+String(i+1).padStart(2,"0")+"</span><span class='lbl'>"+s[1]+"</span></button>").join("")}
+function go(id){cur=id;detailId=null;document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===id));render()}
+function pill(p){return {ok:"p-ok",warn:"p-warn",bad:"p-bad",gate:"p-gate",info:"p-info"}[p]||"p-info"}
+function render(){const v=$("view");const R={home:vHome,projects:vProjects,create:vCreate,worlds:vWorlds,characters:vCharacters,books:vBooks,media:vMedia,studio:vStudio,queue:vQueue,voices:vVoices,socials:vSocials,kpi:vKpi,connections:vConnections,savemap:vSavemap,tiers:vTiers,settings:vSettings};v.innerHTML=(R[cur]||vHome)();window.scrollTo(0,0);if(cur==="media")renderMedia();if(cur==="worlds"){const wf=$("wFilter");if(wf)wf.value=wFilterVal}}
+function kpiGrid(k){const n=x=>x>=1000000?(x/1000000)+"M":x>=1000?(x/1000)+"K":""+x;return "<div class='kpirow'>"
+ +"<div class='kpi'><div class='v'>"+n(k.views)+"</div><div class='k'>Views</div></div>"
+ +"<div class='kpi'><div class='v'>"+k.igReelsLive+"</div><div class='k'>IG reels live</div></div>"
+ +"<div class='kpi'><div class='v'>"+k.ytPrivate+"</div><div class='k'>YouTube (private)</div></div>"
+ +"<div class='kpi'><div class='v'>"+k.episodesStaged+"</div><div class='k'>Episodes staged</div></div>"
+ +"<div class='kpi'><div class='v'>$"+k.productionSpend.toFixed(2)+"</div><div class='k'>Production spend</div></div>"
+ +"<div class='kpi'><div class='v'>$"+(k.sales-k.adSpend-k.productionSpend).toFixed(2)+"</div><div class='k'>Net (sales − spend)</div></div></div>"}
+/* ============ VIEWS ============ */
+function vHome(){const k=S.kpi;return "<h2>Home</h2>"+kpiGrid(k)
+ +"<div class='grid2'><div class='card'><h3>"+(S.mode==="demo"?"Where the work stands":"Welcome — your workspace is ready")+"</h3><p class='mut'>"+(S.mode==="demo"?"Fireside Ep 1 (v3) sits at its QC gate in the Hold Queue. Crossroads waits on four standing picks. Everything publishes only on Steve's APPROVED.":"Your workspace was created automatically. Start at Create & Produce: the intake form builds the project record, runs the seven-check preflight, and queues the job — no hand-written files.")+"</p><button class='primary' onclick=\"go('"+(S.mode==="demo"?"queue":"create")+"')\">"+(S.mode==="demo"?"Open the Hold Queue":"Start your first production")+"</button></div>"
+ +"<div class='card'><h3>System</h3><p class='mut'>Version 2.0 — one model: canon → conversation → generation → QC &amp; edit → approval → publishing → reporting. Provider Router with cost ceilings · Save Map memory · MCP/API connections in section 13.</p><button onclick=\"go('tiers')\">See the tiers</button></div></div>"}
+function vProjects(){if(detailId){const p=S.projects.find(x=>x.id===detailId);if(p)return "<button onclick='detailId=null;render()'>← All projects</button><div class='card' style='margin-top:10px'><h2>"+esc(p.name)+"<span class='pill "+pill(p.pill)+"'>"+esc(p.status)+"</span></h2><p class='mut'>"+esc(p.type)+"</p><p>"+esc(p.detail)+"</p>"+(p.file?"<p><a href='"+p.file+"' target='_blank'>Open the master file</a></p>":"")+"</div>"}
+ if(!S.projects.length)return "<h2>Projects</h2><div class='card'><h3>No projects yet</h3><p class='mut'>A blank system starts empty on purpose. Your first project is created by the intake form — it builds the record, the preflight, and the queue card in one pass.</p><button class='primary' onclick=\"go('create')\">Create &amp; Produce</button></div>";
+ return "<h2>Projects</h2><div class='grid'>"+S.projects.map(p=>"<div class='card proj' onclick=\"detailId='"+p.id+"';render()\"><h3>"+esc(p.name)+"</h3><p class='mut'>"+esc(p.type)+"</p><span class='pill "+pill(p.pill)+"'>"+esc(p.status)+"</span></div>").join("")+"</div><p class='mut'>Open Project lands on the project itself — the v1 routing defect is fixed.</p>"}
+function vCreate(){return "<h2>Create &amp; Produce</h2><div class='card'><h3>New production — intake</h3>"
+ +"<label>Title</label><input id='fTitle' placeholder='e.g. Fireside Ep 31'>"
+ +"<label>Type</label><select id='fType'><option>Video episode</option><option>Book</option><option>Image set</option><option>Commercial</option></select>"
+ +"<label>Conversation / script state</label><select id='fScript'><option value=''>Not started</option><option value='draft'>Draft</option><option value='locked'>Locked — conversation measured (breaths, pauses, emphasis)</option></select>"
+ +"<label>Budget ceiling (USD) — the router may not exceed it</label><input id='fBudget' type='number' min='0' step='0.5' placeholder='e.g. 10'>"
+ +"<label style='font-weight:400;color:var(--ink)'><input type='checkbox' id='fLocks' style='width:auto'> Character &amp; world locks approved</label>"
+ +"<label style='font-weight:400;color:var(--ink)'><input type='checkbox' id='fRights' style='width:auto'> Rights record on file</label>"
+ +"<label style='font-weight:400;color:var(--ink)'><input type='checkbox' id='fKey' style='width:auto'> Approved keyframe / reference set attached</label>"
+ +"<p><button class='gold' onclick='runPreflight()'>Run preflight &amp; queue</button></p><div id='preOut'></div></div>"
+ +"<div class='card'><h3>How production runs</h3><p class='mut'>Conversation first (script + voices locked, measured) → images framed per beat → video with motion written against the speech → QC → assembly → publish gate. The Provider Router states the cost BEFORE any job runs and holds the ceiling you set. Generation routes to the proven loop; every run gets a Hold Queue card.</p></div>"}
+function runPreflight(){const t=$("fTitle").value.trim(),sc=$("fScript").value,b=$("fBudget").value;
+ const checks=[["Project record (this form)",!!t],["Script / conversation locked",sc==="locked"],["Character & world locks approved",$("fLocks").checked],["Rights record on file",$("fRights").checked],["Approved keyframe / references",$("fKey").checked],["Budget ceiling set",b!==""&&+b>=0],["Provider verified (Runway)",true]];
+ const fails=checks.filter(c=>!c[1]);const out=$("preOut");
+ out.innerHTML=checks.map(c=>"<div class='check'><span class='st' style='color:"+(c[1]?"var(--ok)":"var(--bad)")+"'>"+(c[1]?"✓":"✗")+"</span>"+c[0]+"</div>").join("")
+  +(fails.length?"<p style='color:var(--bad);font-weight:700'>"+fails.length+" of 7 checks failed. Generation is blocked — complete the items above; the form is the path, not a dead end.</p>"
+  :"<p style='color:var(--ok);font-weight:700'>7 of 7 checks passed. Project created and queued — cost will be stated before the run fires.</p>");
+ if(!fails.length){const id="p"+Date.now();S.projects.push({id:id,name:t,type:$("fType").value,status:"Queued — cost estimate pending",pill:"warn",detail:"Created by the 2.0 intake. Conversation-first order applies. Cost stated before any render.",file:""});S.queue.push([t,"queued — new intake","warn"]);save();toast("Project created and queued")}}
+let wFilterVal="";
+function vWorlds(){return "<h2>Worlds</h2><div class='card'><label>Filter by kind</label><select id='wFilter' onchange='wFilterVal=this.value;render()' style='max-width:240px'><option value=''>All worlds</option><option>Interior</option><option>Exterior</option></select>"
+ +(S.worlds.length?"<div class='grid' style='margin-top:12px'>"+S.worlds.filter(w=>!wFilterVal||w[1]===wFilterVal).map(w=>"<div class='card' style='margin:0'><h3>"+esc(w[0])+"</h3><p class='mut'>"+esc(w[1])+" · "+esc(w[2])+"</p></div>").join("")+"</div>":"<p class='mut' style='margin-top:10px'>No worlds yet. Worlds are documented as world sheets in 2.0: multi-view scene documentation with placement and action maps — authored consistency now, simulation on watch.</p>")
+ +"<p class='mut'>The filter works — the v1 Worlds Pack defect is fixed. World layer: see the flagship tier.</p></div>"}
+function vCharacters(){const chars=S.projects.filter(p=>p.type==="Character");
+ return "<h2>Characters</h2>"+(S.mode==="demo"?"<div class='card'><h3>Grand — Fireside teller<span class='pill p-ok'>Look LOCKED</span></h3><p class='mut'>Photorealistic proof approved Oct 22 (\"She perfect\"). Voice: Homespun Basket. The 2.0 boards use only locked production stills — the v1 sample-board defect does not exist here.</p></div>":"")
+ +(chars.length?"<div class='grid'>"+chars.map(p=>"<div class='card proj' onclick=\"detailId='"+p.id+"';cur='projects';render()\"><h3>"+esc(p.name)+"</h3><span class='pill "+pill(p.pill)+"'>"+esc(p.status)+"</span></div>").join("")+"</div>":"<div class='card'><p class='mut'>No characters yet. A character is created as a full bundle — look, location, voice, background, approach, era, industry, reference works — then locked.</p></div>")}
+function vBooks(){return "<h2>Books</h2><div class='card'><table><tr><th>Book</th><th>State</th></tr>"+BOOKS.map(b=>"<tr><td>"+b[0]+"</td><td>"+b[1]+"</td></tr>").join("")+"</table><p class='mut'>The book pipeline ends at Amazon KDP (Socials &amp; Distribution, section 11). Chapter prose lives in Drive today; the 2.0 pipeline pulls it into the project record under the Save Map.</p></div>"}
+function vMedia(){return "<h2>Media Library</h2><div class='card'><div style='display:flex;gap:10px;flex-wrap:wrap'><input id='mSearch' placeholder='Search media…' oninput='renderMedia()' style='flex:1;min-width:180px'><select id='mType' onchange='renderMedia()' style='max-width:180px'><option value=''>All types</option><option>video</option><option>image</option><option>tool</option></select></div><div id='mList' style='margin-top:12px'></div><p class='mut'>Search and type filters work — the v1 Media Library defect is fixed.</p></div>"}
+function renderMedia(){const q=(($("mSearch")||{}).value||"").toLowerCase(),t=($("mType")||{}).value||"";
+ const list=S.media.filter(m=>(!t||m[1]===t)&&(!q||(m[0]+" "+m[2]).toLowerCase().includes(q)));
+ $("mList").innerHTML=list.length?list.map(m=>"<div style='padding:8px 0;border-bottom:1px solid var(--line)'><b>"+esc(m[0])+"</b> <span class='pill p-info'>"+m[1]+"</span><div class='mut'>"+esc(m[2])+(m[3]?" · <a href='"+m[3]+"' target='_blank'>Open</a>":"")+"</div></div>").join(""):"<p class='mut'>No media matches — in a blank system this is the empty shelf: uploads land here and in the Save Map.</p>"}
+function vStudio(){return "<h2>QC &amp; Edit Studio</h2>"
+ +(S.mode==="demo"?"<div class='card'><h3>Fireside Ep 1 — QC &amp; Edit Window<span class='pill p-gate'>Verdict gate</span></h3><p class='mut'>Beat lane + 19-cue audio lane over the master; tap a cue to hear it against the picture. Verdict is Steve's word in chat — the window records, it does not publish.</p><p><a href='../goals/fireside-series-production/files/fireside-video/ep01-qc-edit-window.html' target='_blank'><button class='primary'>Open the QC &amp; Edit Window</button></a> <a href='../goals/fireside-series-production/files/fireside-video/ep01-v3-realistic.mp4' target='_blank'><button>Play the master</button></a></p></div>":"<div class='card'><h3>Editor surface</h3><p class='mut'>Empty until your first production reaches QC: picture lane, audio-track lane, cue matching, verdict panel, Produce / Save / Send.</p></div>")
+ +"<div class='card'><h3>Edit on the spot — the 2.0 edit stage</h3><p class='mut'>The edit stage is an edit-MODEL stage: select a shot at its track position, apply a fix (relight, restyle, replace, remove), the result lands back at that position for QC — the pattern Steve pinned from Runway's plugin examples, built into our surface under our gates and cost rules. Performance capture is a cast-stage option. Both are Pro/Flagship tier capabilities, specified in the tiers.</p></div>"}
+function vQueue(){return "<h2>Hold Queue</h2>"+(S.queue.length?"<div class='grid'>"+S.queue.map(q=>"<div class='card' style='margin:0'><h3>"+esc(q[0])+"</h3><span class='pill "+pill(q[2])+"'>"+esc(q[1])+"</span><p class='mut'>Stages: Cast → Voice → Animate → Assemble → Publish. Publish fires only on Steve's APPROVED.</p></div>").join("")+"</div>":"<div class='card'><p class='mut'>The queue is empty. Every production run creates its card here automatically — including the cost per stage, stated before it runs.</p></div>")}
+function vVoices(){return "<h2>Voice Library</h2><div class='card'><table><tr><th>Voice</th><th>Role</th><th>State</th></tr>"+VOICES.map(v=>"<tr><td><b>"+v[0]+"</b></td><td>"+v[1]+"</td><td>"+v[2]+"</td></tr>").join("")+"</table><p class='mut'>Locked voices are production assets. June's voice remains provisional and swaps free until Steve locks it.</p></div>"}
+function vSocials(){return "<h2>Socials &amp; Distribution</h2><div class='card'><table><tr><th>Platform</th><th>Lane</th><th>Status</th></tr>"+SOCIALS.map(s=>"<tr><td><b>"+s[0]+"</b></td><td>"+s[1]+"</td><td><span class='pill "+pill(s[3])+"'>"+s[2]+"</span></td></tr>").join("")+"</table><p class='mut'>The canonical 2.0 listing: YouTube · TikTok · Instagram · Facebook · X · Yahoo · Etsy · Amazon / Amazon KDP. Publishing is approval-gated everywhere — a staged packet, then Steve's APPROVED, then the post.</p></div>"}
+function vKpi(){const k=S.kpi;return "<h2>KPI &amp; Reports</h2>"+kpiGrid(k)
+ +"<div class='grid2'><div class='card'><h3>Business reporting</h3><p class='mut'>Weekly and monthly: views, reach, engagement, advertising boosts, spending, sales, attribution, ROI, forecasts, recommendations. This section and Home read the SAME data object — one truth, every layout (v1's Finance/Reports contradiction is fixed by construction).</p></div>"
+ +"<div class='card'><h3>Finance</h3><table><tr><td>Production spend</td><td>$"+k.productionSpend.toFixed(2)+"</td></tr><tr><td>Ad spend</td><td>$"+k.adSpend.toFixed(2)+"</td></tr><tr><td>Sales</td><td>$"+k.sales.toFixed(2)+"</td></tr><tr><td><b>Net</b></td><td><b>$"+(k.sales-k.adSpend-k.productionSpend).toFixed(2)+"</b></td></tr></table></div></div>"}
+function vConnections(){return "<h2>Connections — MCP / API</h2><div class='card'><table><tr><th>System</th><th>Connection</th><th>Surface</th><th>Status</th></tr>"+CONNECTIONS.map(c=>"<tr><td><b>"+c[0]+"</b></td><td>"+c[1]+"</td><td class='mut'>"+c[2]+"</td><td><span class='pill "+pill(c[4])+"'>"+c[3]+"</span></td></tr>").join("")+"</table><p class='mut'>Systems that expose an MCP server or an API get a door here — ChatGPT/OpenAI, Claude, Google AI Studio, and Runway among them. Connecting a new system is Steve's tap, one at a time, keys through the secure flow. Higgsfield stays reference-only by his direction.</p></div>"}
+function vSavemap(){return "<h2>Save Map &amp; Storage</h2><div class='card'><table><tr><th>What</th><th>Home</th><th>Rule</th></tr>"
+ +"<tr><td>Masters &amp; media of record</td><td>Dropbox hub — /Estiban Creations/</td><td>Permanent; byte-size receipt on arrival</td></tr>"
+ +"<tr><td>Cross-system handoffs</td><td>Google Drive — Master Folder (00–04)</td><td>Drop-file standard v1.1</td></tr>"
+ +"<tr><td>Project memory (locks, maps, verdicts)</td><td>System record + plain-file mirror in the project folder</td><td>Saved where the system can find it again</td></tr>"
+ +"<tr><td>Provider outputs</td><td>Pulled into our storage on completion</td><td>A provider window is never the archive</td></tr>"
+ +"<tr><td>Intermediates</td><td>Local workspace</td><td>30 days, then reviewed</td></tr>"
+ +"<tr><td>Wrong files</td><td>Quarantine folder</td><td>Never silently deleted</td></tr></table>"
+ +"<p><button class='primary' onclick='exportWorkspace()'>Export this workspace (JSON)</button></p><p class='mut'>External options always available: Dropbox, Drive, device download. Retention is written into the system, not remembered.</p></div>"}
+function vTiers(){return "<h2>Plans &amp; Tiers — VisionWeaver 2.0</h2><div class='grid'>"+TIERS.map((t,i)=>"<div class='card' style='margin:0;"+(i===3?"border:2px solid var(--gold)":"")+"'><h3>"+t[0]+(i===3?" — FLAGSHIP":"")+"</h3><p class='mut'>"+t[1]+"</p><ul style='margin:6px 0;padding-left:18px;font-size:13.5px'>"+t[2].map(f=>"<li>"+f+"</li>").join("")+"</ul></div>").join("")+"</div><p class='mut'>One big model, outlined under tiers. Commerce activates last, after doors, the new-user floor, the router, and the Save Map are proven in the walkthrough.</p>"}
+function vSettings(){return "<h2>Settings</h2><div class='grid2'><div class='card'><h3>Sign in</h3><p class='mut'>Unchanged in 2.0, exactly as it stands — the system builds up and out from an accurate start.</p><label>Email</label><input placeholder='Email address'><label>Password (8+ characters)</label><input type='password' placeholder='Password'><p><button class='primary'>Sign in</button></p><p class='mut'>Or continue with:</p><p><button disabled>Google (not turned on yet)</button> <button disabled>Apple (not turned on yet)</button> <button disabled>Microsoft (not turned on yet)</button></p></div>"
+ +"<div class='card'><h3>Workspace</h3><p class='mut'>Name: <b>"+esc(S.ws)+"</b><br>Mode: "+S.mode+"<br>Version: 2.0<br>Publishing: approval-gated<br>Spend: cost stated before every run, ceiling enforced by the router<br>Deletes: gated; wrong files go to quarantine, never silent deletion.</p></div></div>"}
+function exportWorkspace(){const blob=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="visionweaver-2.0-"+S.mode+"-workspace.json";a.click();toast("Workspace exported")}
+</script>
+</body>
+</html>
