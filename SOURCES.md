@@ -594,3 +594,39 @@ full per-file accounting: GitHub per-file list + redaction table, Drive 2,134-li
 manifest (folder list, included files, redactions, unresolvable, excluded appendix),
 email manifest, workspace manifest (1,613 lines, §5 judgments), memory manifest
 (733 lines, chronological index from line 226).
+
+
+## Round 2 redactions (2026-11-18, secret-scan remediation before resume)
+
+GitHub Secret Scanning (push protection) rejected batch 8. A full re-scan of all staged text files with expanded patterns (Anthropic, Supabase secret, OpenAI, Google, GitHub token, private key, Slack) found additional live-looking secret values the first scan missed. Only the secret VALUES were replaced with `[secret value withheld]` in the staged working copies; every other byte of each file is intact, and no source outside this hub was changed.
+
+| File | Secret type | Values redacted |
+|---|---|---|
+| `sources/drive/My Drive/MAF/B v.md` | Anthropic API key | 2 |
+| `sources/drive/My Drive/MAF/B v.md` | Supabase secret key | 1 |
+
+Placeholders and non-key-format matches reviewed and left intact: 0 across 0 files. Lone BEGIN PRIVATE KEY lines with no END block: 0 across 0 files (flagged for review, not altered). Re-scan after redaction: 0 confirmed matches remaining.
+
+## Round 3 redactions (2026-11-18, secret-scan remediation after batches 8–9 pushed)
+
+GitHub Secret Scanning (push protection) rejected batch 10 after batches 8 and 9 pushed cleanly. The flagged secret type was a GCP API Key Bound to a Service Account (high confidence, found twice) in one file. A full re-scan of all staged files for the newly found patterns — `AQ.`-prefixed service-account-bound keys, short `sk_` values stored as `fullKey`, and `STRIPE_SECRET_KEY` values — found the same kinds of keys in other not-yet-pushed files, including three files held for web upload. Only the secret VALUES were replaced with `[secret value withheld]` in the staged working copies; every other byte of each file is intact, and no source outside this hub was changed. Key previews (first/last few characters) were left intact — they are fragments, not values.
+
+| File | Secret type | Values redacted |
+|---|---|---|
+| `sources/drive/My Drive/MAF/Google AI Studio 1/review system and analyze code - run entire system check and ensure code is working correctly.prompt.md` | GCP API key, service-account-bound (`AQ.`, 53-char) | 1 |
+| `sources/drive/My Drive/MAF/Google AI Studio 2/In current view endless scrolling doesn’t properly work. Review all pages and ensure every butto.prompt.md` | GCP API key, service-account-bound (`AQ.`, 53-char) | 3 |
+| `sources/drive/My Drive/MAF/Google AI Studio 2/In current view endless scrolling doesn’t properly work. Review all pages and ensure every butto.prompt.md` | `fullKey` API key (`sk_`) | 5 |
+| `sources/drive/My Drive/MAF/Google AI Studio 2/In current view endless scrolling doesn’t properly work. Review all pages and ensure every butto.prompt__1vY2aMQQ.md` | GCP API key, service-account-bound (`AQ.`, 53-char) | 3 |
+| `sources/drive/My Drive/MAF/Google AI Studio 2/In current view endless scrolling doesn’t properly work. Review all pages and ensure every butto.prompt__1vY2aMQQ.md` | `fullKey` API key (`sk_`) | 5 |
+| `sources/drive/My Drive/MAF/Google AI Studio 1/t.h.e.l.m.a.-ai-core-&-modules (2)/components/modules/ITControlCenter.tsx` | GCP API key, service-account-bound (`AQ.`, 24-char `fullKey`) | 1 |
+| `sources/drive/My Drive/MAF/Google AI Studio 1/t.h.e.l.m.a.-ai-core-&-modules (2)/components/modules/ITControlCenter.tsx` | `fullKey` API key (`sk_`) | 2 |
+| `sources/drive/My Drive/MAF/Google AI Studio 2/Copy of i can't back the files up again. Put the GitHub Ph WHATEVER back the way it was when it synched.prompt.md` | GCP API key, service-account-bound (`AQ.`, 24-char `fullKey`) | 3 |
+| `sources/drive/My Drive/MAF/Google AI Studio 2/Copy of i can't back the files up again. Put the GitHub Ph WHATEVER back the way it was when it synched.prompt.md` | `fullKey` API key (`sk_`) | 6 |
+| `sources/drive/My Drive/MAF/t.h.e.l.m.a.-ai-core-&-modules (2)/components/modules/ITControlCenter.tsx` | GCP API key, service-account-bound (`AQ.`, 24-char `fullKey`) | 1 |
+| `sources/drive/My Drive/MAF/t.h.e.l.m.a.-ai-core-&-modules (2)/components/modules/ITControlCenter.tsx` | `fullKey` API key (`sk_`) | 2 |
+| `sources/drive/My Drive/MAF/Google AI Studio 2/Review the information for further system updates. Be sure to update code and foies on all acces.prompt.md` | `fullKey` API key (`sk_`) | 1 |
+| `sources/drive/_00_THELMA_AI_SUITE/T.H.E.L.M.A. Dump/THELMA HENRYAI LILY PASTE CODE/MOTIVE NEXT ORIGINAL/MOTIVE NEXT Environment Variables-env_config.sh` | Stripe secret key | 1 |
+| `sources/drive/_00_THELMA_AI_SUITE/T.H.E.L.M.A. Dump/THELMA HENRYAI LILY PASTE CODE/MOTIVE NEXT ORIGINAL/MOTIVE NEXT Environment Variables.sh` | Stripe secret key | 1 |
+| `sources/github/standalone-crm/supabase/tests/rls_isolation.sql` | Test-fixture `api_key` value (precautionary — mock data beside an example.com domain, could not verify fake without reading the value) | 1 |
+
+Total: 36 values across 10 files. The three held files on this list had their staged copies redacted too, so a future web upload from staging is clean. The keys still exist in the owner's Drive originals — rotation is the owner's call. Live batches verified clean before resume: batch 3's file (`review system and analyze code...prompt__1MJAFq23.md`) has 0 matches for every pattern checked; its one `ghp_` hit is a 24-character placeholder value, not a token (0 exact-36 matches), and GitHub accepted the batch. Re-scan after redaction: 0 `AQ.` matches, 0 `fullKey` real values, 0 live `STRIPE_SECRET_KEY` values remaining across all staged files.
