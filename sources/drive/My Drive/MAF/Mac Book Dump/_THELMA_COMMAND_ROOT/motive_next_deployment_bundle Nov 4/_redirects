@@ -1,0 +1,6 @@
+Original name: _redirects
+Drive ID: 1JW5YvcoQgztb0_LdUMgC592beC4fxX7f
+Parent folder: My Drive/MAF/Mac Book Dump/_THELMA_COMMAND_ROOT/motive_next_deployment_bundle Nov 4/
+Modified: 2025-11-05T03:08:42.000Z
+
+/api/* /.netlify/functions/:splat 200

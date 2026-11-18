@@ -1,0 +1,8 @@
+Original name: robots.txt
+Drive ID: 1KXjAxd1ubfWP2DxV-B05yq06kp8nha-m
+Parent folder: My Drive/MAF/Mac Book Dump/_THELMA_COMMAND_ROOT/motive-next-deployment Sep 5/motive-next-deployment/robots.txt/
+Modified: 2025-09-06T02:28:57.000Z
+
+User-agent: *
+Allow: /
+Sitemap: https://motivenext.online/sitemap.xml

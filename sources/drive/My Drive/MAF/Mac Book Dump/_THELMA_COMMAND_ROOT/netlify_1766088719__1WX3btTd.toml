@@ -1,0 +1,21 @@
+Original name: netlify_1766088719.toml
+Drive ID: 1WX3btTdibcCnjq1ls9GaN0n2uv1UN2wL
+Parent folder: My Drive/MAF/Mac Book Dump/_THELMA_COMMAND_ROOT/
+Modified: 2026-01-20T18:05:06.692Z
+
+# Netlify drop-in config for T.H.E.L.M.A. Ops (Next.js)
+# Save as: netlify.toml at the project root
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Optional:
+# [build.environment]
+#   NODE_VERSION = "20"

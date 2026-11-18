@@ -1,0 +1,6 @@
+Original name: ai_studio_code.txt
+Drive ID: 1sX8iIDjL_zbJDzRvlxLGU0cfKtpIQyxK
+Parent folder: My Drive/MAF/Mac Book Dump/_THELMA_COMMAND_ROOT/
+Modified: 2026-01-13T01:02:07.000Z
+
+Uncaught SyntaxError: The requested module 'lucide-react' does not provide an export named 'Tool'

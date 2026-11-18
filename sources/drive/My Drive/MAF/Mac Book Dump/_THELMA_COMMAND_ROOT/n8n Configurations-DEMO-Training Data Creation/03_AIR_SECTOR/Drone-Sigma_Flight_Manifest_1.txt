@@ -1,0 +1,7 @@
+Original name: Drone-Sigma_Flight_Manifest_1.txt
+Drive ID: 1_aW7kJ_rSKJ7g58C8a4muM984UWoCKuY
+Parent folder: My Drive/MAF/Mac Book Dump/_THELMA_COMMAND_ROOT/n8n Configurations-DEMO-Training Data Creation/03_AIR_SECTOR/
+Modified: 2026-01-19T05:32:19.273Z
+
+LOG ENTRY 1 - DRONE SIGMA - AIR SECTOR
+STATUS: VERIFIED

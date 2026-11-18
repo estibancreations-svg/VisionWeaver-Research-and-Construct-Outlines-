@@ -1,0 +1,10 @@
+Original name: netlify.toml
+Drive ID: 13nZC5WmAa5Oq8_yJUSgGT3WaLxtS6Y3f
+Parent folder: My Drive/MAF/Mac Book Dump/_THELMA_COMMAND_ROOT/motive_next_deployment_bundle Nov 4/
+Modified: 2025-11-05T03:08:42.000Z
+
+[build]
+functions = "netlify/functions"
+
+[analytics]
+enabled = true
