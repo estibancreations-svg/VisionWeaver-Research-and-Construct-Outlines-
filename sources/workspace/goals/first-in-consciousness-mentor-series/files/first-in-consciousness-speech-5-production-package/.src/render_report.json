@@ -1,0 +1,413 @@
+{
+  "ok": true,
+  "pdf": "/home/hatch/workspace/goals/first-in-consciousness-mentor-series/files/first-in-consciousness-speech-5-production-package/first-in-consciousness-speech-5-production-package.pdf",
+  "pages": 0,
+  "pngs": [],
+  "fonts": {
+    "missing": [],
+    "unused": [
+      "Liberation Serif:400"
+    ],
+    "used": [
+      "Liberation Sans",
+      "Liberation Serif"
+    ],
+    "expected": [
+      "Liberation Sans:400",
+      "Liberation Sans:700",
+      "Liberation Serif:400",
+      "Liberation Serif:700"
+    ]
+  },
+  "overflow": [],
+  "text_floor": [
+    {
+      "index": 0,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 96,
+          "max_node_chars": 46,
+          "sample": "VisionWeaver - First in Consciousness - "
+        },
+        {
+          "pt": 9.5,
+          "chars": 314,
+          "max_node_chars": 314,
+          "sample": "Aelune, Keeper of the Night Shelf - lead"
+        },
+        {
+          "pt": 10,
+          "chars": 281,
+          "max_node_chars": 205,
+          "sample": "Before:"
+        },
+        {
+          "pt": 10.5,
+          "chars": 267,
+          "max_node_chars": 112,
+          "sample": "DONE"
+        },
+        {
+          "pt": 11,
+          "chars": 264,
+          "max_node_chars": 36,
+          "sample": "Series:"
+        },
+        {
+          "pt": 12,
+          "chars": 253,
+          "max_node_chars": 237,
+          "sample": "Speech 5 production package. The full sc"
+        },
+        {
+          "pt": 34,
+          "chars": 30,
+          "max_node_chars": 16,
+          "sample": "The Current Cannot"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 70,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim"
+        },
+        {
+          "pt": 10.5,
+          "chars": 148,
+          "max_node_chars": 148,
+          "sample": "Delivery note. The demonstration comes b"
+        },
+        {
+          "pt": 11,
+          "chars": 683,
+          "max_node_chars": 261,
+          "sample": "Speaker is Aelune throughout, except the"
+        },
+        {
+          "pt": 12,
+          "chars": 24,
+          "max_node_chars": 20,
+          "sample": "Hook"
+        },
+        {
+          "pt": 13.5,
+          "chars": 72,
+          "max_node_chars": 72,
+          "sample": "\"I'll try\" is sometimes a promise - and "
+        },
+        {
+          "pt": 19,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The script is the source - these words d"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 80,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 218,
+          "max_node_chars": 71,
+          "sample": "Delivery notes for this section."
+        },
+        {
+          "pt": 11,
+          "chars": 422,
+          "max_node_chars": 195,
+          "sample": "\"The half bowl is not modest,\" I said. \""
+        },
+        {
+          "pt": 19,
+          "chars": 27,
+          "max_node_chars": 27,
+          "sample": "The half bowl, and the third door"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 80,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 160,
+          "max_node_chars": 160,
+          "sample": "Delivery note. \"Step in fully, or sit on"
+        },
+        {
+          "pt": 11,
+          "chars": 530,
+          "max_node_chars": 223,
+          "sample": "Hear me. Step in fully, or sit on the ba"
+        },
+        {
+          "pt": 12,
+          "chars": 7,
+          "max_node_chars": 7,
+          "sample": "Reframe"
+        },
+        {
+          "pt": 19,
+          "chars": 34,
+          "max_node_chars": 34,
+          "sample": "Step in fully, or sit on the bank honest"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 80,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 308,
+          "max_node_chars": 167,
+          "sample": "Where this sits in the episode. End of s"
+        },
+        {
+          "pt": 11,
+          "chars": 675,
+          "max_node_chars": 338,
+          "sample": "So this week, pick one thing. One thing "
+        },
+        {
+          "pt": 12,
+          "chars": 21,
+          "max_node_chars": 13,
+          "sample": "Practice"
+        },
+        {
+          "pt": 19,
+          "chars": 18,
+          "max_node_chars": 18,
+          "sample": "Retire one \"I'll try\""
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 89,
+          "max_node_chars": 45,
+          "sample": "Crossroads Standards - Mapped to This Ep"
+        },
+        {
+          "pt": 9.8,
+          "chars": 1566,
+          "max_node_chars": 341,
+          "sample": "Crossroads standard"
+        },
+        {
+          "pt": 10.5,
+          "chars": 87,
+          "max_node_chars": 80,
+          "sample": "Status:"
+        },
+        {
+          "pt": 11,
+          "chars": 218,
+          "max_node_chars": 218,
+          "sample": "The standards already set for Crossroads"
+        },
+        {
+          "pt": 19,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The Crossroads standard governs this epi"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 79,
+          "max_node_chars": 45,
+          "sample": "Scene Map - 12 Scenes - 6-12 Minutes"
+        },
+        {
+          "pt": 9.8,
+          "chars": 1347,
+          "max_node_chars": 87,
+          "sample": "#"
+        },
+        {
+          "pt": 10,
+          "chars": 117,
+          "max_node_chars": 117,
+          "sample": "Setting: the Night Shelf observatory at "
+        },
+        {
+          "pt": 19,
+          "chars": 43,
+          "max_node_chars": 43,
+          "sample": "Scenes 1-6 - the list, the two bowls, th"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 68,
+          "max_node_chars": 45,
+          "sample": "Scene Map - Continued"
+        },
+        {
+          "pt": 9.8,
+          "chars": 1475,
+          "max_node_chars": 108,
+          "sample": "#"
+        },
+        {
+          "pt": 10,
+          "chars": 141,
+          "max_node_chars": 141,
+          "sample": "Payoff placement: Scene 12 lands at 70-8"
+        },
+        {
+          "pt": 19,
+          "chars": 44,
+          "max_node_chars": 44,
+          "sample": "Scenes 7-12 - the third door, the Curren"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 81,
+          "max_node_chars": 45,
+          "sample": "Posting Package - Processing Status"
+        },
+        {
+          "pt": 9.5,
+          "chars": 163,
+          "max_node_chars": 84,
+          "sample": "Main thumbnail - speech5-thumbnail-main."
+        },
+        {
+          "pt": 10,
+          "chars": 38,
+          "max_node_chars": 38,
+          "sample": "No posting day or time is set for this e"
+        },
+        {
+          "pt": 10.5,
+          "chars": 249,
+          "max_node_chars": 87,
+          "sample": "Processing status"
+        },
+        {
+          "pt": 11,
+          "chars": 1173,
+          "max_node_chars": 333,
+          "sample": "Long title:"
+        },
+        {
+          "pt": 12,
+          "chars": 37,
+          "max_node_chars": 26,
+          "sample": "Short - 45-60 second beat sheet"
+        },
+        {
+          "pt": 19,
+          "chars": 36,
+          "max_node_chars": 36,
+          "sample": "Ready to post - when the episode is prod"
+        }
+      ]
+    }
+  ],
+  "image_resolution": [
+    {
+      "index": 0,
+      "images": [
+        {
+          "rendered_w": 412,
+          "natural_w": 1280,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "images": []
+    },
+    {
+      "index": 2,
+      "images": []
+    },
+    {
+      "index": 3,
+      "images": []
+    },
+    {
+      "index": 4,
+      "images": []
+    },
+    {
+      "index": 5,
+      "images": []
+    },
+    {
+      "index": 6,
+      "images": []
+    },
+    {
+      "index": 7,
+      "images": []
+    },
+    {
+      "index": 8,
+      "images": [
+        {
+          "rendered_w": 315.8,
+          "natural_w": 2048,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        },
+        {
+          "rendered_w": 99.9,
+          "natural_w": 1152,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    }
+  ],
+  "geometry": {
+    "failures": [],
+    "advisories": []
+  },
+  "gate_failures": [],
+  "advisories": []
+}
