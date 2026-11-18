@@ -1,0 +1,409 @@
+{
+  "ok": true,
+  "pdf": "/home/hatch/workspace/goals/first-in-consciousness-mentor-series/files/first-in-consciousness-speech-7-production-package/first-in-consciousness-speech-7-production-package.pdf",
+  "pages": 0,
+  "pngs": [],
+  "fonts": {
+    "missing": [],
+    "unused": [],
+    "used": [
+      "Liberation Sans",
+      "Liberation Serif"
+    ],
+    "expected": [
+      "Liberation Sans:400",
+      "Liberation Sans:700"
+    ]
+  },
+  "overflow": [],
+  "text_floor": [
+    {
+      "index": 0,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 96,
+          "max_node_chars": 46,
+          "sample": "VisionWeaver - First in Consciousness - "
+        },
+        {
+          "pt": 9.5,
+          "chars": 242,
+          "max_node_chars": 242,
+          "sample": "Okta, Who Walks It All - lead for Speech"
+        },
+        {
+          "pt": 10,
+          "chars": 293,
+          "max_node_chars": 205,
+          "sample": "Before:"
+        },
+        {
+          "pt": 10.5,
+          "chars": 267,
+          "max_node_chars": 112,
+          "sample": "DONE"
+        },
+        {
+          "pt": 11,
+          "chars": 280,
+          "max_node_chars": 52,
+          "sample": "Series:"
+        },
+        {
+          "pt": 12,
+          "chars": 253,
+          "max_node_chars": 237,
+          "sample": "Speech 7 production package. The full sc"
+        },
+        {
+          "pt": 34,
+          "chars": 14,
+          "max_node_chars": 8,
+          "sample": "How You"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 70,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim"
+        },
+        {
+          "pt": 10.5,
+          "chars": 195,
+          "max_node_chars": 195,
+          "sample": "Delivery note. The refusal is the teachi"
+        },
+        {
+          "pt": 11,
+          "chars": 642,
+          "max_node_chars": 426,
+          "sample": "Speaker is Okta throughout, except the m"
+        },
+        {
+          "pt": 12,
+          "chars": 35,
+          "max_node_chars": 31,
+          "sample": "Hook"
+        },
+        {
+          "pt": 13.5,
+          "chars": 64,
+          "max_node_chars": 64,
+          "sample": "\"Before you decide, ask one question: is"
+        },
+        {
+          "pt": 19,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The script is the source - these words d"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 80,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 254,
+          "max_node_chars": 87,
+          "sample": "Delivery notes for this section."
+        },
+        {
+          "pt": 11,
+          "chars": 599,
+          "max_node_chars": 599,
+          "sample": "So we set the dilemma on the table, fair"
+        },
+        {
+          "pt": 19,
+          "chars": 42,
+          "max_node_chars": 42,
+          "sample": "Both sides in full, then the question th"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 80,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 185,
+          "max_node_chars": 185,
+          "sample": "Delivery note. \"Discernment is not a ski"
+        },
+        {
+          "pt": 11,
+          "chars": 319,
+          "max_node_chars": 319,
+          "sample": "Hear this, and hold it. Discernment is n"
+        },
+        {
+          "pt": 12,
+          "chars": 7,
+          "max_node_chars": 7,
+          "sample": "Reframe"
+        },
+        {
+          "pt": 19,
+          "chars": 30,
+          "max_node_chars": 30,
+          "sample": "Discernment is a state you return to"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 80,
+          "max_node_chars": 45,
+          "sample": "Script Draft - Verbatim, Continued"
+        },
+        {
+          "pt": 10.5,
+          "chars": 323,
+          "max_node_chars": 176,
+          "sample": "Where this sits in the episode. End of s"
+        },
+        {
+          "pt": 11,
+          "chars": 547,
+          "max_node_chars": 274,
+          "sample": "So here is the practice, and it is a rul"
+        },
+        {
+          "pt": 12,
+          "chars": 21,
+          "max_node_chars": 13,
+          "sample": "Practice"
+        },
+        {
+          "pt": 19,
+          "chars": 34,
+          "max_node_chars": 34,
+          "sample": "No decision inside the first hour of fea"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 89,
+          "max_node_chars": 45,
+          "sample": "Crossroads Standards - Mapped to This Ep"
+        },
+        {
+          "pt": 9.8,
+          "chars": 1526,
+          "max_node_chars": 247,
+          "sample": "Crossroads standard"
+        },
+        {
+          "pt": 10.5,
+          "chars": 87,
+          "max_node_chars": 80,
+          "sample": "Status:"
+        },
+        {
+          "pt": 11,
+          "chars": 218,
+          "max_node_chars": 218,
+          "sample": "The standards already set for Crossroads"
+        },
+        {
+          "pt": 19,
+          "chars": 54,
+          "max_node_chars": 54,
+          "sample": "The Crossroads standard governs this epi"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 79,
+          "max_node_chars": 45,
+          "sample": "Scene Map - 12 Scenes - 6-12 Minutes"
+        },
+        {
+          "pt": 9.8,
+          "chars": 1314,
+          "max_node_chars": 98,
+          "sample": "#"
+        },
+        {
+          "pt": 10,
+          "chars": 121,
+          "max_node_chars": 121,
+          "sample": "Setting: a riverside path at dawn, a for"
+        },
+        {
+          "pt": 19,
+          "chars": 50,
+          "max_node_chars": 50,
+          "sample": "Scenes 1-6 - the fork, both sides heard,"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 68,
+          "max_node_chars": 45,
+          "sample": "Scene Map - Continued"
+        },
+        {
+          "pt": 9.8,
+          "chars": 1416,
+          "max_node_chars": 110,
+          "sample": "#"
+        },
+        {
+          "pt": 10,
+          "chars": 141,
+          "max_node_chars": 141,
+          "sample": "Payoff placement: Scene 12 lands at 70-8"
+        },
+        {
+          "pt": 19,
+          "chars": 50,
+          "max_node_chars": 50,
+          "sample": "Scenes 7-12 - the case for staying, the "
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "runs": [
+        {
+          "pt": 8.5,
+          "chars": 81,
+          "max_node_chars": 45,
+          "sample": "Posting Package - Processing Status"
+        },
+        {
+          "pt": 9.5,
+          "chars": 201,
+          "max_node_chars": 106,
+          "sample": "Main thumbnail - speech7-thumbnail-main."
+        },
+        {
+          "pt": 10,
+          "chars": 38,
+          "max_node_chars": 38,
+          "sample": "No posting day or time is set for this e"
+        },
+        {
+          "pt": 10.5,
+          "chars": 249,
+          "max_node_chars": 87,
+          "sample": "Processing status"
+        },
+        {
+          "pt": 11,
+          "chars": 1203,
+          "max_node_chars": 314,
+          "sample": "Long title:"
+        },
+        {
+          "pt": 12,
+          "chars": 37,
+          "max_node_chars": 26,
+          "sample": "Short - 45-60 second beat sheet"
+        },
+        {
+          "pt": 19,
+          "chars": 36,
+          "max_node_chars": 36,
+          "sample": "Ready to post - when the episode is prod"
+        }
+      ]
+    }
+  ],
+  "image_resolution": [
+    {
+      "index": 0,
+      "images": [
+        {
+          "rendered_w": 345.5,
+          "natural_w": 1920,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "images": []
+    },
+    {
+      "index": 2,
+      "images": []
+    },
+    {
+      "index": 3,
+      "images": []
+    },
+    {
+      "index": 4,
+      "images": []
+    },
+    {
+      "index": 5,
+      "images": []
+    },
+    {
+      "index": 6,
+      "images": []
+    },
+    {
+      "index": 7,
+      "images": []
+    },
+    {
+      "index": 8,
+      "images": [
+        {
+          "rendered_w": 255.3,
+          "natural_w": 2048,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        },
+        {
+          "rendered_w": 71.8,
+          "natural_w": 1120,
+          "src_head": "data:image/jpeg;base64,/9j/4AAQSkZJRgABA"
+        }
+      ]
+    }
+  ],
+  "geometry": {
+    "failures": [],
+    "advisories": []
+  },
+  "gate_failures": [],
+  "advisories": []
+}
