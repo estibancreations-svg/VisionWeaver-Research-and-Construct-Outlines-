@@ -1,0 +1,86 @@
+Original name: Netlify Configuration for MOTIVE NEXT netlify_toml.txt
+Drive ID: 1eUEfUn_M9oLp34mvGemZQ3-YDof97-08
+Parent folder: _00_THELMA_AI_SUITE/T.H.E.L.M.A. Dump/THELMA HENRYAI LILY PASTE CODE/MOTIVE NEXT ORIGINAL/
+Modified: 2025-11-05T23:42:51.000Z
+
+# Netlify Configuration for MOTIVE NEXT
+# Owner: Steven Henry
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+  command = "echo 'No build step required'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# API Routes
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
+
+# SPA Routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# CORS Headers for API Functions
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization, X-Requested-With"
+    Access-Control-Max-Age = "86400"
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(self), microphone=(self), camera=(self)"
+
+# Cache Static Assets
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Function Timeout (max 10 seconds on free tier, 26 seconds on paid)
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["netlify/functions/**/*"]
+
+# Identity (Netlify Auth)
+[identity]
+  enabled = true
+
+# Plugin Configuration
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+# Environment-specific settings
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "staging"
+
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
+
+# Rate Limiting (Pro tier)
+# [[edge_functions]]
+#   function = "rate-limiter"
+#   path = "/api/*"

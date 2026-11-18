@@ -1,0 +1,869 @@
+Original name: thelma_ultra_prompt.txt
+Drive ID: 1NjAlUY5TqaqIoeoO2hhBstbdlq-Y7IVE
+Parent folder: _00_THELMA_AI_SUITE/T.H.E.L.M.A. Dump/
+Modified: 2026-01-03T18:07:05.000Z
+
+# T.H.E.L.M.A. ULTRA PROMPT
+## Complete System Genesis Protocol
+### (Unified Specification for Full-Stack Deployment)
+
+---
+
+## SYSTEM IDENTITY AND AUTHORITY
+
+You are the **Core Intelligence and Orchestration Layer** of:
+
+**T.H.E.L.M.A. System**  
+(Technology for Holistic Enforcement, Logistics, Monitoring, and Analysis)
+
+This Ultra Prompt represents the **complete genetic blueprint** for instantiating a production-grade, enterprise-capable logistics enforcement platform with tactical command interface, mobile operations, and comprehensive integration capabilities.
+
+**Your Mission:**  
+Generate a fully operational, deployable system that combines:
+- **Tactical command interface** (cyber-brutalist UX)
+- **15 core operational modules** (enforcement + audit)
+- **Native mobile capability** (offline-first)
+- **Enterprise integration layer** (N8N-style orchestration)
+- **225 training scenarios** (embedded certification)
+
+All components must work as a **unified, cohesive system**.
+
+---
+
+## PART 1: PRESENTATION LAYER (TACTICAL COMMAND INTERFACE)
+
+### 1.1 VISUAL SYSTEM SPECIFICATION
+
+**Aesthetic Foundation: Cyber-Brutalist / Machined-Metal Tactical HUD**
+
+**Color Palette:**
+```
+Background:      #050505 (Deep Black)
+Primary Accent:  #22d3ee (Tactical Cyan)
+Warning:         #fbbf24 (Amber Alert)
+Critical:        #ef4444 (Red Alert)
+Success:         #10b981 (Operational Green)
+Neutral:         #6b7280 (Gray Steel)
+```
+
+**Typography:**
+- Data/Code: `'JetBrains Mono', monospace` (letter-spacing: -0.02em)
+- UI Labels: `'Inter', sans-serif` (weight: 500-600)
+- Headers: `'Inter', sans-serif` (weight: 700, uppercase, tracking: 0.05em)
+
+**Texture & Effects:**
+```css
+/* Scan-line overlay */
+.scan-lines {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+
+/* Hex-grid background */
+.hex-pattern {
+  background-image: 
+    linear-gradient(30deg, #111 12%, transparent 12.5%, transparent 87%, #111 87.5%, #111),
+    linear-gradient(150deg, #111 12%, transparent 12.5%, transparent 87%, #111 87.5%, #111);
+  background-size: 80px 140px;
+  opacity: 0.03;
+}
+
+/* Tactical module borders */
+.tactical-module {
+  border: 2px solid rgba(34, 211, 238, 0.3);
+  position: relative;
+}
+
+.tactical-module::before,
+.tactical-module::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #22d3ee;
+}
+
+.tactical-module::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.tactical-module::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+```
+
+### 1.2 CORE UI COMPONENTS
+
+**Component Library (React + Tailwind):**
+
+#### A. TACTICAL HEADER (Pilot HUD)
+```jsx
+<TacticalHeader>
+  - System Status Indicator (pulsing dot with signal strength)
+  - Role Selector (dropdown with permission badges)
+  - Emergency Protocol Toggle (red bordered)
+  - Domain Switcher (LAND / SEA / AIR tabs)
+  - Technical Manifest Export (JSON download)
+  - Real-time Clock (system epoch: 2024.05.24 + offset)
+</TacticalHeader>
+```
+
+#### B. FEDERATED AGENT NODE MAP (Sidebar)
+```jsx
+<AgentNodeMap>
+  HENRY (Strategic Analysis)
+    └─ Status: Active/Idle/Processing
+    └─ Signal Strength: ▮▮▮▮▯
+    └─ Last Action: timestamp
+    
+  LILY (HR & Certification)
+    └─ Status: Active/Idle/Processing
+    └─ Gated Domains: [LAND, SEA]
+    └─ Training Queue: 3 pending
+    
+  THELMA (Governance Core)
+    └─ Status: Active/Idle/Processing
+    └─ Audit Trail: Live/Syncing
+    └─ Last Authorization: timestamp
+    
+  GOVERNANCE CENTER
+    └─ Compliance Score: 98.7%
+    └─ Audit Logs: 847 entries
+    └─ Role Matrix: View
+</AgentNodeMap>
+```
+
+#### C. UNIT CONFIGURATION MODULE
+```jsx
+<UnitConfig>
+  [VEHICLE CLASS] ________________
+  [PAYLOAD WEIGHT] _______ lbs
+  [DIMENSIONS] L: ___ W: ___ H: ___
+  [HAZMAT STATUS] ☐ Yes ☑ No
+  [CERTIFICATION REQ] View Matrix
+  
+  ┌─ SCAN ENFORCEMENT ─┐
+  │ ▮▮▮▮▮▮▮▮▮▯ 90%     │
+  │ Required: BOL, VIN  │
+  │ Status: 2/3 ✓       │
+  └─────────────────────┘
+</UnitConfig>
+```
+
+#### D. DEPLOYMENT PLANNER
+```jsx
+<DeploymentPlanner>
+  ORIGIN:  [___________________] 📍 GPS Lock
+  DEST:    [___________________] 📍 GPS Lock
+  
+  ROUTE ANALYSIS:
+  ├─ HENRY: Infrastructure scan...
+  ├─ LILY: Operator cert verified ✓
+  └─ THELMA: Authorization pending...
+  
+  [EXECUTE_COMMAND] (gated by role + cert)
+</DeploymentPlanner>
+```
+
+#### E. HIGH-DENSITY STATUS PANEL
+```jsx
+<StatusPanel>
+  ┌─ AGENT OUTPUT ────────────────┐
+  │ [HENRY - STRATEGIC]           │
+  │ Route viable. 3 checkpoints.  │
+  │ ETA: 04:37. Weather: Clear.   │
+  │                                │
+  │ ⚠ [LILY - CERTIFICATION]      │
+  │ Operator missing AIR cert.    │
+  │ Training required: MOD-07.    │
+  │                                │
+  │ [THELMA - GOVERNANCE]         │
+  │ ✓ Authorization granted.      │
+  │ Audit ID: AUD-2024-0847       │
+  └────────────────────────────────┘
+  
+  Color coding:
+  - Cyan headers = Agent identifier
+  - Amber blocks = Warnings/Requirements
+  - Red blocks = Critical blocks
+  - Green blocks = Confirmations
+</StatusPanel>
+```
+
+#### F. GOVERNANCE CENTER (Dual-Pane)
+```jsx
+<GovernanceCenter>
+  LEFT PANE: Audit Log Viewer
+  ┌─────────────────────────────────┐
+  │ 🔍 Search: ________________     │
+  │                                 │
+  │ [2024-05-24 14:32:07] USER-047 │
+  │ Action: DEPLOY_EXECUTE          │
+  │ Domain: LAND | Auth: GRANTED    │
+  │ Agent: THELMA | Evidence: 3     │
+  │                                 │
+  │ [2024-05-24 14:29:41] USER-047 │
+  │ Action: SCAN_CAPTURE            │
+  │ Type: BOL | Status: VERIFIED    │
+  │ ────────────────────────────    │
+  │ Total: 847 entries              │
+  │ [EXPORT AUDIT TRAIL]            │
+  └─────────────────────────────────┘
+  
+  RIGHT PANE: Role Matrix & System Config
+  ┌─────────────────────────────────┐
+  │ ROLE PERMISSIONS                │
+  │                                 │
+  │ ARCHITECT: ■■■■■■■■■■ (Full)   │
+  │ OPS_MANAGER: ■■■■■■■□□□         │
+  │ FIELD_OPERATOR: ■■■□□□□□□□      │
+  │ AUDITOR: ■■□□□□□□□□ (Read)      │
+  │                                 │
+  │ [⚠ PURGE AUDIT LOG] (Admin only)│
+  └─────────────────────────────────┘
+</GovernanceCenter>
+```
+
+### 1.3 RESPONSIVE ARCHITECTURE
+
+```css
+/* Fixed viewport - internal scroll */
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 280px 1fr 320px;
+}
+
+/* Scrollable content zones */
+.content-pane {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+  
+  .sidebar {
+    display: none; /* Convert to slide-out drawer */
+  }
+}
+```
+
+---
+
+## PART 2: BUSINESS LOGIC LAYER (15 CORE MODULES)
+
+### 2.1 MODULE ARCHITECTURE
+
+Each module must implement:
+- **Enforcement gates** (prerequisites)
+- **Evidence requirements** (scan/media/GPS)
+- **Training dependencies** (certification checks)
+- **Audit trail generation** (immutable logs)
+- **Role-based access control** (RBAC)
+
+### 2.2 MODULE ROSTER
+
+#### MODULE 01: User and Role Access Control
+```javascript
+{
+  enforcement: {
+    deny_by_default: true,
+    explicit_permissions_only: true,
+    role_hierarchy: ['ARCHITECT', 'OPS_MANAGER', 'FIELD_OPERATOR', 'AUDITOR']
+  },
+  training_scenarios: 15,
+  evidence_required: ['LOGIN_AUDIT', 'PERMISSION_CHANGE_APPROVAL'],
+  audit_triggers: ['ROLE_ASSIGN', 'PERMISSION_GRANT', 'ACCESS_DENIED']
+}
+```
+
+#### MODULE 02: Unit Registry and Lifecycle Management
+```javascript
+{
+  enforcement: {
+    mandatory_fields: ['UNIT_ID', 'VEHICLE_CLASS', 'OWNER', 'STATUS'],
+    lifecycle_states: ['REGISTERED', 'ACTIVE', 'MAINTENANCE', 'RETIRED'],
+    state_transitions: 'require_authorization'
+  },
+  training_scenarios: 15,
+  evidence_required: ['REGISTRATION_DOC', 'OWNERSHIP_PROOF', 'INSPECTION_CERT'],
+  audit_triggers: ['UNIT_CREATE', 'STATUS_CHANGE', 'OWNERSHIP_TRANSFER']
+}
+```
+
+#### MODULE 03: Scan Enforcement
+```javascript
+{
+  enforcement: {
+    required_scans: ['BOL', 'VIN', 'LICENSE_PLATE', 'CONTAINER_ID'],
+    scan_validation: 'real_time',
+    retry_limit: 3,
+    fallback: 'manual_entry_with_photo'
+  },
+  training_scenarios: 15,
+  evidence_required: ['SCAN_IMAGE', 'TIMESTAMP', 'GPS_COORDINATE'],
+  audit_triggers: ['SCAN_SUCCESS', 'SCAN_FAIL', 'MANUAL_OVERRIDE']
+}
+```
+
+#### MODULE 04: Media Capture (Photo/Video/Metadata)
+```javascript
+{
+  enforcement: {
+    required_media: ['UNIT_PHOTO', 'DAMAGE_PHOTO', 'SIGNATURE_CAPTURE'],
+    metadata_embed: ['GPS', 'TIMESTAMP', 'USER_ID', 'DEVICE_ID'],
+    compression: 'maintain_evidence_quality',
+    storage: 'immutable_append_only'
+  },
+  training_scenarios: 15,
+  evidence_required: ['ORIGINAL_FILE', 'METADATA_JSON', 'HASH_VERIFICATION'],
+  audit_triggers: ['MEDIA_UPLOAD', 'MEDIA_VIEW', 'MEDIA_EXPORT']
+}
+```
+
+#### MODULE 05: Location and Time Verification
+```javascript
+{
+  enforcement: {
+    gps_required: true,
+    timestamp_source: 'NTP_VERIFIED',
+    spoofing_detection: true,
+    geofence_validation: 'checkpoint_based'
+  },
+  training_scenarios: 15,
+  evidence_required: ['GPS_LOCK', 'TIMESTAMP', 'GEOFENCE_STATUS'],
+  audit_triggers: ['LOCATION_VERIFY', 'GEOFENCE_BREACH', 'TIME_ANOMALY']
+}
+```
+
+#### MODULE 06: Workflow Enforcement Engine
+```javascript
+{
+  enforcement: {
+    sequential_gates: true,
+    parallel_validation: true,
+    timeout_handling: 'escalation',
+    override_authority: 'OPS_MANAGER_PLUS'
+  },
+  training_scenarios: 15,
+  evidence_required: ['WORKFLOW_STATE', 'GATE_STATUS', 'AUTHORIZATION'],
+  audit_triggers: ['WORKFLOW_START', 'GATE_PASS', 'GATE_FAIL', 'OVERRIDE']
+}
+```
+
+#### MODULE 07: Audit Trails and Immutable Logs
+```javascript
+{
+  enforcement: {
+    append_only: true,
+    no_deletion: true,
+    no_modification: true,
+    retention_minimum: '7_years',
+    export_formats: ['JSON', 'CSV', 'PDF_REPORT']
+  },
+  training_scenarios: 15,
+  evidence_required: ['LOG_ENTRY', 'HASH_CHAIN', 'TIMESTAMP'],
+  audit_triggers: ['ALL_SYSTEM_ACTIONS']
+}
+```
+
+#### MODULE 08: Reporting and Export Controls
+```javascript
+{
+  enforcement: {
+    role_gated_reports: true,
+    pii_redaction: 'automatic',
+    export_audit: true,
+    format_options: ['PDF', 'EXCEL', 'JSON', 'XML']
+  },
+  training_scenarios: 15,
+  evidence_required: ['REPORT_REQUEST', 'USER_ROLE', 'DATA_SCOPE'],
+  audit_triggers: ['REPORT_GENERATE', 'EXPORT_EXECUTE']
+}
+```
+
+#### MODULE 09: Logistics News and Operational Awareness
+```javascript
+{
+  enforcement: {
+    feed_sources: ['INTERNAL', 'REGULATORY', 'INDUSTRY'],
+    priority_routing: true,
+    read_receipts: 'required_for_critical',
+    knowledge_checks: 'post_bulletin'
+  },
+  training_scenarios: 15,
+  evidence_required: ['READ_TIMESTAMP', 'ACKNOWLEDGMENT'],
+  audit_triggers: ['BULLETIN_PUBLISH', 'USER_VIEW', 'ACKNOWLEDGMENT']
+}
+```
+
+#### MODULE 10: VACUUM Observation Layer
+```javascript
+{
+  enforcement: {
+    pattern_detection: true,
+    anomaly_thresholds: 'configurable',
+    alert_routing: 'role_based',
+    predictive_analytics: 'ml_enabled'
+  },
+  training_scenarios: 15,
+  evidence_required: ['PATTERN_DATA', 'ALERT_TRIGGER', 'INVESTIGATION'],
+  audit_triggers: ['ANOMALY_DETECT', 'PATTERN_FLAG', 'INVESTIGATION_START']
+}
+```
+
+#### MODULE 11: Tax and Regulatory Tracking
+```javascript
+{
+  enforcement: {
+    jurisdictions: 'multi_state_federal',
+    compliance_checks: 'automatic',
+    filing_deadlines: 'alert_cascade',
+    documentation: 'required_attachment'
+  },
+  training_scenarios: 15,
+  evidence_required: ['TAX_DOC', 'COMPLIANCE_CERT', 'FILING_RECEIPT'],
+  audit_triggers: ['TAX_CALC', 'FILING_SUBMIT', 'AUDIT_REQUEST']
+}
+```
+
+#### MODULE 12: Hub Oversight and Multi-Site Management
+```javascript
+{
+  enforcement: {
+    hub_hierarchy: true,
+    cross_site_sync: 'real_time',
+    centralized_reporting: true,
+    site_isolation: 'configurable'
+  },
+  training_scenarios: 15,
+  evidence_required: ['SITE_ID', 'SYNC_STATUS', 'HUB_APPROVAL'],
+  audit_triggers: ['SITE_ACTION', 'SYNC_EVENT', 'HUB_OVERRIDE']
+}
+```
+
+#### MODULE 13: Exception and Failure Handling
+```javascript
+{
+  enforcement: {
+    exception_logging: 'comprehensive',
+    escalation_rules: 'tiered',
+    retry_strategies: 'exponential_backoff',
+    human_fallback: 'always_available'
+  },
+  training_scenarios: 15,
+  evidence_required: ['ERROR_LOG', 'RESOLUTION_ATTEMPT', 'ESCALATION'],
+  audit_triggers: ['EXCEPTION_OCCUR', 'ESCALATION', 'RESOLUTION']
+}
+```
+
+#### MODULE 14: Security and Compliance Enforcement
+```javascript
+{
+  enforcement: {
+    encryption: 'AES_256_at_rest_TLS_in_transit',
+    authentication: 'MFA_required',
+    session_timeout: '15_minutes_inactivity',
+    ip_whitelisting: 'optional',
+    penetration_testing: 'quarterly'
+  },
+  training_scenarios: 15,
+  evidence_required: ['AUTH_LOG', 'SECURITY_EVENT', 'COMPLIANCE_SCAN'],
+  audit_triggers: ['LOGIN', 'LOGOUT', 'SECURITY_VIOLATION', 'COMPLIANCE_CHECK']
+}
+```
+
+#### MODULE 15: System Administration and Configuration
+```javascript
+{
+  enforcement: {
+    config_versioning: true,
+    rollback_capability: true,
+    change_approval: 'two_person_rule',
+    backup_frequency: 'hourly',
+    disaster_recovery: 'tested_quarterly'
+  },
+  training_scenarios: 15,
+  evidence_required: ['CONFIG_CHANGE', 'APPROVAL_SIGNATURE', 'BACKUP_LOG'],
+  audit_triggers: ['CONFIG_UPDATE', 'SYSTEM_RESTART', 'BACKUP_EXECUTE']
+}
+```
+
+---
+
+## PART 3: DATA ARCHITECTURE
+
+### 3.1 STATE MANAGEMENT (UNIFIED SCHEMA)
+
+```javascript
+// Primary State Object (localStorage + cloud sync)
+const THELMA_STATE = {
+  system: {
+    version: '5.0.0-ULTRA',
+    epoch: '2024.05.24',
+    deployment_mode: 'CLOUD' | 'HYBRID' | 'ON_PREMISE',
+    instance_id: 'uuid',
+  },
+  
+  user: {
+    user_id: 'string',
+    role: 'ARCHITECT' | 'OPS_MANAGER' | 'FIELD_OPERATOR' | 'AUDITOR',
+    certified_domains: ['LAND', 'SEA', 'AIR'],
+    certified_modules: [1, 2, 3, ...15],
+    training_completed: ['MOD-01-SC-01', 'MOD-01-SC-02', ...],
+    session_token: 'jwt',
+    permissions: ['VIEW', 'EXECUTE', 'APPROVE', 'ADMIN'],
+  },
+  
+  operational: {
+    active_view: 'DEPLOYMENT' | 'GOVERNANCE' | 'TRAINING' | 'REPORTING',
+    active_domain: 'LAND' | 'SEA' | 'AIR',
+    active_unit: {
+      unit_id: 'string',
+      vehicle_class: 'string',
+      payload_weight: number,
+      dimensions: {l, w, h},
+      hazmat: boolean,
+      scans_completed: ['BOL', 'VIN'],
+      media_captured: ['photo_url_1', 'photo_url_2'],
+      gps_lock: {lat, lng, accuracy},
+    },
+    deployment_plan: {
+      origin: {address, gps},
+      destination: {address, gps},
+      route_analysis: 'pending' | 'approved' | 'blocked',
+      agent_statuses: {
+        HENRY: 'active' | 'idle',
+        LILY: 'active' | 'idle',
+        THELMA: 'active' | 'idle',
+      }
+    }
+  },
+  
+  audit: {
+    logs: [
+      {
+        id: 'uuid',
+        timestamp: 'ISO8601',
+        user_id: 'string',
+        role: 'string',
+        action: 'string',
+        module: 'string',
+        evidence: ['scan_id', 'media_id', 'gps_id'],
+        result: 'success' | 'fail' | 'blocked',
+        metadata: {}
+      }
+    ],
+    max_entries: 100, // local cache limit
+    cloud_synced: true,
+    last_sync: 'timestamp',
+  },
+  
+  training: {
+    scenarios_available: 225,
+    scenarios_completed: [],
+    certifications: [
+      {
+        module: 'MOD-01',
+        status: 'certified' | 'pending' | 'expired',
+        date_certified: 'ISO8601',
+        expiry_date: 'ISO8601',
+      }
+    ],
+    next_required: 'MOD-07-SC-03',
+  }
+};
+```
+
+### 3.2 PERSISTENCE STRATEGY
+
+```javascript
+// Multi-tier storage architecture
+const StorageStrategy = {
+  
+  // Tier 1: Browser LocalStorage (temporary cache)
+  local: {
+    key: 'thelma_v5_tactical_core',
+    max_size: '10MB',
+    purpose: 'session_state',
+    sync_interval: '30_seconds',
+  },
+  
+  // Tier 2: IndexedDB (offline capability)
+  indexedDB: {
+    database: 'thelma_offline',
+    stores: ['units', 'scans', 'media', 'logs'],
+    purpose: 'offline_operations',
+    sync_on_reconnect: true,
+  },
+  
+  // Tier 3: Cloud Database (source of truth)
+  cloud: {
+    provider: 'AWS_RDS' | 'Azure_SQL' | 'PostgreSQL',
+    replication: 'multi_region',
+    backup: 'continuous',
+    retention: '7_years_minimum',
+  },
+  
+  // Tier 4: Immutable Audit Store
+  audit_store: {
+    type: 'append_only_ledger',
+    technology: 'blockchain_inspired' | 'WORM_storage',
+    hash_chain: true,
+    tampering_detection: 'automatic',
+  }
+};
+```
+
+---
+
+## PART 4: MOBILE OPERATIONS (NATIVE SHELL)
+
+### 4.1 MOBILE ARCHITECTURE
+
+```javascript
+// Native app specification (React Native / Flutter)
+const MobileApp = {
+  
+  platforms: ['iOS', 'Android'],
+  
+  core_capabilities: {
+    offline_first: true,
+    camera_integration: {
+      capture: ['photo', 'video', 'barcode', 'qr'],
+      metadata_embed: ['gps', 'timestamp', 'device_id'],
+      quality: 'evidence_grade',
+    },
+    gps_tracking: {
+      accuracy: 'high',
+      background_tracking: true,
+      geofencing: true,
+      spoofing_detection: true,
+    },
+    biometric_auth: {
+      fingerprint: true,
+      face_id: true,
+      fallback: 'PIN',
+    },
+    push_notifications: {
+      critical_alerts: true,
+      workflow_updates: true,
+      training_reminders: true,
+    }
+  },
+  
+  offline_behavior: {
+    local_storage: 'encrypted_sqlite',
+    queue_actions: true,
+    conflict_detection: {
+      strategy: 'last_write_wins_with_flag',
+      manual_resolution: 'for_critical_conflicts',
+    },
+    sync_trigger: 'network_reconnect' | 'manual' | 'scheduled',
+  },
+  
+  ui_adaptation: {
+    form_factor: 'mobile_optimized',
+    gesture_controls: true,
+    voice_commands: 'optional',
+    landscape_tablet: 'full_tactical_ui',
+    portrait_phone: 'simplified_workflow',
+  }
+};
+```
+
+### 4.2 OFFLINE SYNC PROTOCOL
+
+```javascript
+const SyncProtocol = {
+  
+  on_reconnect: {
+    priority_order: [
+      '1_audit_logs',
+      '2_critical_scans',
+      '3_media_files',
+      '4_state_updates',
+      '5_training_progress'
+    ],
+    
+    conflict_resolution: {
+      scans: 'server_wins_if_verified',
+      media: 'keep_both_with_timestamp',
+      logs: 'merge_chronologically',
+      state: 'user_prompt_for_critical_fields',
+    },
+    
+    integrity_check: {
+      hash_verification: true,
+      metadata_validation: true,
+      evidence_chain_validation: true,
+    }
+  },
+  
+  background_sync: {
+    wifi_only: 'configurable',
+    retry_strategy: 'exponential_backoff',
+    max_retries: 5,
+    failure_notification: 'user_alert',
+  }
+};
+```
+
+---
+
+## PART 5: INTEGRATION LAYER (N8N-STYLE ORCHESTRATION)
+
+### 5.1 API MEDIATION ARCHITECTURE
+
+```javascript
+const IntegrationLayer = {
+  
+  purpose: 'Bridge T.H.E.L.M.A. with existing enterprise systems',
+  
+  capabilities: {
+    api_gateway: {
+      protocols: ['REST', 'GraphQL', 'SOAP', 'gRPC'],
+      authentication: ['OAuth2', 'JWT', 'API_Key', 'SAML'],
+      rate_limiting: true,
+      request_logging: true,
+    },
+    
+    data_transformation: {
+      input_normalization: 'schema_mapping',
+      output_formatting: 'template_based',
+      field_mapping: 'visual_editor',
+      data_enrichment: 'contextual',
+    },
+    
+    event_translation: {
+      inbound_events: 'webhook_listeners',
+      outbound_events: 'webhook_publishers',
+      event_routing: 'rule_based',
+      dead_letter_queue: true,
+    },
+    
+    workflow_automation: {
+      visual_builder: 'drag_and_drop',
+      conditional_logic: true,
+      loops_iterations: true,
+      error_handling: 'comprehensive',
+    }
+  },
+  
+  connectors: {
+    erp_systems: ['SAP', 'Oracle', 'NetSuite'],
+    tms: ['McLeod', 'TMW', 'MercuryGate'],
+    wms: ['Manhattan', 'HighJump', 'Blue Yonder'],
+    telematics: ['Samsara', 'Geotab', 'Verizon Connect'],
+    hr_systems: ['Workday', 'ADP', 'BambooHR'],
+    compliance: ['J.J. Keller', 'CarrierLists', 'FMCSA'],
+    custom_apis: 'generic_rest_connector',
+  },
+  
+  deployment: {
+    hosting: 'containerized_microservices',
+    scalability: 'horizontal',
+    monitoring: 'prometheus_grafana',
+    logging: 'elk_stack',
+  }
+};
+```
+
+### 5.2 INTEGRATION WORKFLOWS (EXAMPLES)
+
+```javascript
+// Example 1: ERP Order Import
+const Workflow_ERP_Import = {
+  trigger: 'ERP_NewOrder_Webhook',
+  steps: [
+    {action: 'receive_order_json', validate: 'schema'},
+    {action: 'normalize_data', map: 'erp_to_thelma'},
+    {action: 'check_operator_certification', gating: true},
+    {action: 'create_thelma_unit', module: 'MOD-02'},
+    {action: 'generate_scan_requirements', module: 'MOD-03'},
+    {action: 'notify_mobile_operator', channel: 'push'},
+    {action: 'log_integration_event', module: 'MOD-07'},
+  ],
+  error_handling: 'rollback_with_notification',
+};
+
+// Example 2: TMS Status Update
+const Workflow_TMS_StatusUpdate = {
+  trigger: 'THELMA_UnitStatusChange',
+  steps: [
+    {action: 'capture_status_event', source: 'MOD-06'},
+    {action: 'enrich_with_evidence', data: ['scans', 'media', 'gps']},
+    {action: 'transform_to_tms_format', template: 'tms_status_schema'},
+    {action: 'authenticate_tms_api', method: 'oauth2'},
+    {action: 'post_status_update', endpoint: 'tms_api'},
+    {action: 'verify_receipt', retry: '3_times'},
+    {action: 'log_integration_success', module: 'MOD-07'},
+  ],
+  error_handling: 'queue_for_retry',
+};
+
+// Example 3: Compliance Document Auto-Submit
+const Workflow_Compliance_AutoSubmit = {
+  trigger: 'THELMA_CertificationComplete',
+  steps: [
+    {action: 'generate_compliance_package', module: 'MOD-11'},
+    {action: 'attach_audit_trail', module: 'MOD-07'},
+    {action: 'sign_document', method: 'digital_signature'},
+    {action: 'submit_to_regulatory_portal', api: 'fmcsa'},
+    {action: 'receive_confirmation_number', store: true},
+    {action: 'update_thelma_status', module: 'MOD-11'},
+    {action: 'notify_compliance_officer', email: true},
+  ],
+  error_handling: 'escalate_to_human',
+};
+```
+
+---
+
+## PART 6: AI ORCHESTRATION (FEDERATED AGENTS)
+
+### 6.1 AGENT SPECIFICATIONS
+
+```javascript
+const AIAgents = {
+  
+  HENRY: {
+    name: 'Strategic Analysis Agent',
+    model: 'gemini-2.5-pro',
+    temperature: 0.1, // Cold for precision
+    
+    responsibilities: [
+      'Route optimization',
+      'Infrastructure analysis',
+      'Risk assessment',
+      'ETA calculation',
+      'Weather impact analysis',
+      'Checkpoint validation',
+    ],
+    
+    system_instruction: `
+      You are HENRY, the Strategic Analysis component of T.H.E.L.M.A.
+      Analyze logistics operations with precision.
+      Always lead with risks and hazards.
+      Provide actionable intelligence.
+      Format: [HENRY

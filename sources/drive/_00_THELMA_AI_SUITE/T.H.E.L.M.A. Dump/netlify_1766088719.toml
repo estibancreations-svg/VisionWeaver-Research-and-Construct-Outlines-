@@ -1,0 +1,21 @@
+Original name: netlify_1766088719.toml
+Drive ID: 1LjwfgDp596qZWo8baTmuKkWZxOPBaNEV
+Parent folder: _00_THELMA_AI_SUITE/T.H.E.L.M.A. Dump/
+Modified: 2025-12-18T20:16:24.000Z
+
+# Netlify drop-in config for T.H.E.L.M.A. Ops (Next.js)
+# Save as: netlify.toml at the project root
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Optional:
+# [build.environment]
+#   NODE_VERSION = "20"

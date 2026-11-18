@@ -1,0 +1,438 @@
+Original name: MOTIVE NEXT - Transportation Management Platform Version 2.0.5_V4_main.html
+Drive ID: 1DlON3A3c1JYVB2rtsuu87VQf_Slm4bKa
+Parent folder: _00_THELMA_AI_SUITE/T.H.E.L.M.A. Dump/THELMA HENRYAI LILY PASTE CODE/MOTIVE NEXT ORIGINAL/
+Modified: 2025-11-05T23:36:36.000Z
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTIVE NEXT - Transportation Management Platform</title>
+    <meta name="description" content="Complete transportation management solutions for trucking and automotive transport. Proudly Made in America by Steven Henry.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333; min-height: 100vh;
+        }
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .header-content {
+            max-width: 1400px; margin: 0 auto;
+            display: flex; justify-content: space-between;
+            align-items: center; flex-wrap: wrap;
+        }
+        .logo { display: flex; align-items: center; gap: 1rem; }
+        .logo h1 { color: #2c3e50; font-size: 2.2rem; font-weight: 800; }
+        .american-flag { font-size: 2.5rem; animation: wave 3s ease-in-out infinite; }
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+        .btn {
+            padding: 0.8rem 1.8rem; border: none; border-radius: 12px;
+            font-weight: 700; cursor: pointer; transition: all 0.3s ease;
+            text-decoration: none; display: inline-block; font-size: 1rem;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4); }
+        .btn-secondary {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+        .hero { text-align: center; padding: 5rem 0; color: white; }
+        .hero h2 { font-size: 3.5rem; margin-bottom: 1.5rem; font-weight: 800; }
+        .hero p { font-size: 1.4rem; margin-bottom: 2.5rem; opacity: 0.95; }
+        .emergency-section {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white; padding: 3rem; border-radius: 20px;
+            margin: 3rem 0; text-align: center;
+            box-shadow: 0 10px 40px rgba(231, 76, 60, 0.3);
+        }
+        .emergency-btn {
+            background: #fff; color: #e74c3c; font-size: 1.8rem;
+            font-weight: 800; padding: 1.5rem 3rem; border: none;
+            border-radius: 60px; cursor: pointer; margin-top: 1.5rem;
+            animation: pulse 2s infinite; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+        .app-selection {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem; margin: 5rem 0;
+        }
+        .app-card {
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px);
+            border-radius: 25px; padding: 3rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease; cursor: pointer;
+        }
+        .app-card:hover { transform: translateY(-15px) scale(1.02); }
+        .app-icon { font-size: 5rem; margin-bottom: 1.5rem; display: block; }
+        .app-card h3 { color: #2c3e50; font-size: 2rem; margin-bottom: 1.5rem; }
+        .app-card p { color: #5d6d7e; line-height: 1.7; margin-bottom: 2rem; }
+        .footer {
+            text-align: center; padding: 3rem 2rem; color: white;
+            background: rgba(0, 0, 0, 0.2); margin-top: 4rem;
+        }
+        .hidden { display: none; }
+        .dashboard-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .ptt-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #27ae60, #229954);
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            transition: all 0.3s ease;
+        }
+        .ptt-button:active {
+            transform: scale(0.95);
+            background: linear-gradient(45deg, #229954, #1e8449);
+        }
+        .ptt-button.active {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            animation: ptt-pulse 1s infinite;
+        }
+        @keyframes ptt-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            50% { box-shadow: 0 0 0 20px rgba(231, 76, 60, 0); }
+        }
+        @media (max-width: 768px) {
+            .app-selection { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 2.5rem; }
+            .header-content { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="american-flag">🇺🇸</span>
+                <h1>MOTIVE NEXT</h1>
+            </div>
+            <nav id="auth-buttons"></nav>
+        </div>
+    </header>
+
+    <div id="landing-page">
+        <div class="container">
+            <section class="hero">
+                <h2>The Future of American Transportation</h2>
+                <p>Complete transportation management solutions for trucking and automotive transport. Proudly designed by Steven Henry.</p>
+            </section>
+
+            <section class="emergency-section">
+                <h3>🚨 EMERGENCY S.O.S SYSTEM</h3>
+                <p>Advanced emergency response with GPS location sharing and multi-contact notification. Available 24/7 for all drivers.</p>
+                <button class="emergency-btn" onclick="activateEmergency()">🆘 ACTIVATE EMERGENCY</button>
+            </section>
+
+            <section class="app-selection">
+                <div class="app-card" onclick="selectApp('trucking')">
+                    <span class="app-icon">🚛</span>
+                    <h3>MOTIVE TRUCKING PRO</h3>
+                    <p>Complete solution for long-haul trucking, freight carriers, and fleet management. Features HOS compliance, route optimization, and expense management.</p>
+                    <div class="btn btn-primary">Explore Trucking Platform</div>
+                </div>
+
+                <div class="app-card" onclick="selectApp('driveaway')">
+                    <span class="app-icon">🚗</span>
+                    <h3>MOTIVE DRIVEAWAY</h3>
+                    <p>Specialized platform for automotive transport, rental car repositioning, and vehicle delivery services. Real-time pricing and VIN verification.</p>
+                    <div class="btn btn-secondary">Explore Driveaway Platform</div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <div class="container">
+            <div class="dashboard-card">
+                <h2 class="text-3xl font-bold mb-4">Welcome, <span id="user-name"></span>!</h2>
+                <p class="text-lg text-gray-600 mb-4">MOTIVE NEXT Dashboard</p>
+                
+                <!-- CB Radio / Push-to-Talk -->
+                <div class="dashboard-card">
+                    <h3 class="text-2xl font-bold mb-4">📻 CB Radio Communication</h3>
+                    <div class="flex items-center gap-4">
+                        <button id="ptt-button" class="ptt-button" onmousedown="startPTT()" onmouseup="endPTT()" ontouchstart="startPTT()" ontouchend="endPTT()">
+                            🎤
+                        </button>
+                        <div>
+                            <p class="font-semibold">Hold to Talk</p>
+                            <p class="text-sm text-gray-600">Connected: <span id="ptt-status">Ready</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <select id="ptt-contacts" class="w-full p-2 border rounded">
+                            <option value="dispatch">Dispatch Center</option>
+                            <option value="emergency">Emergency Line</option>
+                            <option value="fleet">Fleet Manager</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Insurance Monitoring -->
+                <div class="dashboard-card">
+                    <h3 class="text-2xl font-bold mb-4">🛡️ Insurance Monitoring</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-blue-50 rounded">
+                            <p class="font-semibold">Allstate Status</p>
+                            <p id="allstate-status" class="text-sm">Checking...</p>
+                        </div>
+                        <div class="p-4 bg-green-50 rounded">
+                            <p class="font-semibold">Progressive Status</p>
+                            <p id="progressive-status" class="text-sm">Checking...</p>
+                        </div>
+                    </div>
+                    <button onclick="refreshInsurance()" class="btn btn-primary mt-4">Refresh Insurance Data</button>
+                </div>
+
+                <!-- HOS Tracking -->
+                <div class="dashboard-card">
+                    <h3 class="text-2xl font-bold mb-4">⏱️ Hours of Service</h3>
+                    <div class="space-y-2">
+                        <div><strong>Drive Time:</strong> <span id="hos-drive">0:00</span> / 11:00</div>
+                        <div><strong>On Duty:</strong> <span id="hos-onduty">0:00</span> / 14:00</div>
+                        <div><strong>Cycle:</strong> <span id="hos-cycle">0:00</span> / 70:00</div>
+                    </div>
+                    <button onclick="updateHOS()" class="btn btn-primary mt-4">Update HOS</button>
+                </div>
+
+                <!-- DOT Inspection System -->
+                <div class="dashboard-card">
+                    <h3 class="text-2xl font-bold mb-4">📋 DOT Inspection</h3>
+                    <div class="grid grid-cols-3 gap-2 mb-4">
+                        <button onclick="startInspection(1)" class="btn btn-primary text-sm">Level 1 (Full)</button>
+                        <button onclick="startInspection(2)" class="btn btn-primary text-sm">Level 2 (Walk)</button>
+                        <button onclick="startInspection(3)" class="btn btn-primary text-sm">Level 3 (Driver)</button>
+                    </div>
+                    <div id="inspection-view" class="hidden">
+                        <video id="inspection-camera" class="w-full rounded mb-2" autoplay playsinline></video>
+                        <div id="inspection-steps" class="space-y-2 max-h-60 overflow-y-auto"></div>
+                        <button onclick="captureInspectionPhoto()" class="btn btn-success w-full mt-2">📷 Capture</button>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary mt-6" onclick="netlifyIdentity.logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 MOTIVE NEXT - Proudly Made in America 🇺🇸</p>
+        <p><strong>Owner & Architect:</strong> Steven Henry | All Rights Reserved</p>
+        <p>Live at: motivenext.online</p>
+    </footer>
+
+    <script>
+        const MotiveNext = {
+            version: '2.0.5',
+            owner: 'Steven Henry',
+            domain: 'motivenext.online',
+            apiEndpoint: window.location.origin + '/.netlify/functions',
+            pttActive: false,
+            audioStream: null,
+            peerConnection: null,
+            inspectionActive: false,
+            currentInspectionLevel: null,
+            inspectionSteps: [],
+            capturedPhotos: []
+        };
+
+        const authButtons = document.getElementById('auth-buttons');
+        const landingPage = document.getElementById('landing-page');
+        const dashboard = document.getElementById('dashboard');
+        const userName = document.getElementById('user-name');
+
+        const renderUI = (user) => {
+            if (user) {
+                landingPage.classList.add('hidden');
+                dashboard.classList.remove('hidden');
+                userName.textContent = user.user_metadata.full_name || user.email;
+                authButtons.innerHTML = `<button class="btn btn-secondary" onclick="netlifyIdentity.logout()">Logout</button>`;
+                initializeDashboard(user);
+            } else {
+                landingPage.classList.remove('hidden');
+                dashboard.classList.add('hidden');
+                authButtons.innerHTML = `<button class="btn btn-primary" onclick="netlifyIdentity.open('login')">🔐 Login</button>
+                                         <button class="btn btn-secondary" onclick="netlifyIdentity.open('signup')">🚀 Sign Up</button>`;
+            }
+        };
+
+        netlifyIdentity.on('init', user => renderUI(user));
+        netlifyIdentity.on('login', user => { renderUI(user); netlifyIdentity.close(); });
+        netlifyIdentity.on('logout', () => renderUI(null));
+
+        function initializeDashboard(user) {
+            checkInsuranceStatus();
+            initializePTT();
+            startHOSTracking();
+        }
+
+        async function checkInsuranceStatus() {
+            try {
+                const response = await fetch(`${MotiveNext.apiEndpoint}/insurance-status`, {
+                    headers: { 'Authorization': `Bearer ${netlifyIdentity.currentUser().token.access_token}` }
+                });
+                const data = await response.json();
+                document.getElementById('allstate-status').textContent = data.allstate || '✅ Active';
+                document.getElementById('progressive-status').textContent = data.progressive || '✅ Active';
+            } catch (err) {
+                console.error('Insurance check failed:', err);
+            }
+        }
+
+        async function refreshInsurance() {
+            await checkInsuranceStatus();
+            alert('✅ Insurance data refreshed');
+        }
+
+        function initializePTT() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    MotiveNext.audioStream = stream;
+                    document.getElementById('ptt-status').textContent = '✅ Ready';
+                })
+                .catch(err => {
+                    console.error('Microphone access denied:', err);
+                    document.getElementById('ptt-status').textContent = '❌ No Mic Access';
+                });
+        }
+
+        async function startPTT() {
+            if (!MotiveNext.audioStream) return;
+            MotiveNext.pttActive = true;
+            document.getElementById('ptt-button').classList.add('active');
+            document.getElementById('ptt-status').textContent = '🔴 TRANSMITTING';
+            
+            const contact = document.getElementById('ptt-contacts').value;
+            await fetch(`${MotiveNext.apiEndpoint}/ptt-start`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contact, userId: netlifyIdentity.currentUser().id })
+            });
+        }
+
+        async function endPTT() {
+            MotiveNext.pttActive = false;
+            document.getElementById('ptt-button').classList.remove('active');
+            document.getElementById('ptt-status').textContent = '✅ Ready';
+            
+            await fetch(`${MotiveNext.apiEndpoint}/ptt-end`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ userId: netlifyIdentity.currentUser().id })
+            });
+        }
+
+        function startHOSTracking() {
+            setInterval(updateHOSDisplay, 60000);
+        }
+
+        async function updateHOS() {
+            try {
+                const response = await fetch(`${MotiveNext.apiEndpoint}/hos-update`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${netlifyIdentity.currentUser().token.access_token}`
+                    },
+                    body: JSON.stringify({ timestamp: new Date().toISOString() })
+                });
+                const data = await response.json();
+                updateHOSDisplay(data);
+            } catch (err) {
+                console.error('HOS update failed:', err);
+            }
+        }
+
+        function updateHOSDisplay(data = {}) {
+            document.getElementById('hos-drive').textContent = data.driveTime || '0:00';
+            document.getElementById('hos-onduty').textContent = data.onDutyTime || '0:00';
+            document.getElementById('hos-cycle').textContent = data.cycleTime || '0:00';
+        }
+
+        function selectApp(appType) {
+            if (appType === 'trucking') {
+                alert('🚛 MOTIVE TRUCKING PRO\n\nComplete trucking platform with HOS, ELD, insurance monitoring, and CB radio.');
+            } else {
+                alert('🚗 MOTIVE DRIVEAWAY\n\nAuto transport platform with VIN verification and real-time pricing.');
+            }
+        }
+
+        function activateEmergency() {
+            const user = netlifyIdentity.currentUser();
+            if (!user) {
+                alert("You must be logged in to activate emergency S.O.S.");
+                return netlifyIdentity.open('login');
+            }
+
+            if (confirm('🚨 EMERGENCY S.O.S\n\nThis will share your GPS location and alert emergency contacts.\n\nProceed?')) {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(position => {
+                        fetch(`${MotiveNext.apiEndpoint}/emergency-activate`, {
+                            method: 'POST',
+                            headers: { 
+                                'Content-Type': 'application/json',
+                                'Authorization': `Bearer ${user.token.access_token}`
+                            },
+                            body: JSON.stringify({
+                                location: {
+                                    latitude: position.coords.latitude,
+                                    longitude: position.coords.longitude
+                                },
+                                timestamp: new Date().toISOString()
+                            })
+                        }).then(res => res.json()).then(data => {
+                            if(data.success) {
+                                alert('✅ EMERGENCY ACTIVATED\n\nLocation shared with emergency contacts!\nHelp is on the way!');
+                            } else {
+                                alert('❌ Error activating emergency. Please try again.');
+                            }
+                        }).catch(() => {
+                            alert('❌ Could not connect to emergency service.');
+                        });
+                    }, () => {
+                        alert('❌ Could not get your location. Please enable GPS.');
+                    });
+                } else {
+                    alert('❌ GPS is required for emergency services.');
+                }
+            }
+        }
+        
+        console.log('🚛🚗 MOTIVE NEXT v2.0.0 - motivenext.online');
+        console.log('Owner: Steven Henry');
+        console.log('🇺🇸 Proudly Made In America');
+    </script>
+</body>
+</html>
