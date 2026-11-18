@@ -1,0 +1,120 @@
+Original name: index.html
+Drive ID: 1xb1BSzh0SutM4xzVqaBL_yAEOrIbHavp
+Parent folder: My Drive/MAF/Google AI Studio 1/t.h.e.l.m.a.-ai-core-&-modules (2)/
+Modified: 2026-01-31T10:56:50.000Z
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>T.H.E.L.M.A. AI | v4.0.0 Global Mesh Deployment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              slate: { 950: '#020617' },
+              thelma: { ruby: '#ef4444', emerald: '#10b981', sapphire: '#3b82f6', warning: '#f59e0b' }
+            },
+            width: {
+              'cortex': '340px'
+            },
+            animation: {
+              'pulse-warning': 'pulseWarning 2s infinite',
+              'pulse-critical': 'pulseCritical 1.5s infinite',
+              'orb-float': 'orbFloat 6s infinite ease-in-out',
+              'spin-slow': 'spin 12s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      :root { --header-height: 64px; --cortex-width: 340px; }
+      html, body {
+        height: 100%; width: 100%; margin: 0; padding: 0;
+        font-family: 'Inter', sans-serif; background-color: #f8fafc;
+        overflow: hidden; touch-action: pan-x pan-y;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      @keyframes pulseWarning {
+        0%, 100% { box-shadow: inset 0 0 0 0px rgba(245, 158, 11, 0); }
+        50% { box-shadow: inset 0 0 40px 10px rgba(245, 158, 11, 0.4); }
+      }
+      
+      @keyframes pulseCritical {
+        0%, 100% { box-shadow: inset 0 0 0 0px rgba(239, 68, 68, 0); }
+        50% { box-shadow: inset 0 0 60px 15px rgba(239, 68, 68, 0.5); }
+      }
+
+      @keyframes orbFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .warning-glow { animation: pulseWarning 2.5s infinite ease-in-out; }
+      .critical-glow { animation: pulseCritical 1.5s infinite ease-in-out; }
+
+      /* Living Orb Styles */
+      .orb-container {
+        filter: url('#orb-gooey');
+      }
+      .orb-core {
+        background: radial-gradient(circle, #3b82f6 0%, #1d4ed8 70%, #1e3a8a 100%);
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+      }
+      
+      .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
+      @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+      
+      .animate-slideInRight { animation: slideInRight 0.4s ease-out forwards; }
+      @keyframes slideInRight { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+      .dark body { background-color: #020617; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "lucide-react": "https://esm.sh/lucide-react@0.469.0?external=react",
+    "@google/genai": "https://esm.sh/@google/genai@1.3.0",
+    "recharts": "https://esm.sh/recharts@2.12.7?external=react,react-dom",
+    "zod": "https://esm.sh/zod@3.23.8",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "@capacitor/geolocation": "https://esm.sh/@capacitor/geolocation@^8.0.0",
+    "@capacitor/app": "https://esm.sh/@capacitor/app@^8.0.0",
+    "@capacitor/device": "https://esm.sh/@capacitor/device@^8.0.0",
+    "@capacitor/local-notifications": "https://esm.sh/@capacitor/local-notifications@^8.0.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="orb-gooey">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+        </filter>
+      </defs>
+    </svg>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
