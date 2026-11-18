@@ -1,0 +1,32 @@
+Original name: CANONICAL-SYSTEM-2026-11-01
+Drive ID: 1BFU-2h--5TmDmscspvEADg7I4s79J1vV
+Parent folder: My Drive/MAF/VisionWeaver Hub/
+Modified: 2026-11-01T23:24:19.066Z
+
+# Canonical VisionWeaver System — 2026-11-01
+
+## Decision
+ONE working system. The multi-lineage debate is put to rest by owner decision 2026-11-01.
+
+## The one system
+**Master System Build Out Live** (fullstack) — the consolidated build.
+- Body: the fullstack Master build — dark 16-panel shell, 33 pages, Demo/Blank modes, D1–D16 Directives, server sign-in/out, live uptime ticker, real health checks, THELMA with Guild approvals.
+- Folded in from the repo 2.0 line: Characters/Cast, Voice Library, Hold Queue, Loop Engine & Run Manifests, Save Map & Storage, Plans & Tiers.
+- Design crown: vw3 in MASTER_CEO_DASHBOARD (the 2026-10-22 ruled visual lock).
+
+## Lineage status
+- vw3 (MASTER_CEO_DASHBOARD): design reference. PR #64 remains the gate for dashboard changes.
+- Repo 2.0 line (VisionWeaver repo): engine + page source folded into the one system. CANONICAL-SYSTEM.md committed to the repo main branch 2026-11-01.
+- Static window (master-system-build-out): superseded by the fullstack build.
+
+## Data home
+Supabase "Master Dashboard" — 153 tables, verified healthy 2026-10-30 (production data home).
+App-schema holder: "MASTER_CEO_DASHBOARD" — page_registry (27 pages), projects, release_gates, initiatives.
+Wiring the app to the data home is a separate step, on the owner's word. Nothing here reads or writes it.
+
+## Platform realignment 2026-11-01
+- GitHub: canonical record committed (VisionWeaver repo, main).
+- Drive: this file placed in VisionWeaver Hub.
+- Vercel: master-system-buildout / -lzaa projects are stale BLOCKED deploys of unrelated docs (Master-System-Buildout repo) — not the one system; owner decision pending on pause/remove.
+- Dropbox: not connected — needs owner sign-in to realign.
+- Supabase: data home verified; app wiring needs the owner's credential step.

@@ -1,0 +1,69 @@
+Original name: content.opf
+Drive ID: 1oozYxDWiENpqR_lzmyGygyEbRAUOmi-9
+Parent folder: My Drive/MAF/Master Book Audio Video Dump/
+Modified: 2025-07-15T04:45:14.000Z
+
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:title>Crossroads of Identity: Book One - Convergence</dc:title>
+        <dc:creator opf:role="aut">Steven Henry</dc:creator>
+        <dc:identifier id="BookId">crossroads-identity-book1-convergence</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:subject>Fiction</dc:subject>
+        <dc:subject>LGBTQ+</dc:subject>
+        <dc:subject>Contemporary</dc:subject>
+        <dc:description>Book One: "Convergence" follows three strangers who inherit a safe house from a civil rights elder, forcing them to confront their own relationships with identity, community, and legacy.</dc:description>
+        <meta name="cover" content="cover-image"/>
+    </metadata>
+    
+    <manifest>
+        <!-- Navigation files -->
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+        <item id="toc" href="toc.html" media-type="application/xhtml+xml"/>
+        
+        <!-- Content files (to be added when creating individual chapter files) -->
+        <item id="chapter1" href="chapter1.html" media-type="application/xhtml+xml"/>
+        <item id="chapter2" href="chapter2.html" media-type="application/xhtml+xml"/>
+        <item id="chapter3" href="chapter3.html" media-type="application/xhtml+xml"/>
+        <item id="chapter4" href="chapter4.html" media-type="application/xhtml+xml"/>
+        <item id="chapter5" href="chapter5.html" media-type="application/xhtml+xml"/>
+        <item id="chapter6" href="chapter6.html" media-type="application/xhtml+xml"/>
+        <item id="chapter7" href="chapter7.html" media-type="application/xhtml+xml"/>
+        <item id="chapter8" href="chapter8.html" media-type="application/xhtml+xml"/>
+        <item id="chapter9" href="chapter9.html" media-type="application/xhtml+xml"/>
+        <item id="chapter10" href="chapter10.html" media-type="application/xhtml+xml"/>
+        <item id="chapter11" href="chapter11.html" media-type="application/xhtml+xml"/>
+        <item id="chapter12" href="chapter12.html" media-type="application/xhtml+xml"/>
+        <item id="chapter13" href="chapter13.html" media-type="application/xhtml+xml"/>
+        <item id="chapter14" href="chapter14.html" media-type="application/xhtml+xml"/>
+        <item id="chapter15" href="chapter15.html" media-type="application/xhtml+xml"/>
+        <item id="epilogue" href="epilogue.html" media-type="application/xhtml+xml"/>
+    </manifest>
+    
+    <spine toc="ncx">
+        <itemref idref="toc"/>
+        <itemref idref="chapter1"/>
+        <itemref idref="chapter2"/>
+        <itemref idref="chapter3"/>
+        <itemref idref="chapter4"/>
+        <itemref idref="chapter5"/>
+        <itemref idref="chapter6"/>
+        <itemref idref="chapter7"/>
+        <itemref idref="chapter8"/>
+        <itemref idref="chapter9"/>
+        <itemref idref="chapter10"/>
+        <itemref idref="chapter11"/>
+        <itemref idref="chapter12"/>
+        <itemref idref="chapter13"/>
+        <itemref idref="chapter14"/>
+        <itemref idref="chapter15"/>
+        <itemref idref="epilogue"/>
+    </spine>
+    
+    <guide>
+        <reference type="toc" title="Table of Contents" href="toc.html"/>
+        <reference type="text" title="Beginning" href="chapter1.html"/>
+    </guide>
+</package>
+

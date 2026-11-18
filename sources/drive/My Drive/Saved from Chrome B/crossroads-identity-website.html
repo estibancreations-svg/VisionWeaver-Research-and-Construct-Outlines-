@@ -1,0 +1,1171 @@
+Original name: crossroads-identity-website.html
+Drive ID: 16yh6OxBqeHJsRPu7_dLNHvLZ355_ozfc
+Parent folder: My Drive/Saved from Chrome B/
+Modified: 2025-07-27T08:32:48.429Z
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossroads of Identity - Seven-Novel Series</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary: #f8f9fa;
+            --accent: #ff6b6b;
+            --dark: #2c3e50;
+            --light: #ffffff;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --text: #333;
+            --border: #e1e5e9;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--secondary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: var(--light);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid var(--border);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Main Layout */
+        .main-content {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+        }
+
+        .page {
+            display: none;
+            padding: 2rem 0;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--primary);
+            color: var(--light);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Books Grid */
+        .books-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .book-card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-number {
+            background: var(--primary);
+            color: var(--light);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .book-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .book-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Forms */
+        .form-container {
+            max-width: 400px;
+            margin: 2rem auto;
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .biometric-auth {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: var(--light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .sidebar {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: fit-content;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            text-decoration: none;
+            color: var(--text);
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .sidebar-menu a:hover, .sidebar-menu a.active {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        .dashboard-content {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .payment-method {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-method:hover, .payment-method.selected {
+            border-color: var(--accent);
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        /* Chatbot */
+        .chatbot-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .chatbot-window {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background: var(--light);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .chatbot-header {
+            background: var(--primary);
+            color: var(--light);
+            padding: 1rem;
+            border-radius: 12px 12px 0 0;
+            font-weight: 600;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .chatbot-input {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .chatbot-input input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">Crossroads of Identity</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('books')">Books</a></li>
+                <li><a href="#" onclick="showPage('subscription')">Subscription</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+            </ul>
+            <div class="auth-buttons" id="authButtons">
+                <a href="#" class="btn btn-outline" onclick="showPage('login')">Login</a>
+                <a href="#" class="btn btn-primary" onclick="showPage('register')">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="container">
+                    <h1>Crossroads of Identity</h1>
+                    <p>A seven-novel series exploring LGBTQ+ experiences across generations, cultures, and communities</p>
+                    <a href="#" class="btn btn-primary" onclick="showPage('books')">
+                        <i class="fas fa-book"></i> Explore the Series
+                    </a>
+                </div>
+            </section>
+
+            <section class="books-section">
+                <div class="container">
+                    <h2 class="section-title">The Seven-Novel Journey</h2>
+                    <div class="books-grid" id="booksGrid">
+                        <!-- Books will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Books Page -->
+        <div id="books" class="page">
+            <section class="books-section">
+                <div class="container">
+                    <h2 class="section-title">Complete Series Collection</h2>
+                    <div class="books-grid" id="detailedBooksGrid">
+                        <!-- Detailed books will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login" class="page">
+            <div class="container">
+                <div class="form-container">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Welcome Back</h2>
+                    
+                    <div class="biometric-auth">
+                        <i class="fas fa-fingerprint"></i>
+                        <p>Use biometric authentication for secure login</p>
+                        <button class="btn btn-outline" onclick="biometricLogin()">
+                            <i class="fas fa-fingerprint"></i> Authenticate
+                        </button>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Page -->
+        <div id="register" class="page">
+            <div class="container">
+                <div class="form-container">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Join Our Community</h2>
+                    
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Account Type</label>
+                            <select required>
+                                <option value="">Select Account Type</option>
+                                <option value="reader">Reader</option>
+                                <option value="admin">Administrator</option>
+                            </select>
+                        </div>
+                        
+                        <div class="biometric-auth">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Set up biometric security</p>
+                            <button type="button" class="btn btn-outline" onclick="setupBiometric()">
+                                <i class="fas fa-fingerprint"></i> Setup Biometric
+                            </button>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscription Page -->
+        <div id="subscription" class="page">
+            <div class="container">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Monthly Subscription</h3>
+                        <div class="stat-value">$9.99</div>
+                        <div class="stat-label">per month</div>
+                        <p>Access to all books as they're released</p>
+                        <button class="btn btn-primary" onclick="selectPlan('monthly')">Choose Plan</button>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Annual Subscription</h3>
+                        <div class="stat-value">$99.99</div>
+                        <div class="stat-label">per year (2 months free!)</div>
+                        <p>Full series access + exclusive content</p>
+                        <button class="btn btn-primary" onclick="selectPlan('annual')">Choose Plan</button>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Complete Series</h3>
+                        <div class="stat-value">$149.99</div>
+                        <div class="stat-label">one-time purchase</div>
+                        <p>Own all seven novels forever</p>
+                        <button class="btn btn-primary" onclick="selectPlan('complete')">Buy Now</button>
+                    </div>
+                </div>
+
+                <div id="paymentSection" style="display: none;">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method" onclick="selectPayment('card')">
+                            <i class="fas fa-credit-card"></i>
+                            <p>Credit Card</p>
+                        </div>
+                        <div class="payment-method" onclick="selectPayment('apple')">
+                            <i class="fab fa-apple-pay"></i>
+                            <p>Apple Pay</p>
+                        </div>
+                    </div>
+                    
+                    <div id="cardForm" style="display: none; margin-top: 2rem;">
+                        <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" placeholder="1234 5678 9012 3456">
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <div class="form-group" style="flex: 1;">
+                                <label>Expiry</label>
+                                <input type="text" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label>CVV</label>
+                                <input type="text" placeholder="123">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="processPayment()">Complete Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="page">
+            <div class="container">
+                <div class="dashboard">
+                    <aside class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li><a href="#" class="active" onclick="showDashboard('overview')">
+                                <i class="fas fa-chart-line"></i> Overview
+                            </a></li>
+                            <li><a href="#" onclick="showDashboard('books')">
+                                <i class="fas fa-book"></i> My Books
+                            </a></li>
+                            <li><a href="#" onclick="showDashboard('sales')">
+                                <i class="fas fa-dollar-sign"></i> Sales Reports
+                            </a></li>
+                            <li><a href="#" onclick="showDashboard('members')">
+                                <i class="fas fa-users"></i> Members
+                            </a></li>
+                            <li><a href="#" onclick="showDashboard('api')">
+                                <i class="fas fa-plug"></i> API Settings
+                            </a></li>
+                            <li><a href="#" onclick="showDashboard('settings')">
+                                <i class="fas fa-cog"></i> Settings
+                            </a></li>
+                        </ul>
+                    </aside>
+
+                    <main class="dashboard-content">
+                        <div id="dashboardOverview" class="dashboard-section active">
+                            <h2>Dashboard Overview</h2>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-value">1,247</div>
+                                    <div class="stat-label">Total Subscribers</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">$12,450</div>
+                                    <div class="stat-label">Monthly Revenue</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">3,891</div>
+                                    <div class="stat-label">Books Sold</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value">4.8★</div>
+                                    <div class="stat-label">Average Rating</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="dashboardBooks" class="dashboard-section">
+                            <h2>Book Management</h2>
+                            <p>Manage your book inventory, pricing, and availability.</p>
+                            <!-- Book management interface would go here -->
+                        </div>
+
+                        <div id="dashboardSales" class="dashboard-section">
+                            <h2>Sales Reports</h2>
+                            <p>Comprehensive sales analytics and revenue tracking.</p>
+                            <!-- Sales charts and reports would go here -->
+                        </div>
+
+                        <div id="dashboardMembers" class="dashboard-section">
+                            <h2>Member Management</h2>
+                            <p>View and manage subscriber accounts and permissions.</p>
+                            <!-- Member management interface would go here -->
+                        </div>
+
+                        <div id="dashboardApi" class="dashboard-section">
+                            <h2>API Integration Settings</h2>
+                            <div class="form-group">
+                                <label>Amazon KDP API Key</label>
+                                <input type="password" placeholder="Enter your Amazon KDP API key">
+                            </div>
+                            <div class="form-group">
+                                <label>Stripe API Key</label>
+                                <input type="password" placeholder="Enter your Stripe API key">
+                            </div>
+                            <div class="form-group">
+                                <label>Apple Pay Merchant ID</label>
+                                <input type="text" placeholder="Enter your Apple Pay Merchant ID">
+                            </div>
+                            <button class="btn btn-primary">Save API Settings</button>
+                        </div>
+
+                        <div id="dashboardSettings" class="dashboard-section">
+                            <h2>Account Settings</h2>
+                            <p>Manage your account preferences and security settings.</p>
+                            <!-- Settings interface would go here -->
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbot -->
+    <div class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <i class="fas fa-robot"></i> Literary Assistant
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div style="padding: 1rem; color: #666;">
+                Hello! I'm here to help you with questions about the Crossroads of Identity series, subscription options, or technical support. How can I assist you today?
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+        </div>
+    </div>
+
+    <script>
+        // Book data
+        const books = [
+            {
+                number: 1,
+                title: "Convergence",
+                description: "Three lives intersect at a memorial service, inheriting a shared legacy that will change everything.",
+                price: "$12.99",
+                theme: "Isolation vs. connection; the weight of secrets; the legacy of elders"
+            },
+            {
+                number: 2,
+                title: "Foundations",
+                description: "As Marcus, Jordan, and Desiree work together, their tensions evolve into complex chosen family bonds.",
+                price: "$12.99",
+                theme: "Chosen family; healing through community; reconciling past and present"
+            },
+            {
+                number: 3,
+                title: "Generations",
+                description: "Victor Mendoza returns, bringing historical perspective and reopening old wounds from the AIDS crisis.",
+                price: "$12.99",
+                theme: "Historical memory; survivor's guilt; mentorship and growth"
+            },
+            {
+                number: 4,
+                title: "Intersections",
+                description: "Young Amara Okafor joins the group, highlighting generational and cultural differences in identity expression.",
+                price: "$12.99",
+                theme: "Cultural hybridity; digital vs. physical community; coming of age"
+            },
+            {
+                number: 5,
+                title: "Transformations",
+                description: "Each character faces significant personal and professional transformations that test their relationships.",
+                price: "$12.99",
+                theme: "Visibility and vulnerability; body and identity; success and compromise"
+            },
+            {
+                number: 6,
+                title: "Diaspora",
+                description: "The characters scatter globally, exploring how distance provides perspective on home and identity.",
+                price: "$12.99",
+                theme: "Belonging; cultural context; global perspectives on queerness"
+            },
+            {
+                number: 7,
+                title: "Homecoming",
+                description: "All five characters reunite to face gentrification and preserve their community legacy.",
+                price: "$12.99",
+                theme: "Legacy; collective action; continuing journeys"
+            }
+        ];
+
+        // Authentication state
+        let currentUser = null;
+        let isLoggedIn = false;
+
+        // Initialize the page
+        function init() {
+            populateBooks();
+            setupEventListeners();
+        }
+
+        // Populate books grid
+        function populateBooks() {
+            const booksGrid = document.getElementById('booksGrid');
+            const detailedBooksGrid = document.getElementById('detailedBooksGrid');
+            
+            books.forEach(book => {
+                const bookCard = createBookCard(book);
+                const detailedBookCard = createDetailedBookCard(book);
+                
+                booksGrid.appendChild(bookCard);
+                detailedBooksGrid.appendChild(detailedBookCard);
+            });
+        }
+
+        // Create book card
+        function createBookCard(book) {
+            const card = document.createElement('div');
+            card.className = 'book-card';
+            card.innerHTML = `
+                <div class="book-number">${book.number}</div>
+                <h3 class="book-title">${book.title}</h3>
+                <p class="book-description">${book.description}</p>
+                <div class="book-price">${book.price}</div>
+                <button class="btn btn-primary" onclick="purchaseBook(${book.number})">
+                    <i class="fas fa-shopping-cart"></i> Purchase
+                </button>
+            `;
+            return card;
+        }
+
+        // Create detailed book card
+        function createDetailedBookCard(book) {
+            const card = document.createElement('div');
+            card.className = 'book-card';
+            card.innerHTML = `
+                <div class="book-number">${book.number}</div>
+                <h3 class="book-title">${book.title}</h3>
+                <p class="book-description">${book.description}</p>
+                <p style="color: #666; font-style: italic; margin-bottom: 1rem;">${book.theme}</p>
+                <div class="book-price">${book.price}</div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <button class="btn btn-primary" onclick="purchaseBook(${book.number})">
+                        <i class="fas fa-shopping-cart"></i> Buy Now
+                    </button>
+                    <button class="btn btn-outline" onclick="previewBook(${book.number})">
+                        <i class="fas fa-eye"></i> Preview
+                    </button>
+                </div>
+            `;
+            return card;
+        }
+
+        // Show page
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageName).classList.add('active');
+            
+            // Update auth buttons if user is logged in
+            if (isLoggedIn && pageName === 'home') {
+                updateAuthButtons();
+            }
+        }
+
+        // Show dashboard section
+        function showDashboard(section) {
+            // Remove active class from all sidebar links
+            document.querySelectorAll('.sidebar-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to clicked link
+            event.target.classList.add('active');
+            
+            // Hide all dashboard sections
+            document.querySelectorAll('.dashboard-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById('dashboard' + capitalize(section)).style.display = 'block';
+        }
+
+        // Capitalize first letter
+        function capitalize(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Biometric authentication simulation
+        function biometricLogin() {
+            // Simulate biometric authentication
+            showNotification('Biometric authentication successful!', 'success');
+            setTimeout(() => {
+                login('biometric_user@example.com');
+            }, 1500);
+        }
+
+        // Setup biometric
+        function setupBiometric() {
+            showNotification('Biometric authentication setup complete!', 'success');
+        }
+
+        // Login function
+        function login(email = null) {
+            if (!email) {
+                email = document.querySelector('#loginForm input[type="email"]').value;
+            }
+            
+            currentUser = {
+                email: email,
+                name: email.includes('admin') ? 'Admin User' : 'Reader User',
+                type: email.includes('admin') ? 'admin' : 'reader'
+            };
+            
+            isLoggedIn = true;
+            updateAuthButtons();
+            
+            if (currentUser.type === 'admin') {
+                showPage('dashboard');
+            } else {
+                showPage('home');
+            }
+            
+            showNotification('Login successful!', 'success');
+        }
+
+        // Register function
+        function register() {
+            const formData = new FormData(document.getElementById('registerForm'));
+            const email = formData.get('email');
+            const accountType = formData.get('accountType');
+            
+            showNotification('Account created successfully!', 'success');
+            
+            setTimeout(() => {
+                login(email);
+            }, 1000);
+        }
+
+        // Update auth buttons
+        function updateAuthButtons() {
+            const authButtons = document.getElementById('authButtons');
+            if (isLoggedIn) {
+                authButtons.innerHTML = `
+                    <span style="margin-right: 1rem;">Welcome, ${currentUser.name}</span>
+                    <a href="#" class="btn btn-outline" onclick="showPage('dashboard')">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <a href="#" class="btn btn-primary" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                `;
+            }
+        }
+
+        // Logout function
+        function logout() {
+            currentUser = null;
+            isLoggedIn = false;
+            
+            const authButtons = document.getElementById('authButtons');
+            authButtons.innerHTML = `
+                <a href="#" class="btn btn-outline" onclick="showPage('login')">Login</a>
+                <a href="#" class="btn btn-primary" onclick="showPage('register')">Sign Up</a>
+            `;
+            
+            showPage('home');
+            showNotification('Logged out successfully!', 'info');
+        }
+
+        // Purchase book
+        function purchaseBook(bookNumber) {
+            if (!isLoggedIn) {
+                showNotification('Please login to purchase books', 'warning');
+                showPage('login');
+                return;
+            }
+            
+            const book = books[bookNumber - 1];
+            showNotification(`Processing purchase for "${book.title}"...`, 'info');
+            
+            // Simulate payment processing
+            setTimeout(() => {
+                showNotification(`Successfully purchased "${book.title}"!`, 'success');
+            }, 2000);
+        }
+
+        // Preview book
+        function previewBook(bookNumber) {
+            const book = books[bookNumber - 1];
+            showNotification(`Opening preview for "${book.title}"...`, 'info');
+        }
+
+        // Select subscription plan
+        function selectPlan(plan) {
+            document.getElementById('paymentSection').style.display = 'block';
+            document.getElementById('paymentSection').scrollIntoView();
+        }
+
+        // Select payment method
+        function selectPayment(method) {
+            // Remove selected class from all payment methods
+            document.querySelectorAll('.payment-method').forEach(pm => {
+                pm.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked method
+            event.target.closest('.payment-method').classList.add('selected');
+            
+            if (method === 'card') {
+                document.getElementById('cardForm').style.display = 'block';
+            } else if (method === 'apple') {
+                processApplePay();
+            }
+        }
+
+        // Process Apple Pay
+        function processApplePay() {
+            showNotification('Processing Apple Pay payment...', 'info');
+            setTimeout(() => {
+                showNotification('Payment successful via Apple Pay!', 'success');
+            }, 2000);
+        }
+
+        // Process payment
+        function processPayment() {
+            showNotification('Processing credit card payment...', 'info');
+            setTimeout(() => {
+                showNotification('Payment successful!', 'success');
+                if (!isLoggedIn) {
+                    showPage('register');
+                }
+            }, 2000);
+        }
+
+        // Chatbot functionality
+        function setupEventListeners() {
+            // Login form
+            document.getElementById('loginForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                login();
+            });
+
+            // Register form
+            document.getElementById('registerForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                register();
+            });
+
+            // Chatbot toggle
+            document.getElementById('chatbotToggle').addEventListener('click', () => {
+                const chatWindow = document.getElementById('chatbotWindow');
+                chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            // Chatbot input
+            document.getElementById('chatInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    sendChatMessage();
+                }
+            });
+        }
+
+        // Send chat message
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const messages = document.getElementById('chatbotMessages');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            const userMsg = document.createElement('div');
+            userMsg.style.cssText = 'text-align: right; margin: 0.5rem 0; padding: 0.5rem; background: #667eea; color: white; border-radius: 8px;';
+            userMsg.textContent = message;
+            messages.appendChild(userMsg);
+            
+            // Simulate bot response
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.style.cssText = 'text-align: left; margin: 0.5rem 0; padding: 0.5rem; background: #f1f3f4; border-radius: 8px;';
+                botMsg.textContent = generateBotResponse(message);
+                messages.appendChild(botMsg);
+                messages.scrollTop = messages.scrollHeight;
+            }, 1000);
+            
+            input.value = '';
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        // Generate bot response
+        function generateBotResponse(message) {
+            const msg = message.toLowerCase();
+            
+            if (msg.includes('book') && msg.includes('order')) {
+                return "Books in the series should be read in order: 1. Convergence, 2. Foundations, 3. Generations, 4. Intersections, 5. Transformations, 6. Diaspora, 7. Homecoming. Each builds on the previous stories.";
+            } else if (msg.includes('subscription') || msg.includes('price')) {
+                return "We offer three options: Monthly ($9.99), Annual ($99.99 - save 2 months!), or Complete Series ($149.99). The subscription gives you access as books are released, while the complete series is yours forever.";
+            } else if (msg.includes('character') || msg.includes('who')) {
+                return "The series follows five main characters: Marcus (entertainment lawyer), Jordan (transmasculine activist), Desiree (visual artist), Victor (writer/AIDS activist), and Amara (Nigerian-American student). Their lives intersect in meaningful ways throughout the series.";
+            } else if (msg.includes('author') || msg.includes('writer')) {
+                return "The series draws inspiration from literary giants like E. Lynn Harris, Leslie Feinberg, Alice Walker, James Baldwin, and James Earl Hardy, creating contemporary narratives that honor their legacies.";
+            } else if (msg.includes('help') || msg.includes('support')) {
+                return "I can help with book information, subscription options, account issues, or technical support. You can also contact our support team directly through the dashboard if you're logged in.";
+            } else {
+                return "Thank you for your question! I'm here to help with information about the Crossroads of Identity series, subscriptions, characters, or technical support. What would you like to know more about?";
+            }
+        }
+
+        // Show notification
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                color: white;
+                font-weight: 600;
+                z-index: 1001;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+                max-width: 300px;
+            `;
+            
+            // Set color based on type
+            switch(type) {
+                case 'success':
+                    notification.style.background = 'var(--success)';
+                    break;
+                case 'warning':
+                    notification.style.background = 'var(--warning)';
+                    break;
+                case 'error':
+                    notification.style.background = 'var(--danger)';
+                    break;
+                default:
+                    notification.style.background = 'var(--primary)';
+            }
+            
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Animate out and remove
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

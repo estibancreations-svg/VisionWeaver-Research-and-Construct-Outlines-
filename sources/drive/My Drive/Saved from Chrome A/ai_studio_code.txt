@@ -1,0 +1,111 @@
+Original name: ai_studio_code.txt
+Drive ID: 1yrtA0AyKnoFBUhlgZRZOD5ACZyOYz1xq
+Parent folder: My Drive/Saved from Chrome A/
+Modified: 2026-01-27T16:40:20.921Z
+
+{
+  "contract_identity": {
+    "system_name": "T.H.E.L.M.A. AI Core",
+    "version": "2.3.5-GOLD",
+    "architect": "Steven Henry",
+    "deployment_id": "THELMA-N8N-MESH-8821-ALPHA",
+    "status": "PROVISIONED",
+    "last_sync_target": "GLOBAL_LINK_LOGISTICS_HQ"
+  },
+  "integration_endpoints": {
+    "outbound_relay": "https://your-n8n-instance.app/webhook/thelma-outbound",
+    "inbound_bridge": "https://your-n8n-instance.app/webhook/thelma-inbound",
+    "auth_method": "BEARER_TOKEN_PASSTHROUGH",
+    "retry_policy": {
+      "max_attempts": 3,
+      "backoff_interval_ms": 5000,
+      "failover_node": "PERCY_SECURITY_BUFFER"
+    }
+  },
+  "payload_manifest": {
+    "outbound_from_thelma": {
+      "header": {
+        "source": "THELMA_CORE",
+        "timestamp": "{{$timestamp}}",
+        "trace_id": "REQ-{{$guid}}",
+        "clearance_level": 10,
+        "active_agent": "P.E.R.C.Y."
+      },
+      "body": {
+        "intent": "CORE_DATA_RECONCILIATION",
+        "module_scope": ["FLEET_TELEMETRY", "PAYROLL_LEDGER", "HIVE_PERSONNEL", "DOCUMENT_MESH"],
+        "parameters": {
+          "sync_depth": "FULL_RECOVERY",
+          "ocr_verification": true,
+          "gps_dead_reckoning": "ENABLED"
+        },
+        "security": {
+          "session_hash": "SHA256:{{$current_session_token}}",
+          "air_gap_status": "MONITORED"
+        }
+      }
+    },
+    "inbound_to_thelma": {
+      "expected_response": {
+        "status": "SUCCESS",
+        "bridge_handshake": "STABLE",
+        "execution_summary": {
+          "documents_processed": 0,
+          "ledger_commits": 0,
+          "asset_updates": 0
+        },
+        "data_packets": [
+          {
+            "module": "FLEET",
+            "entries": [
+              {
+                "unit_id": "F-101",
+                "telemetry": { "lat": 0.0, "lng": 0.0, "speed": 0, "hos_remaining": "04h 22m" },
+                "directives": ["RE_ROUTE", "MAINTENANCE_FLAG"]
+              }
+            ]
+          },
+          {
+            "module": "PAYROLL",
+            "entries": [
+              {
+                "batch_id": "B-8821",
+                "ach_status": "RELEASED",
+                "reconciliation_hash": "HEX:0x8821AF"
+              }
+            ]
+          }
+        ],
+        "agent_instructions": {
+          "HENRY": "Prioritize Route R1-Alpha due to Sector 7 congestion.",
+          "PERCY": "Rotate API keys for Google Drive Ingress in 120 minutes.",
+          "CORE": "Update Gross Revenue UI with Google Sheets Finance sync."
+        }
+      }
+    }
+  },
+  "governance_rules": {
+    "scrubbing_protocol": "PERCY_LEVEL_4",
+    "validation_schema": {
+      "required_fields": ["source", "payload", "security_token"],
+      "allowed_methods": ["POST", "PUT"],
+      "content_type": "application/json"
+    },
+    "compliance": {
+      "dot_hos_enforcement": "STRICT",
+      "financial_audit_trail": "IMMUTABLE_LEDGER",
+      "privacy_shield": "AES-256-GCM"
+    }
+  },
+  "module_mapping_logic": {
+    "google_drive": {
+      "target_folder": "THELMA_SYSTEM_FILES",
+      "ocr_folder": "INCOMING_RECEIPTS_OCR",
+      "audit_folder": "SYSTEM_LOGS_ARCHIVE"
+    },
+    "sap_integration": {
+      "id_mapping": "EXTERNAL_ENTITY_LINK",
+      "sync_frequency": "REAL_TIME_EVENT_DRIVEN"
+    }
+  }
+}

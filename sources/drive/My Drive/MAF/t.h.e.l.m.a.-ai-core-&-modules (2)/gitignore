@@ -1,0 +1,29 @@
+Original name: .gitignore
+Drive ID: 1U5z1_C0Qeze0obUkuvwHhZmgAsN6tz1U
+Parent folder: My Drive/MAF/t.h.e.l.m.a.-ai-core-&-modules (2)/
+Modified: 2026-01-31T10:56:50.000Z
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
