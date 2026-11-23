@@ -125,3 +125,9 @@ Full materials live under `sources/`:
 
 See [SOURCES.md](SOURCES.md) for the full accounting, including everything withheld,
 everything unresolvable, and everything excluded as out of scope.
+
+## Hosting decision and deployment mapping
+
+Estiban Creations selected **Render** for application hosting. Existing Supabase projects continue to provide PostgreSQL, authentication and storage where applicable. This repository's placement is **Discovery · research and build lineage**. Reconcile the repo with the referenced C-Suite and VisionWeaver app before choosing a runtime. Preserve distinct research and product sources.
+
+The GrantOS review verified 27 failed Vercel preview checks across nine commit SHAs, a temporary successful preview checkpoint and a separate production availability block. See the [repository mapping and evidence](docs/RENDER-MIGRATION-MAP.md) for context and release requirements.
